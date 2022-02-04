@@ -1,0 +1,31 @@
+﻿@model Webima.Models.CategoriasViewModel
+
+@{
+    ViewData["Title"] = "Gestão das Categorias";
+}
+
+<div class="maincontent">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <h1>@ViewData["Title"]</h1>
+                <br /><br />
+                <div id="lista">
+                    <partial name="ListaCategorias" model="Model.Categorias" />
+                </div>
+            </div>
+            <div class="col-lg" id="CatForm">
+                <partial name="AdicionarCategoria" model="Model.Categoria" />
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function MudarForm () {
+        $.get('@Url.Action("ListaCategorias")', function (data) {
+            $('#lista').html(data);
+            alert("Categorias atualizadas!");
+        });
+    }
+</script>

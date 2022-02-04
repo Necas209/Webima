@@ -1,0 +1,32 @@
+﻿@model Webima.Models.SalasViewModel
+
+@{
+    ViewData["Title"] = "Gestão das Salas";
+}
+
+<div class="maincontent">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <h1>@ViewData["Title"]</h1>
+                <br /><br />
+                <div id="lista">
+                    <partial name="ListaSalas" model="Model.Salas" />
+                </div>
+            </div>
+            <div class="col-lg" id="SalaForm">
+                <partial name="AdicionarSala" model="Model.Sala" />
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function MudarForm () {
+        $.get('@Url.Action("ListaSalas")', function (data) {
+            $('#lista').html(data);
+            alert("Salas atualizadas!");
+        });
+    }
+</script>
+

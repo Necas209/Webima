@@ -1,0 +1,140 @@
+﻿@model Webima.Models.Admin
+
+@{
+	ViewData["Title"] = "Back Office";
+}
+
+<div class="maincontent"> 
+    <div class="container">
+		<h1>Back Office</h1>
+		<br />
+        <div class="row">
+			<div class="col-lg">
+				<h3>Dados do Admin</h3>
+				<br /><br />
+				<div class="transformers-content" style="font-size: 1.2em;">
+					<ul>
+						<li>
+							<div class="transformers-left">@Html.DisplayNameFor(model => model.IdNavigation.Nome):</div>
+							<div class="transformers-right" id="nome">@Html.DisplayFor(model => model.IdNavigation.Nome)</div>
+							<a asp-controller="Conta" asp-action="AlterarNome" asp-route-id="@Model.Id"
+								data-ajax="true" data-ajax-method="get"
+								data-ajax-mode="replace" data-ajax-update="#nome">
+								&nbsp;<i class="bi bi-pencil"></i>
+							</a>
+						</li>
+						<li>
+							<div class="transformers-left">@Html.DisplayNameFor(model => model.IdNavigation.Username):</div>
+							<div class="transformers-right">@Html.DisplayFor(model => model.IdNavigation.Username)</div>
+						</li>
+						<li>
+							<div class="transformers-left">Email: </div>
+							<div class="transformers-right">@ViewBag.Email</div>
+						</li>
+					</ul>
+				</div>
+				<br /><br />
+				<a class="theme-btn" asp-area="Identity" asp-page="/Account/Manage/Index" title="Gerir a sua conta" >Gerir a sua conta</a>
+				<br />
+			</div>
+        </div>
+		<div class="row" style="padding:50px">
+			<div class="col-lg">
+				<h3>Gestão do Cinema</h3>
+				<br /><hr /><br />
+				<center>
+					<a class="theme-btn" asp-action="GerirSalas">Gerir Salas</a>
+					<br /><br />
+					<a class="theme-btn" asp-action="GerirSessoes">Gerir Sessões</a>
+					<br /><br />
+					<a class="theme-btn" asp-action="GerirCategorias">Gerir Categorias</a>
+				</center>
+			</div>
+			<div class="col-lg">
+				<h3>Gestão do Staff</h3>
+				<br /><hr /><br />
+				<center>
+					<button type="button" class="theme-btn" data-toggle="modal" data-target="#AddFunc">
+						Adicionar Funcionário
+					</button>
+					<br /><br />
+					<button type="button" class="theme-btn" data-toggle="modal" data-target="#AddAdmin">
+						Adicionar Administrador
+					</button>
+				</center>
+			</div>
+		</div>
+    </div>
+</div>
+
+<div class="modal fade" id="AddFunc" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-dialog-scrollable" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" style="color:black">Adicionar Funcionário</h5>
+        <button type="button" class="close" data-dismiss="modal">
+          <span>&times;</span>
+        </button>
+      </div>
+	  <form asp-action="AdicionarFunc" method="post"
+			data-ajax="true" data-ajax-method="post"
+			data-ajax-complete="sucessoFunc">
+		  <div class="modal-body">
+			<div class="form-group">
+				<label for="Email" name="Email" class="form-label" style="color:black">Email: </label>
+				<input for="Email" name="Email" class="form-control" type="email" required />
+			</div>
+		  </div>
+		  <div class="modal-footer">
+			<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+			<button type="submit" class="btn btn-primary" style="background-color:#007bff;color:white">
+				Adicionar
+			</button>
+		  </div>
+	  </form>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="AddAdmin" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-dialog-scrollable" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" style="color:black">Adicionar Administrador</h5>
+        <button type="button" class="close" data-dismiss="modal">
+          <span>&times;</span>
+        </button>
+      </div>
+	  <form asp-action="AdicionarAdmin" method="post"
+			data-ajax="true" data-ajax-method="post"
+			data-ajax-complete="sucessoAdmin">
+		  <div class="modal-body">
+			<div class="form-group">
+				<label for="Email" name="Email" class="form-label" style="color:black">Email: </label>
+				<input for="Email" name="Email" class="form-control" type="email" required />
+			</div>
+		  </div>
+		  <div class="modal-footer">
+			<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+			<button type="submit" class="btn btn-primary" style="background-color:#007bff;color:white">
+				Adicionar
+			</button>
+		  </div>
+	  </form>
+    </div>
+  </div>
+</div>
+
+<script>
+	function sucessoAdmin() {
+		$('#AddAdmin').modal('hide');
+		alert("Administrador adicionado!");
+	}
+</script>
+
+<script>
+	function sucessoFunc() {
+		$('#AddFunc').modal('hide');
+		alert("Funcionário adicionado!");
+	}
+</script>

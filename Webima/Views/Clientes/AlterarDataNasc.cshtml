@@ -1,0 +1,16 @@
+﻿@model Webima.Models.Cliente
+
+<form asp-action="AlterarDataNasc" data-ajax="true" data-ajax-method="post"
+    data-ajax-update="#dataNasc" data-ajax-mode="replace">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <input type="hidden" asp-for="Id" />
+    <div>
+        <input asp-for="DataNasc" class="form-control" />
+        <span asp-validation-for="DataNasc" class="form-danger"></span>
+        <input type="submit" value="Guardar" class="btn btn-primary" />
+    </div>
+</form>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,165 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>@ViewData["Title"] | Webima</title>
+    <!-- Favicon Icon -->
+    <link rel="icon" type="image/png" href="~/img/logo/logo_small_icon_only_inverted.png"/>
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="~/css/bootstrap.min.css" media="all" />
+    <!-- Slick nav CSS -->
+    <link rel="stylesheet" type="text/css" href="~/css/slicknav.min.css" media="all" />
+    <!-- Iconfont CSS -->
+    <link rel="stylesheet" type="text/css" href="~/css/icofont.css" media="all" />
+    <!-- Owl carousel CSS -->
+    <link rel="stylesheet" type="text/css" href="~/css/owl.carousel.css">
+    <!-- Popup CSS -->
+    <link rel="stylesheet" type="text/css" href="~/css/magnific-popup.css">
+    <!-- Main style CSS -->
+    <link rel="stylesheet" type="text/css" href="~/css/style.css" media="all" />
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" type="text/css" href="~/css/responsive.css" media="all" />
+    <!-- Personalised CSS -->
+    <link rel="stylesheet" type="text/css" href="~/css/personalized-styles.css" />
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-area">
+                <div class="logo">
+                    <a asp-area="" asp-controller="Home" asp-action="Index">
+                        <img src="~/img/logo/120x118.svg" alt="logo" />
+                    </a>
+                </div>
+                <div class="header-right">
+                    <form action="#">
+                        <input type="text" />
+                        <button><i class="icofont icofont-search"></i></button>
+                    </form>
+                    <partial name="_LoginPartial" />
+                </div>
+                <div class="menu-area">
+                    <div class="responsive-menu"></div>
+                    <div class="mainmenu">
+                        <ul id="primary-menu">
+                            <li>
+                                <a asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            </li>
+                            <li>
+                                <a href="#">Filmes <i class="icofont icofont-simple-down"></i></a>
+                                <ul>
+                                    <li>
+                                        <a asp-area="" asp-controller="Filmes" asp-action="Cartaz">Em Cartaz</a>
+                                    </li>
+                                    <li>
+                                        <a asp-area="" asp-controller="Filmes" asp-action="Estreias">Próximas Estreias</a>
+                                    </li>
+                                    @if (User.IsInRole("Funcionario"))
+                                    {
+                                        <li>
+                                            <a asp-area="" asp-controller="Funcionarios" asp-action="AdicionarFilme">Adicionar Filme</a>
+                                        </li>
+                                    }
+                                </ul>
+                            </li>
+                            <li><a asp-area="" asp-controller="Home" asp-action="FAQs">FAQs</a></li>
+                            <li><a asp-area="" asp-controller="Home" asp-action="Acerca">Acerca</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main role="main">
+        @RenderBody()
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-sm-6">
+                    <div class="widget">
+                        <img src="~/img/logo/logo_large.png" alt="about" style="border-right:solid; padding-right:10px;" />
+                        Quinta de Prados, 5000-801 Vila Real
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="widget">
+                        <h4>Legal</h4>
+                        <ul>
+                            <li><a asp-controller="Home" asp-action="TermosCondicoes">Termos e Condições</a></li>
+                            <li><a asp-controller="Home" asp-action="PoliticaPrivacidade">Política de Privacidade</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="widget">
+                        <h4>Conta</h4>
+                        <ul>
+                            @if(User.Identity.IsAuthenticated)
+                            { 
+                                <li><a asp-controller="Conta" asp-action="Index">A minha conta</a></li>
+                            }
+                            else
+                            {
+                                <li><a asp-area="Identity" asp-page="/Account/Register">Registar</a></li>
+                                <li><a asp-area="Identity" asp-page="/Account/Login">Login</a></li>
+                            }
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="widget">
+                        <h4>Newsletter</h4>
+                        <p>Subscreva à nossa newsletter para conhecer as próximas estreias.</p>
+                        <form action="#">
+                            <input type="text" placeholder="Introduza o seu email.." />
+                            <button>Subscrever</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <hr />
+        </div>
+        <div class="copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 text-center text-lg-right">
+                        <div class="copyright-content">
+                            <a href="#" class="scrollToTop">
+                                Voltar ao início<i class="icofont icofont-arrow-up"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer><!-- footer section end -->
+    <!-- jquery main JS -->
+    <script src="~/js/jquery.min.js"></script>
+    <!-- jquery unobtrusive AJAX JS -->
+    <script src="~/lib/jquery-ajax/jquery.unobtrusive-ajax.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="~/js/bootstrap.min.js"></script>
+    <!-- Slick nav JS -->
+    <script src="~/js/jquery.slicknav.min.js"></script>
+    <!-- owl carousel JS -->
+    <script src="~/js/owl.carousel.min.js"></script>
+    <!-- Popup JS -->
+    <script src="~/js/jquery.magnific-popup.min.js"></script>
+    <!-- Isotope JS -->
+    <script src="~/js/isotope.pkgd.min.js"></script>
+    <!-- main JS -->
+    <script src="~/js/main.js"></script>
+    <!-- Webima scripts JS -->
+    <script src="~/js/webima-scripts.js"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

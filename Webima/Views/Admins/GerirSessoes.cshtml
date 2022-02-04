@@ -1,0 +1,31 @@
+﻿@model Webima.Models.SessoesViewModel
+
+@{
+    ViewData["Title"] = "Gestão das Sessões";
+}
+
+<div class="maincontent">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <h1>@ViewData["Title"]</h1>
+                <br /><br />
+                <div id="lista">
+                    <partial name="ListaSessoes" model="Model.Sessoes" />
+                </div>
+            </div>
+            <div class="col-lg" id="SessaoForm">
+                <partial name="AdicionarSessao" model="Model.Sessao" />
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function MudarForm () {
+        $.get('@Url.Action("ListaSessoes")', function (data) {
+            $('#lista').html(data);
+            alert("Sessões atualizadas!");
+        });
+    }
+</script>

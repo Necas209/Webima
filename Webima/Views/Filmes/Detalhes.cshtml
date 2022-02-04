@@ -1,0 +1,81 @@
+﻿@model Webima.Models.Filme
+
+@{
+    ViewData["Title"] = $"Detalhes - {Model.Titulo}";
+}
+
+<!-- padding start -->
+<section class="maincontent">
+</section>
+<!-- padding end -->
+<section class="transformers-area">
+	<div class="container">
+		<div class="transformers-box">
+			@if (User.IsInRole("Funcionario"))
+			{
+				<div>
+					<a asp-controller="Funcionarios" asp-action="EditarFilme" asp-route-id="@Model.Id" class="theme-btn" 
+						style="position:absolute;right:0;top:0;border-radius:0 0 0 5px">
+						Editar&nbsp;<i class="bi bi-pencil"></i>
+					</a>
+				</div>
+			}
+			<div class="row flexbox-center">
+				<div class="col-lg-5 text-lg-left text-center">
+					<div class="transformers-content">
+						<img src="~/posters/@Model.Poster" alt="about" />
+						<br />
+						<p>
+							<i class="bi bi-youtube"></i>
+							<a href="@Model.Trailer" class="popup-youtube">
+								Ver Trailer
+							</a>
+						</p>						
+					</div>
+				</div>
+				<div class="col-lg-7">
+					<div class="transformers-content">
+						<h2>@Model.Titulo</h2>
+						<ul>
+							<li>
+								<div class="transformers-left">Categoria:</div>
+								<div class="transformers-right">@Model.IdCatNavigation.Nome</div>
+							</li>
+							<li>
+								<div class="transformers-left">Estreia:</div>
+								<div class="transformers-right">@Model.Estreia.ToString("d", CultureInfo.GetCultureInfo("pt-PT"))</div>
+							</li>
+							<li>
+								<div class="transformers-left">Realizador:</div>
+								<div class="transformers-right">@Model.Realizador</div>
+							</li>
+							<li>
+								<div class="transformers-left">Elenco:</div>
+								<div class="transformers-right">@Model.Elenco</div>
+							</li>
+							<li>
+								<div class="transformers-left">Ano: </div>
+								<div class="transformers-right">@Model.Ano</div>
+							</li>
+							<li>
+								<div class="transformers-left">Duração: </div>
+								<div class="transformers-right">@Model.Duracao minutos</div>
+							</li>
+							<li>
+								<div class="transformers-left">Sinopse: </div>
+								<div class="transformers-right">@Model.Sinopse</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<a asp-controller="Filmes" asp-action="EscolherSessao" asp-route-id="@Model.Id" class="theme-btn">
+				<i class="icofont icofont-ticket"></i> Bilhetes
+			</a>
+		</div>
+	</div>
+</section><!-- transformers area end -->
+<!-- padding start -->
+<section class="maincontent">
+</section>
+<!-- padding end -->

@@ -1,0 +1,79 @@
+@model Webima.Models.Filme
+@{
+    ViewData["Title"] = "Editar Filme";
+}
+
+<div class="maincontent">
+    <h2> Editar Filme</h2>
+    <hr /><br />
+    <form asp-action="EditarFilme" enctype="multipart/form-data">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg">
+                    <input type="hidden" asp-for="IdFunc" />
+                    <input asp-for="Estreia" type="hidden"/>
+                    <div class="form-group">
+                        <label asp-for="Titulo" class="control-label"></label>
+                        <input asp-for="Titulo" class="form-control" />
+                        <span asp-validation-for="Titulo" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Realizador" class="control-label"></label>
+                        <input asp-for="Realizador" class="form-control" />
+                        <span asp-validation-for="Realizador" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Elenco" class="control-label"></label>
+                        <input asp-for="Elenco" class="form-control" />
+                        <span asp-validation-for="Elenco" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Ano" class="control-label"></label>
+                        <input asp-for="Ano" class="form-control" />
+                        <span asp-validation-for="Ano" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Duracao" class="control-label"></label>
+                        <input asp-for="Duracao" class="form-control" />
+                        <span asp-validation-for="Duracao" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="IdCat" class="control-label"></label>
+                        <select asp-for="IdCat" class ="form-control" asp-items="ViewBag.IdCat"></select>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Sinopse" class="control-label"></label>
+                        <textarea asp-for="Sinopse" class="form-control" rows="5"></textarea>
+                        <span asp-validation-for="Sinopse" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-lg">
+                    <div class="form-group">
+                        <label asp-for="Trailer" class="control-label"></label>
+                        <input asp-for="Trailer" class="form-control" />
+                        <span asp-validation-for="Trailer" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Poster" class="control-label">Poster</label>
+                        <input asp-for="Poster" hidden />
+                        <input name="poster" type="file" class="form-control" onchange="preview()" />
+                        <span asp-validation-for="Poster" class="text-danger"></span>
+                        <img id="frame" src=""/>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Guardar" class="btn btn-primary" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+@section Scripts{
+    <script>
+        function preview() {
+            frame.src=URL.createObjectURL(event.target.files[0]);
+        }
+    </script>
+}

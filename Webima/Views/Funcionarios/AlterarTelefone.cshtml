@@ -1,0 +1,17 @@
+﻿@model Webima.Models.Funcionario
+
+<form asp-action="AlterarTelefone" data-ajax="true" data-ajax-method="post"
+    data-ajax-update="#telefone" data-ajax-mode="replace">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <input type="hidden" asp-for="Id" />
+    <input type="hidden" asp-for="IdAdmin" />
+    <div>
+        <input asp-for="Telefone" class="form-control" />
+        <span asp-validation-for="Telefone" class="form-danger"></span>
+        <input type="submit" value="Guardar" class="btn btn-primary" />
+    </div>
+</form>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
