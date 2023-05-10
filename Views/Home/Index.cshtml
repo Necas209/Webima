@@ -1,164 +1,155 @@
-﻿@model List<Webima.Models.Filme>
+﻿@model List<Filme>
 
 @{
-	ViewData["Title"] = "Webima";
-	Filme ultimo = Model[^1];
-	Filme proximo = Model[1];
+    ViewData["Title"] = "Webima";
+    var ultimo = Model[^1];
+    var seguinte = Model[1];
 }
 
 <section class="hero-area" id="home">
-	<div class="container">
-		<div class="hero-area-slider">
-			@foreach(var item in Model)
-			{
-			<div class="row hero-area-slide">
-				<div class="col-lg-6 col-md-5">
-					<div class="hero-area-content">
-						<img src="~/posters/@item.Poster" alt="about" />
-					</div>
-				</div>
-				<div class="col-lg-6 col-md-7">
-					<div class="hero-area-content pr-50">
-						<h1>@item.Titulo</h1>
-						<div class="review">
-							<h4>@item.IdCatNavigation.Nome | @item.Ano</h4>
-						</div>
-						<p>@item.Sinopse</p>
-						<div class="slide-trailor">
-							<h3>
-								<i class="bi bi-youtube"></i>
-								<a href="@item.Trailer" class="popup-youtube">
-									Ver Trailer
-								</a>
-							</h3>
-							<a class="theme-btn" asp-controller="Filmes" asp-action="Detalhes" asp-route-id="@item.Id" >
-								<i class="icofont icofont-ticket"></i> Bilhetes
-							</a>
-						</div>
-					</div>
-				</div>
-			</div>
+    <div class="container">
+        <div class="hero-area-slider">
+            @foreach (var item in Model)
+            {
+                <div class="row hero-area-slide">
+                    <div class="col-lg-6 col-md-5">
+                        <div class="hero-area-content">
+                            <img src="~/posters/@item.Poster" alt="about"/>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-7">
+                        <div class="hero-area-content pr-50">
+                            <h1>@item.Titulo</h1>
+                            <div class="review">
+                                <h4>@item.Categoria.Nome | @item.Ano</h4>
+                            </div>
+                            <p>@item.Sinopse</p>
+                            <div class="slide-trailer">
+                                <h3>
+                                    <i class="bi bi-youtube"></i>
+                                    <a href="@item.Trailer" class="popup-youtube">
+                                        Ver Trailer
+                                    </a>
+                                </h3>
+                                <a class="theme-btn" asp-controller="Filmes" asp-action="Detalhes" asp-route-id="@item.Id">
+                                    <i class="ico-font ico-font-ticket"></i> Bilhetes
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+        <div class="hero-area-thumb">
+            <div class="thumb-prev">
+                <div class="row hero-area-slide">
+                    <div class="col-lg-6">
+                        <div class="hero-area-content">
+                            <img src="~/posters/@ultimo.Poster" alt="about"/>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="hero-area-content pr-50">
+                            <h2>@ultimo.Titulo</h2>
+                            <div class="review">
+                                <h4>@ultimo.Categoria.Nome | @ultimo.Ano</h4>
+                            </div>
+                            <p>@ultimo.Sinopse</p>
+                            <div class="slide-trailer">
+                                <h3>
+                                    <a href="@ultimo.Trailer" class="popup-youtube">Ver Trailer</a>
+                                </h3>
+                                <a class="theme-btn theme-btn2" asp-controller="Filmes" asp-action="Comprar" asp-route-id="@ultimo.Id">
+                                    <i class="ico-font ico-font-ticket"></i> Bilhetes
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="thumb-next">
+                <div class="row hero-area-slide">
+                    <div class="col-lg-6">
+                        <div class="hero-area-content">
+                            <img src="~/posters/@seguinte.Poster" alt="about"/>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="hero-area-content pr-50">
+                            <h2>@seguinte.Titulo</h2>
+                            <div class="review">
+                                <h4>@seguinte.Categoria.Nome | @seguinte.Ano</h4>
+                            </div>
+                            <p>@seguinte.Sinopse</p>
+                            <div class="slide-trailer">
+                                <h3>
+                                    <a href="@seguinte.Trailer" class="popup-youtube">Ver Trailer</a>
+                                </h3>
+                                <a class="theme-btn theme-btn2" asp-controller="Filmes" asp-action="Comprar" asp-route-id="@seguinte.Id">
+                                    <i class="ico-font ico-font-ticket"></i> Bilhetes
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-			}
-		</div>
-		<div class="hero-area-thumb">
-			<div class="thumb-prev">
-				<div class="row hero-area-slide">
-					<div class="col-lg-6">
-						<div class="hero-area-content">
-							<img src="~/posters/@ultimo.Poster" alt="about" />
-						</div>
-					</div>
-					<div class="col-lg-6">
-						<div class="hero-area-content pr-50">
-							<h2>@ultimo.Titulo</h2>
-							<div class="review">
-								<h4>@ultimo.IdCatNavigation.Nome | @ultimo.Ano</h4>
-							</div>
-							<p>@ultimo.Sinopse</p>
-							<div class="slide-trailor">
-								<h3>
-									<a href="@ultimo.Trailer" class="popup-youtube">Ver Trailer</a>
-								</h3>
-								<a class="theme-btn theme-btn2" asp-controller="Filmes" asp-action="Comprar" asp-route-id="@ultimo.Id" >
-									<i class="icofont icofont-ticket"></i> Bilhetes
-								</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="thumb-next">
-				<div class="row hero-area-slide">
-					<div class="col-lg-6">
-						<div class="hero-area-content">
-							<img src="~/posters/@proximo.Poster" alt="about" />
-						</div>
-					</div>
-					<div class="col-lg-6">
-						<div class="hero-area-content pr-50">
-							<h2>@proximo.Titulo</h2>
-							<div class="review">
-								<h4>@proximo.IdCatNavigation.Nome | @proximo.Ano</h4>
-							</div>
-							<p>@proximo.Sinopse</p>
-							<div class="slide-trailor">
-								<h3>
-									<a href="@proximo.Trailer" class="popup-youtube">Ver Trailer</a>
-								</h3>
-								<a class="theme-btn theme-btn2" asp-controller="Filmes" asp-action="Comprar" asp-route-id="@proximo.Id" >
-									<i class="icofont icofont-ticket"></i> Bilhetes
-								</a>
-							</div>
-						</div>
-					</div>
-				</div>
-
-			</div>
-		</div>
-	</div>
+            </div>
+        </div>
+    </div>
 </section><!-- hero area end -->
 <!-- portfolio section start -->
 <section class="portfolio-area pt-60" style="padding-bottom:100px">
-	<div class="container">
-		<div class="row flexbox-center">
-			<div class="col-lg-6 text-center text-lg-left">
-				<div class="section-title">
-					<h1><i class="icofont icofont-movie"></i> Em Destaque</h1>
-				</div>
-			</div>
-			<div class="col-lg-6 text-center text-lg-right">
-				<div class="portfolio-menu">
-					<ul>
-						<li data-filter=".released" class="active">Em Cartaz</li>
-						<li data-filter=".soon">Próximas Estreias</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-		<hr />
-		<div class="row">
-			<div class="col-lg">
-				<div class="row portfolio-item">
-					@foreach(var filme in Model)
-					{
-						string type;
-						@if(filme.Estreia.Date <= DateTime.Now.Date)
-						{
-							type = "released";
-						}
-						else
-						{
-							type = "soon";
-						}
-						<div class="col-md-4 col-sm-6 @type">
-							<div class="single-portfolio">
-								<div class="single-portfolio-img">
-									<a asp-controller="Filmes" asp-action="Detalhes" asp-route-id="@filme.Id">
-									<img src="~/posters/@filme.Poster" alt="portfolio" />
-									</a>
-									<a href="@filme.Trailer" class="popup-youtube">
-										<i class="icofont icofont-ui-play"></i>
-									</a>
-								</div>
-								<div class="portfolio-content">
-									<h2>
-										<a asp-controller="Filmes" asp-action="Detalhes" asp-route-id="@filme.Id">@filme.Titulo</a>
-									</h2>
-								</div>
-							</div>
-						</div>
-					}
-				</div>
-			</div>
-		</div>
-	</div>
+    <div class="container">
+        <div class="row flexbox-center">
+            <div class="col-lg-6 text-center text-lg-left">
+                <div class="section-title">
+                    <h1><i class="ico-ont ico-font-movie"></i> Em Destaque</h1>
+                </div>
+            </div>
+            <div class="col-lg-6 text-center text-lg-right">
+                <div class="portfolio-menu">
+                    <ul>
+                        <li data-filter=".released" class="active">Em Cartaz</li>
+                        <li data-filter=".soon">Próximas Estreias</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr/>
+        <div class="row">
+            <div class="col-lg">
+                <div class="row portfolio-item">
+                    @foreach (var filme in Model)
+                    {
+                        var type = filme.Estreia.Date <= DateTime.Now.Date ? "released" : "soon";
+                        <div class="col-md-4 col-sm-6 @type">
+                            <div class="single-portfolio">
+                                <div class="single-portfolio-img">
+                                    <a asp-controller="Filmes" asp-action="Detalhes" asp-route-id="@filme.Id">
+                                        <img src="~/posters/@filme.Poster" alt="portfolio"/>
+                                    </a>
+                                    <a href="@filme.Trailer" class="popup-youtube">
+                                        <i class="ico-font ico-font-ui-play"></i>
+                                    </a>
+                                </div>
+                                <div class="portfolio-content">
+                                    <h2>
+                                        <a asp-controller="Filmes" asp-action="Detalhes" asp-route-id="@filme.Id">@filme.Titulo</a>
+                                    </h2>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
 </section><!-- portfolio section end -->
 
 @section Scripts {
-	<script>
-		$(document).ready(function() {
-			$('[data-filter=".released"]').trigger("click");
-		});
-	</script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelector('[data-filter=".released"]').click();
+        });    
+    </script>
 }

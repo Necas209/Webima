@@ -1,23 +1,23 @@
-﻿@model IEnumerable<IGrouping<DateTime, Webima.Models.Bilhete>>
+﻿@model IEnumerable<IGrouping<DateTime, Bilhete>>
 
 @{
-    var filme = (Filme)ViewData["Filme"];
+    if (ViewBag.Filme is not Filme filme) return;
     ViewData["Title"] = $"Sessões - {filme.Titulo}";
     var check = true;
 }
 
-<div class="maincontent">
+<div class="main-content">
     <form asp-action="Comprar" method="get">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8">
-                <row>
-                    <h1>Bilhetes</h1>                    
-                </row>
-                <br />
-                <row>
-                    <table class="table">
-                        <thead>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <row>
+                        <h1>Bilhetes</h1>
+                    </row>
+                    <br/>
+                    <row>
+                        <table class="table">
+                            <thead>
                             <tr>
                                 <th>
                                     Data
@@ -26,41 +26,46 @@
                                     Sessões
                                 </th>
                             </tr>
-                        </thead>
-                        <tbody>
-                        @foreach (var grupo in Model) {
-                            <tr>
-                                <td style="vertical-align:middle">
-                                    @grupo.Key.ToString("d", CultureInfo.GetCultureInfo("pt-PT"))
-                                </td>
-                                <td>
-                                    @foreach (var bilhete in grupo) 
-                                    {
-                                    <label class="l-radio" >
-                                        <input class="checkmark" type="radio" name="id_bil" value="@bilhete.Id" 
-                                        @if(check) {check=false; <text>checked</text>} />
-                                        <span>@bilhete.IdSessaoNavigation.Horas.ToString(@"hh\:mm")</span>
-                                    </label>
-                                    }
-                                </td>
-                            </tr>
-                        }
-                        </tbody>
-                    </table>
-                </row>
-            </div>
-            <div class="col-lg">
-                <row>
-                    <h3>@filme.Titulo | @filme.Ano</h3>
-                </row>
-                <br />
-                <row>
-			        <img src="~/posters/@filme.Poster" />
-                    <hr /><br />
-                    <button type="submit" class="theme-btn theme-btn2" >Continuar</button>
-                </row>
+                            </thead>
+                            <tbody>
+                            @foreach (var grupo in Model)
+                            {
+                                <tr>
+                                    <td style="vertical-align:middle">
+                                        @grupo.Key.ToString("d", CultureInfo.GetCultureInfo("pt-PT"))
+                                    </td>
+                                    <td>
+                                        @foreach (var bilhete in grupo)
+                                        {
+                                            <label class="l-radio">
+                                                <input class="checkmark" type="radio" name="id_bil" value="@bilhete.Id"
+                                                       @if (check)
+                                                       {
+                                                           check = false;
+                                                           <text>checked</text>
+                                                       }/>
+                                                <span>@bilhete.Sessao.Horas.ToString(@"hh\:mm")</span>
+                                            </label>
+                                        }
+                                    </td>
+                                </tr>
+                            }
+                            </tbody>
+                        </table>
+                    </row>
+                </div>
+                <div class="col-lg">
+                    <row>
+                        <h3>@filme.Titulo | @filme.Ano</h3>
+                    </row>
+                    <br/>
+                    <row>
+                        <img src="~/posters/@filme.Poster" alt="Poster do filme @filme.Titulo" class="img-fluid"/>
+                        <hr/><br/>
+                        <button type="submit" class="theme-btn theme-btn2">Continuar</button>
+                    </row>
+                </div>
             </div>
         </div>
-    </div>
     </form>
 </div>

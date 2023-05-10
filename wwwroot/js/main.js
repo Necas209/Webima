@@ -4,7 +4,7 @@
 	/*----------------------------
     Responsive menu Active
     ------------------------------ */
-	$(".mainmenu ul#primary-menu").slicknav({
+	$(".main-menu ul#primary-menu").slicknav({
 		allowParentLinks: true,
 		prependTo: '.responsive-menu',
 	});

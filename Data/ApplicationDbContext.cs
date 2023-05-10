@@ -2,6 +2,8 @@
 using Microsoft.EntityFrameworkCore;
 using Webima.Models;
 
+// ReSharper disable UnusedAutoPropertyAccessor.Global
+
 namespace Webima.Data
 {
     public class ApplicationDbContext : IdentityDbContext
@@ -10,26 +12,27 @@ namespace Webima.Data
             : base(options)
         {
         }
-        public virtual DbSet<Admin> Admins { get; set; }
-        public virtual DbSet<Bilhete> Bilhetes { get; set; }
-        public virtual DbSet<Categoria> Categoria { get; set; }
-        public virtual DbSet<CliCat> CliCats { get; set; }
-        public virtual DbSet<Cliente> Clientes { get; set; }
-        public virtual DbSet<Compra> Compras { get; set; }
-        public virtual DbSet<Filme> Filmes { get; set; }
-        public virtual DbSet<Funcionario> Funcionarios { get; set; }
-        public virtual DbSet<Sala> Salas { get; set; }
-        public virtual DbSet<Sessao> Sessoes { get; set; }
-        public virtual DbSet<Utilizador> Utilizadores { get; set; }
+
+        public DbSet<Admin> Admins { get; set; }
+        public DbSet<Bilhete> Bilhetes { get; set; }
+        public DbSet<Categoria> Categoria { get; set; }
+        public DbSet<CategoriaPreferida> CategoriasPreferidas { get; set; }
+        public DbSet<Cliente> Clientes { get; set; }
+        public DbSet<Compra> Compras { get; set; }
+        public DbSet<Filme> Filmes { get; set; }
+        public DbSet<Funcionario> Funcionarios { get; set; }
+        public DbSet<Sala> Salas { get; set; }
+        public DbSet<Sessao> Sessoes { get; set; }
+        public DbSet<Utilizador> Utilizadores { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
 
-            modelBuilder.Entity<CliCat>()
-                .HasKey(u => new { u.IdCliente, u.IdCat });
+            modelBuilder.Entity<CategoriaPreferida>()
+                .HasKey(u => new { IdCliente = u.ClienteId, IdCat = u.CategoriaId });
             modelBuilder.Entity<Compra>()
-                .HasKey(u => new { u.IdCliente, u.IdBil, u.DataCompra });
+                .HasKey(u => new { IdCliente = u.ClienteId, IdBil = u.BilheteId, u.DataCompra });
         }
     }
 }

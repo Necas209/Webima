@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
+using Webima.Models;
 
-namespace Webima.Models
+namespace Webima.ViewModels
 {
     public class SalasViewModel
     {

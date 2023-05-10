@@ -1,36 +1,20 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using Microsoft.EntityFrameworkCore;
 
-#nullable disable
+namespace Webima.Models;
 
-namespace Webima.Models
+public class Compra
 {
-    [Table("Compra")]
-    public partial class Compra
-    {
-        [Column("Id_Cliente")]
-        public int IdCliente { get; set; }
+    public string ClienteId { get; init; }
 
-        [Column("Id_Bil")]
-        public int IdBil { get; set; }
+    public int BilheteId { get; init; }
 
-        [Display(Name = "Data Compra")]
-        [Column("Data_Compra", TypeName = "datetime")]
-        public DateTime DataCompra { get; set; }
+    [Display(Name = "Data Compra")] public DateTime DataCompra { get; init; }
 
-        [Display(Name = "N.º Bilhetes")]
-        [Column("Num_Bil")]
-        public int NumBil { get; set; }
+    [Display(Name = "N.º Bilhetes")] public int NumeroBilhetes { get; init; }
 
-        [ForeignKey(nameof(IdBil))]
-        [InverseProperty(nameof(Bilhete.Compras))]
-        public virtual Bilhete IdBilNavigation { get; set; }
+    [ForeignKey(nameof(BilheteId))] public Bilhete Bilhete { get; init; }
 
-        [ForeignKey(nameof(IdCliente))]
-        [InverseProperty(nameof(Cliente.Compras))]
-        public virtual Cliente IdClienteNavigation { get; set; }
-    }
+    [ForeignKey(nameof(ClienteId))] public Cliente Cliente { get; set; }
 }

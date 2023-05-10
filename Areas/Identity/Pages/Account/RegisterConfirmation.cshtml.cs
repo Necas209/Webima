@@ -1,11 +1,8 @@
-﻿using Microsoft.AspNetCore.Authorization;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using Microsoft.AspNetCore.WebUtilities;
 
 namespace Webima.Areas.Identity.Pages.Account
 {
@@ -13,12 +10,10 @@ namespace Webima.Areas.Identity.Pages.Account
     public class RegisterConfirmationModel : PageModel
     {
         private readonly UserManager<IdentityUser> _userManager;
-        private readonly IEmailSender _sender;
 
-        public RegisterConfirmationModel(UserManager<IdentityUser> userManager, IEmailSender sender)
+        public RegisterConfirmationModel(UserManager<IdentityUser> userManager)
         {
             _userManager = userManager;
-            _sender = sender;
         }
 
         public string Email { get; set; }
@@ -29,16 +24,10 @@ namespace Webima.Areas.Identity.Pages.Account
 
         public async Task<IActionResult> OnGetAsync(string email, string returnUrl = null)
         {
-            if (email == null)
-            {
-                return RedirectToPage("/Index");
-            }
+            if (email == null) return RedirectToPage("/Index");
 
             var user = await _userManager.FindByEmailAsync(email);
-            if (user == null)
-            {
-                return NotFound($"Unable to load user with email '{email}'.");
-            }
+            if (user == null) return NotFound($"Unable to load user with email '{email}'.");
 
             Email = email;
             return Page();

@@ -1,134 +1,147 @@
-﻿@using System.Globalization
-@model Webima.Models.Cliente
+﻿@using Webima.ViewModels
+@model Cliente
 
 @{
-	ViewData["Title"] = "Perfil";
+    ViewData["Title"] = "Perfil";
 }
 
-<div class="maincontent"> 
+<div class="main-content">
     <div class="container">
-		<h1>Detalhes da conta</h1>
-		<br />
+        <h1>Detalhes da conta</h1>
+        <br/>
         <div class="row">
-			<div class="col-lg">
-				<h3>Dados do cliente</h3>
-				<br /><br />
-				<div class="transformers-content" style="font-size: 1.2em;">
-					<ul>
-						<li>
-							<div class="transformers-left">@Html.DisplayNameFor(model => model.IdNavigation.Nome):</div>
-							<div class="transformers-right" id="nome">@Html.DisplayFor(model => model.IdNavigation.Nome)</div>
-							<a asp-controller="Conta" asp-action="AlterarNome" asp-route-id="@Model.Id"
-								data-ajax="true" data-ajax-method="get"
-								data-ajax-mode="replace" data-ajax-update="#nome">&nbsp;<i class="bi bi-pencil"></i></a>
+            <div class="col-lg">
+                <h3>Dados do cliente</h3>
+                <br/><br/>
+                <div class="transformers-content" style="font-size: 1.2em;">
+                    <ul>
+                        <li>
+                            <div class="transformers-left">@Html.DisplayNameFor(model => model.Utilizador.Nome):</div>
+                            <div class="transformers-right" id="nome">@Html.DisplayFor(model => model.Utilizador.Nome)</div>
+                            <a asp-controller="Conta" asp-action="AlterarNome" asp-route-id="@Model.Id"
+                               data-ajax="true" data-ajax-method="get"
+                               data-ajax-mode="replace" data-ajax-update="#nome">
+                                &nbsp;<i class="bi bi-pencil"></i>
+                            </a>
 
-						</li>
-						<li>
-							<div class="transformers-left">@Html.DisplayNameFor(model => model.IdNavigation.Username):</div>
-							<div class="transformers-right">@Html.DisplayFor(model => model.IdNavigation.Username)</div>
-						</li>
-						<li>
-							<div class="transformers-left">Email: </div>
-							<div class="transformers-right">@ViewData["Email"]</div>
-						</li>
-						<li>
-							<div class="transformers-left">@Html.DisplayNameFor(model => model.DataNasc):</div>
-							<div class="transformers-right" id="dataNasc">@Model.DataNasc.ToString("d", CultureInfo.GetCultureInfo("pt-PT"))</div>
-							<a asp-action="AlterarDataNasc" asp-route-id="@Model.Id"
-								data-ajax="true" data-ajax-method="get"
-								data-ajax-mode="replace" data-ajax-update="#dataNasc">&nbsp;<i class="bi bi-pencil"></i></a>
-						</li>
-					</ul>
-				</div>
-				<br /><br />
-				<a class="theme-btn" asp-area="Identity" asp-page="/Account/Manage/Index" title="Gerir a sua conta" >Gerir a sua conta</a>
-				<br />
-			</div>
-			<div class="col-lg-4">
-				<h3>Categorias preferidas</h3>
-				<br /><hr /><br />
-				@foreach(var pref in (List<PreferidasViewModel>)ViewBag.Categorias)
-				{
-					<div class="cbx">
-						<input id="@pref.Categoria.Id" type="checkbox" onclick="MudarPreferida(this);" @if(pref.IsChecked) {<text>checked</text>}/>
-						<label for="@pref.Categoria.Id">
-						</label>
-						<svg width="15" height="14" viewBox="0 0 15 14" fill="none">
-							<path d="M2 8.36364L6.23077 12L13 2"></path>
-						</svg>
-					</div>
-					<label style="font-size: 1.4em; padding-left: 30px">
-						@pref.Categoria.Nome
-					</label>
-					<br /><br />
-				}
-			</div>
+                        </li>
+                        <li>
+                            <div class="transformers-left">@Html.DisplayNameFor(model => model.Utilizador.UserName):</div>
+                            <div class="transformers-right">@Html.DisplayFor(model => model.Utilizador.UserName)</div>
+                        </li>
+                        <li>
+                            <div class="transformers-left">Email: </div>
+                            <div class="transformers-right">@ViewData["Email"]</div>
+                        </li>
+                        <li>
+                            <div class="transformers-left">@Html.DisplayNameFor(model => model.DataNascimento):</div>
+                            <div class="transformers-right" id="dataNasc">@Model.DataNascimento.ToString("d", CultureInfo.GetCultureInfo("pt-PT"))</div>
+                            <a asp-action="AlterarDataNasc" asp-route-id="@Model.Id"
+                               data-ajax="true" data-ajax-method="get"
+                               data-ajax-mode="replace" data-ajax-update="#dataNasc">
+                                &nbsp;<i class="bi bi-pencil"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <br/><br/>
+                <a class="theme-btn" asp-area="Identity" asp-page="/Account/Manage/Index" title="Gerir a sua conta">Gerir a sua conta</a>
+                <br/>
+            </div>
+            <div class="col-lg-4">
+                <h3>Categorias preferidas</h3>
+                <br/><hr/><br/>
+                @foreach (var pref in (List<PreferidasViewModel>)ViewBag.Categorias)
+                {
+                    <div class="cbx">
+                        <input id="@pref.Categoria.Id" type="checkbox" onclick="MudarPreferida(this);"
+                               @if (pref.IsChecked)
+                               {
+                                   <text>checked</text>
+                               }/>
+                        <label for="@pref.Categoria.Id">
+                        </label>
+                        <svg width="15" height="14" viewBox="0 0 15 14" fill="none">
+                            <path d="M2 8.36364L6.23077 12L13 2"></path>
+                        </svg>
+                    </div>
+                    <label style="font-size: 1.4em; padding-left: 30px">
+                        @pref.Categoria.Nome
+                    </label>
+                    <br/>
+                    <br/>
+                }
+            </div>
         </div>
-		<div class="row" style="padding:50px">
-			<h3>Histórico de Compras</h3>
-			<br /><br />
-			@if(Model.Compras.Count == 0)
-			{
-				<span>Ainda não comprou bilhetes.</span>
-			}
-			else
-			{
-				<table class="table">
-					<thead>
-						<tr>
-							<th>Compra</th>
-							<th>Data</th>
-							<th>Filme</th>
-							<th>Sessão</th>
-							<th>Sala</th>
-							<th>N.º Bilhetes</th>
-							<th>Total</th>
-						</tr>
-					</thead>
-					<tbody>
-					@foreach (var item in Model.Compras) {
-						<tr>
-							<td>
-								@item.DataCompra.ToString("g", CultureInfo.GetCultureInfo("pt-PT"))
-							</td>
-							<td>
-								@item.IdBilNavigation.Data.ToString("d", CultureInfo.GetCultureInfo("pt-PT"))
-							</td>
-							<td>
-								@Html.DisplayFor(modelItem => item.IdBilNavigation.IdFilmeNavigation.Titulo)
-							</td>
-							<td>
-								@item.IdBilNavigation.IdSessaoNavigation.Horas.ToString(@"hh\:mm")
-							</td>
-							<td>
-								@Html.DisplayFor(modelItem => item.IdBilNavigation.IdSalaNavigation.Nome)
-							</td>
-							<td>
-								@Html.DisplayFor(modelItem => item.NumBil)
-							</td>
-							<td>
-								@((item.NumBil * item.IdBilNavigation.Preco).ToString("C", CultureInfo.GetCultureInfo("pt-PT")))
-							</td>
-						</tr>
-					}
-					</tbody>
-				</table>
-			}
-		</div>
+        <div class="row" style="padding:50px">
+            <h3>Histórico de Compras</h3>
+            <br/><br/>
+            @if (Model.Compras.Count == 0)
+            {
+                <span>Ainda não comprou bilhetes.</span>
+            }
+            else
+            {
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>Compra</th>
+                        <th>Data</th>
+                        <th>Filme</th>
+                        <th>Sessão</th>
+                        <th>Sala</th>
+                        <th>N.º Bilhetes</th>
+                        <th>Total</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    @foreach (var item in Model.Compras)
+                    {
+                        <tr>
+                            <td>
+                                @item.DataCompra.ToString("g", CultureInfo.GetCultureInfo("pt-PT"))
+                            </td>
+                            <td>
+                                @item.Bilhete.Data.ToString("d", CultureInfo.GetCultureInfo("pt-PT"))
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Bilhete.Filme.Titulo)
+                            </td>
+                            <td>
+                                @item.Bilhete.Sessao.Horas.ToString(@"hh\:mm")
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Bilhete.Sala.Nome)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.NumeroBilhetes)
+                            </td>
+                            <td>
+                                @((item.NumeroBilhetes * item.Bilhete.Preco).ToString("C", CultureInfo.GetCultureInfo("pt-PT")))
+                            </td>
+                        </tr>
+                    }
+                    </tbody>
+                </table>
+            }
+        </div>
     </div>
 </div>
 
 @section Scripts{
-	<script>
-	function MudarPreferida(cb) {
-		$.ajax({
-			type: "POST",
-			cache: false,
-			url: '@Url.Action("MudarPreferida")',
-			data: { id: cb.id, check: cb.checked },
-			success: function (data) {},
-			error: function (data) {}
-		});
-	}
-	</script>
+    <script>
+    function MudarPreferida(cb) {
+        fetch('@Url.Action("MudarPreferida")', {
+          method: 'POST',
+          cache: 'no-cache',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            id: cb.id,
+            check: cb.checked
+          })
+        })
+    }
+    </script>
 }

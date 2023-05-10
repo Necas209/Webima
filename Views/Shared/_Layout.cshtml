@@ -14,7 +14,7 @@
     <!-- Slick nav CSS -->
     <link rel="stylesheet" type="text/css" href="~/css/slicknav.min.css" media="all" />
     <!-- Iconfont CSS -->
-    <link rel="stylesheet" type="text/css" href="~/css/icofont.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="~/css/ico-font.css" media="all" />
     <!-- Owl carousel CSS -->
     <link rel="stylesheet" type="text/css" href="~/css/owl.carousel.css">
     <!-- Popup CSS -->
@@ -39,19 +39,19 @@
                 <div class="header-right">
                     <form action="#">
                         <input type="text" />
-                        <button><i class="icofont icofont-search"></i></button>
+                        <button><i class="ico-font ico-font-search"></i></button>
                     </form>
                     <partial name="_LoginPartial" />
                 </div>
                 <div class="menu-area">
                     <div class="responsive-menu"></div>
-                    <div class="mainmenu">
+                    <div class="main-menu">
                         <ul id="primary-menu">
                             <li>
                                 <a asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                             </li>
                             <li>
-                                <a href="#">Filmes <i class="icofont icofont-simple-down"></i></a>
+                                <a href="#">Filmes <i class="ico-font ico-font-simple-down"></i></a>
                                 <ul>
                                     <li>
                                         <a asp-area="" asp-controller="Filmes" asp-action="Cartaz">Em Cartaz</a>
@@ -67,7 +67,7 @@
                                     }
                                 </ul>
                             </li>
-                            <li><a asp-area="" asp-controller="Home" asp-action="FAQs">FAQs</a></li>
+                            <li><a asp-area="" asp-controller="Home" asp-action="Faqs">FAQs</a></li>
                             <li><a asp-area="" asp-controller="Home" asp-action="Acerca">Acerca</a></li>
                         </ul>
                     </div>
@@ -102,7 +102,7 @@
                     <div class="widget">
                         <h4>Conta</h4>
                         <ul>
-                            @if(User.Identity.IsAuthenticated)
+                            @if(User.Identity?.IsAuthenticated == true)
                             { 
                                 <li><a asp-controller="Conta" asp-action="Index">A minha conta</a></li>
                             }
@@ -133,7 +133,7 @@
                     <div class="col-lg-6 text-center text-lg-right">
                         <div class="copyright-content">
                             <a href="#" class="scrollToTop">
-                                Voltar ao início<i class="icofont icofont-arrow-up"></i>
+                                Voltar ao início<i class="ico-font ico-font-arrow-up"></i>
                             </a>
                         </div>
                     </div>

@@ -1,24 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using Webima.Models;
 
-namespace Webima.Models
+namespace Webima.ViewModels;
+
+public class FilmeViewModel : Filme
 {
-    public class FilmeViewModel : Filme
-    {
-        [Required(ErrorMessage = "Data final necessária.")]
-        [Display(Name = "Data Fim")]
-        [DataType(DataType.Date)]
-        public DateTime DataFim { get; set; } = DateTime.Now.Date;
+    [Required(ErrorMessage = "Data final necessária.")]
+    [Display(Name = "Data Fim")]
+    [DataType(DataType.Date)]
+    public DateTime DataFim { get; set; } = DateTime.Now.Date;
 
-        [Display(Name = "Sala")]
-        public int IdSala { get; set; }
+    [Display(Name = "Sala")] public int IdSala { get; set; }
 
-        [Display(Name = "Sessões")]
-        public List<SessaoViewModel> Sessoes { get; set; }
+    [Display(Name = "Sessões")] public List<SessaoViewModel> Sessoes { get; set; }
 
-        [Required(ErrorMessage = "Preço necessário.")]
-        [Range(0, 30)]
-        public decimal Preco { get; set; }
-    }
+    [Required(ErrorMessage = "Preço necessário.")]
+    [Range(0, 30)]
+    public decimal Preco { get; set; }
 }

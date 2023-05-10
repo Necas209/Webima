@@ -1,8 +1,12 @@
 ﻿/*--------------------------------------
 ------ MAIN CONTENT PADDING START ------
 ---------------------------------------*/
-.maincontent {
-    position: center;
+.main-content {
+    /* center the content */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     padding: 150px 200px 50px;
 }
 /*--------------------------------------
@@ -33,8 +37,7 @@
     border-radius: 10px;
     background: none;
     border: 0;
-    box-shadow: inset 0 0 0 1px #9F9F9F;
-    box-shadow: inset 0 0 0 1.5px #9F9F9F;
+    box-shadow: inset 0 0 0 2px #9F9F9F;
     appearance: none;
     padding: 0;
     margin: 0;

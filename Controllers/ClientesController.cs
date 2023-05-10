@@ -1,116 +1,90 @@
-﻿using Microsoft.AspNetCore.Authorization;
+﻿using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Webima.Data;
 using Webima.Filters;
 using Webima.Models;
+using Webima.ViewModels;
 
-namespace Webima.Controllers
+namespace Webima.Controllers;
+
+[Authorize(Roles = "Cliente")]
+public class ClientesController : Controller
 {
-    [Authorize(Roles = "Cliente")]
-    public class ClientesController : Controller
+    private readonly ApplicationDbContext _context;
+
+    public ClientesController(ApplicationDbContext context)
     {
-        private readonly ApplicationDbContext _context;
-        private readonly UserManager<IdentityUser> _userManager;
+        _context = context;
+    }
 
-        public ClientesController(ApplicationDbContext context,
-            UserManager<IdentityUser> userManager)
-        {
-            _context = context;
-            _userManager = userManager;
-        }
+    // GET: Clientes
+    public async Task<IActionResult> Index()
+    {
+        var userId = HttpContext.Session.GetString("UserId");
+        var cliente = await _context.Clientes
+            .Where(x => x.Id == userId)
+            .Include(x => x.Utilizador)
+            .Include(x => x.Compras).ThenInclude(x => x.Bilhete).ThenInclude(x => x.Sessao)
+            .Include(x => x.Compras).ThenInclude(x => x.Bilhete).ThenInclude(x => x.Sala)
+            .Include(x => x.Compras).ThenInclude(x => x.Bilhete).ThenInclude(x => x.Filme)
+            .Include(x => x.CategoriasPreferidas)
+            .FirstOrDefaultAsync();
 
-        // GET: Clientes
-        public async Task<IActionResult> Index()
-        {
-            int? UserId = HttpContext.Session.GetInt32("UserId");
-            if (UserId == null)
+        cliente.Compras = cliente.Compras
+            .OrderByDescending(x => x.DataCompra)
+            .ToList();
+
+        var categoriasIds = cliente.CategoriasPreferidas.Select(x => x.CategoriaId);
+        var lista = await _context.Categoria
+            .Select(categoria => new PreferidasViewModel
             {
-                UserId = (await _context.Utilizadores
-                    .SingleOrDefaultAsync(x => x.Username == User.Identity.Name)).Id;
-                HttpContext.Session.SetInt32("UserId", (int)UserId);
-            }
+                Categoria = categoria,
+                IsChecked = categoriasIds.Contains(categoria.Id)
+            })
+            .ToListAsync();
 
-            var user = await _userManager.GetUserAsync(User);
+        ViewData["Email"] = cliente.Utilizador.Email;
+        ViewData["Categorias"] = lista;
 
-            var cliente = await _context.Clientes
-                .Where(x => x.Id == UserId)
-                .Include(x => x.IdNavigation)
-                .Include(x => x.Compras).ThenInclude(x => x.IdBilNavigation).ThenInclude(x => x.IdSessaoNavigation)
-                .Include(x => x.Compras).ThenInclude(x => x.IdBilNavigation).ThenInclude(x => x.IdSalaNavigation)
-                .Include(x => x.Compras).ThenInclude(x => x.IdBilNavigation).ThenInclude(x => x.IdFilmeNavigation)
-                .Include(x => x.Categorias).ThenInclude(x => x.IdCatNavigation)
-                .FirstOrDefaultAsync();
+        return View(cliente);
+    }
 
-            cliente.Compras = cliente.Compras
-                .OrderByDescending(x => x.DataCompra)
-                .ToList();
-
-            var categorias = (await _context.Categoria.ToListAsync()).GroupJoin(cliente.Categorias,
-                x => x.Id, y => y.IdCat, (x, y) => new { Categoria = x, Preferida = y.Any() });
-
-            var lista = new List<PreferidasViewModel>();
-
-            foreach (var c in categorias)
-            {
-                lista.Add(new PreferidasViewModel
-                {
-                    Categoria = c.Categoria,
-                    IsChecked = c.Preferida,
-                });
-            }
-
-            ViewData["Email"] = user.Email;
-            ViewData["Categorias"] = lista;
-
-            return View(cliente);
-        }
-
-        [HttpPost]
-        [AjaxFilter]
-        public async Task MudarPreferida(int id, bool check)
+    [HttpPost]
+    [AjaxFilter]
+    public async Task MudarPreferida(int id, bool check)
+    {
+        var userId = HttpContext.Session.GetString("UserId");
+        var categoriaPreferida = new CategoriaPreferida
         {
-            int? UserId = HttpContext.Session.GetInt32("UserId");
+            ClienteId = userId,
+            CategoriaId = id
+        };
 
-            var cliente = await _context.Clientes.FindAsync((int)UserId);
+        if (check)
+            _context.CategoriasPreferidas.Add(categoriaPreferida);
+        else
+            _context.CategoriasPreferidas.Remove(categoriaPreferida);
+        await _context.SaveChangesAsync();
+    }
 
-            CliCat cliCat = new()
-            {
-                IdCliente = cliente.Id,
-                IdCat = id
-            };
+    // GET: AlterarDataNasc
+    [AjaxFilter]
+    public async Task<IActionResult> AlterarDataNasc(int id)
+    {
+        var cliente = await _context.Clientes.FindAsync(id);
+        return PartialView(nameof(AlterarDataNasc), cliente);
+    }
 
-            if (check)
-            {
-                _context.CliCats.Add(cliCat);
-            }
-            else
-            {
-                _context.CliCats.Remove(cliCat);
-            }
-            await _context.SaveChangesAsync();
-        }
-
-        // GET: AlterarDataNasc
-        [AjaxFilter]
-        public async Task<IActionResult> AlterarDataNasc(int Id)
-        {
-            var cliente = await _context.Clientes.FindAsync(Id);
-            return PartialView(nameof(AlterarDataNasc), cliente);
-        }
-
-        // POST: AlterarDataNasc
-        [HttpPost]
-        public async Task<string> AlterarDataNasc(Cliente cliente)
-        {
-            _context.Update(cliente);
-            await _context.SaveChangesAsync();
-            return cliente.DataNasc.ToShortDateString();
-        }
+    // POST: AlterarDataNasc
+    [HttpPost]
+    public async Task<string> AlterarDataNasc(Cliente cliente)
+    {
+        _context.Update(cliente);
+        await _context.SaveChangesAsync();
+        return cliente.DataNascimento.ToShortDateString();
     }
 }

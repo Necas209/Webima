@@ -1,21 +1,21 @@
-﻿@model Webima.Models.SessoesViewModel
+﻿@model IEnumerable<Sessao>
 
 @{
     ViewData["Title"] = "Gestão das Sessões";
 }
 
-<div class="maincontent">
+<div class="main-content">
     <div class="container">
         <div class="row">
             <div class="col-lg-8">
                 <h1>@ViewData["Title"]</h1>
-                <br /><br />
+                <br/><br/>
                 <div id="lista">
-                    <partial name="ListaSessoes" model="Model.Sessoes" />
+                    <partial name="ListaSessoes" model="Model"/>
                 </div>
             </div>
             <div class="col-lg" id="SessaoForm">
-                <partial name="AdicionarSessao" model="Model.Sessao" />
+                @await Html.PartialAsync("AdicionarSessao", new Sessao())
             </div>
         </div>
     </div>
@@ -23,9 +23,11 @@
 
 <script>
     function MudarForm () {
-        $.get('@Url.Action("ListaSessoes")', function (data) {
-            $('#lista').html(data);
+        fetch('@Url.Action("ListaSessoes")')
+          .then(response => response.text())
+          .then(data => {
+            document.querySelector('#lista').innerHTML = data;
             alert("Sessões atualizadas!");
-        });
+          });
     }
 </script>

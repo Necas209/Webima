@@ -4,10 +4,10 @@
     data-ajax-update="#telefone" data-ajax-mode="replace">
     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
     <input type="hidden" asp-for="Id" />
-    <input type="hidden" asp-for="IdAdmin" />
+    <input type="hidden" asp-for="AdminId" />
     <div>
-        <input asp-for="Telefone" class="form-control" />
-        <span asp-validation-for="Telefone" class="form-danger"></span>
+        <input asp-for="Utilizador.PhoneNumber" class="form-control" />
+        <span asp-validation-for="Utilizador.PhoneNumber" class="form-danger"></span>
         <input type="submit" value="Guardar" class="btn btn-primary" />
     </div>
 </form>

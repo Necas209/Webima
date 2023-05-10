@@ -49,7 +49,7 @@
 		right: -530px;
 		bottom: 30px;
 	}
-	.slide-trailor h3 {
+	.slide-trailer h3 {
 		margin-right: 10px;
 		font-size: 18px;
 	}
@@ -88,7 +88,7 @@
 	}
 }
 @media only screen and (max-width: 991px){
-	.mainmenu {
+	.main-menu {
 		display: none;
 	}
 	.responsive-menu,
@@ -453,7 +453,7 @@
     padding: 5px;
 }
 
-.slide-trailor h3 {
+.slide-trailer h3 {
     float: none;
     margin: 0 0 8px;
 }

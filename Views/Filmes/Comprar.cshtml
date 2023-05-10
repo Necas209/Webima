@@ -1,59 +1,59 @@
-﻿@model Webima.Models.Bilhete
+﻿@model Bilhete
 
 @{
     ViewData["Title"] = "Comprar Bilhetes";
-    var filme = Model.IdFilmeNavigation;
-    int max = (ViewBag.Lotacao < 6) ? ViewBag.Lotacao : 6;
+    var filme = Model.Filme;
+    int max = ViewBag.Lotacao < 6 ? ViewBag.Lotacao : 6;
 }
 
-<section class="maincontent">
-    <div class="container" >
+<section class="main-content">
+    <div class="container">
         <div class="row">
             <div class="col-lg">
                 <row>
                     <h2>@filme.Titulo | @filme.Ano</h2>
                 </row>
-                <br />
+                <br/>
                 <row>
-    				<img class="img-fluid" src="~/posters/@filme.Poster" />
+                    <img class="img-fluid" src="~/posters/@filme.Poster" alt="Poster do filme @filme.Titulo"/>
                 </row>
             </div>
             <div class="col-lg-8">
                 <row>
                     <h1>Detalhes dos bilhetes</h1>
                 </row>
-                <br />
+                <br/>
                 <row>
                     <form asp-action="Comprar" method="post">
-                        <input name="Id_Bil" value="@Model.Id" type="hidden" />
+                        <input name="BilheteId" value="@Model.Id" type="hidden"/>
                         <div class="transformers-content" style="font-size: 1.2em;">
-					        <ul>                              
-						        <li>
-							        <div class="transformers-left">Data:</div>
-							        <div class="transformers-right">@Model.Data.ToString("d", CultureInfo.GetCultureInfo("pt-PT"))</div>
-						        </li>
-						        <li>
-							        <div class="transformers-left">Sessão:</div>
-							        <div class="transformers-right">@Model.IdSessaoNavigation.Horas.ToString(@"hh\:mm")</div>
-						        </li>
+                            <ul>
                                 <li>
-							        <div class="transformers-left">Sala:</div>
-							        <div class="transformers-right">@Model.IdSalaNavigation.Nome</div>
-						        </li>
-						        <li>
-							        <div class="transformers-left">Lotação:</div>
-							        <div class="transformers-right">@Model.IdSalaNavigation.Lotacao</div>
-						        </li>
-						        <li>
-							        <div class="transformers-left">Disponível:</div>
-							        <div class="transformers-right">@ViewBag.Lotacao</div>
-						        </li>
-						        <li>
-							        <div class="transformers-left">N.º Bilhetes:</div>
-							        <div class="transformers-right">
-                                        <label class="select" for="slct">
-                                            <select name="Num_Bil" id="slct">
-                                                @for(int i = 1; i <= max; i++)
+                                    <div class="transformers-left">Data:</div>
+                                    <div class="transformers-right">@Model.Data.ToString("d", CultureInfo.GetCultureInfo("pt-PT"))</div>
+                                </li>
+                                <li>
+                                    <div class="transformers-left">Sessão:</div>
+                                    <div class="transformers-right">@Model.Sessao.Horas.ToString(@"hh\:mm")</div>
+                                </li>
+                                <li>
+                                    <div class="transformers-left">Sala:</div>
+                                    <div class="transformers-right">@Model.Sala.Nome</div>
+                                </li>
+                                <li>
+                                    <div class="transformers-left">Lotação:</div>
+                                    <div class="transformers-right">@Model.Sala.Lotacao</div>
+                                </li>
+                                <li>
+                                    <div class="transformers-left">Disponível:</div>
+                                    <div class="transformers-right">@ViewBag.Lotacao</div>
+                                </li>
+                                <li>
+                                    <div class="transformers-left">N.º Bilhetes:</div>
+                                    <div class="transformers-right">
+                                        <label class="select" for="select">
+                                            <select name="NumeroBilhetes" id="select">
+                                                @foreach (var i in Enumerable.Range(1, max))
                                                 {
                                                     <option value="@i">@i</option>
                                                 }
@@ -63,18 +63,18 @@
                                             </svg>
                                         </label>
                                     </div>
-						        </li>
-						        <li>
-							        <div class="transformers-left">Preço:</div>
-							        <div class="transformers-right" id="preco">@Model.Preco.ToString("C", CultureInfo.GetCultureInfo("pt-PT"))</div>
-						        </li>
-						        <li>
-							        <div class="transformers-left">Total:</div>
-							        <div class="transformers-right" id="total">@Model.Preco.ToString("C", CultureInfo.GetCultureInfo("pt-PT"))</div>
-						        </li>
+                                </li>
+                                <li>
+                                    <div class="transformers-left">Preço:</div>
+                                    <div class="transformers-right" id="preco">@Model.Preco.ToString("C", CultureInfo.GetCultureInfo("pt-PT"))</div>
+                                </li>
+                                <li>
+                                    <div class="transformers-left">Total:</div>
+                                    <div class="transformers-right" id="total">@Model.Preco.ToString("C", CultureInfo.GetCultureInfo("pt-PT"))</div>
+                                </li>
                             </ul>
                         </div>
-                        <br />
+                        <br/>
                         <button type="submit" class="theme-btn theme-btn2">Pagar</button>
                     </form>
                 </row>
@@ -84,7 +84,7 @@
 </section>
 
 <svg class="sprites">
-  <symbol id="select-arrow-down" viewBox="0 0 10 6">
-    <polyline points="1 1 5 5 9 1"></polyline>
-  </symbol>
+    <symbol id="select-arrow-down" viewBox="0 0 10 6">
+        <polyline points="1 1 5 5 9 1"></polyline>
+    </symbol>
 </svg>

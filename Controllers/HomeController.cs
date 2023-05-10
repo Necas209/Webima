@@ -1,23 +1,21 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Logging;
-using System;
+﻿using System;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Webima.Data;
 using Webima.Models;
+using Webima.ViewModels;
 
 namespace Webima.Controllers
 {
     public class HomeController : Controller
     {
         private readonly ApplicationDbContext _context;
-        private readonly ILogger<HomeController> _logger;
 
-        public HomeController(ILogger<HomeController> logger, ApplicationDbContext context)
+        public HomeController(ApplicationDbContext context)
         {
-            _logger = logger;
             _context = context;
         }
 
@@ -25,15 +23,15 @@ namespace Webima.Controllers
         {
             var filmes = await _context.Filmes
                 .Include(x => x.Bilhetes)
-                .Where(x => x.Bilhetes.Any(x => x.Data.Date >= DateTime.Now.Date))
-                .Include(x => x.IdCatNavigation)
+                .Where(x => x.Bilhetes.Any(bil => bil.Data.Date >= DateTime.Now.Date))
+                .Include(x => x.Categoria)
                 .ToListAsync();
 
             return View(filmes);
         }
 
 
-        public IActionResult FAQs()
+        public IActionResult Faqs()
         {
             return View();
         }
@@ -42,6 +40,7 @@ namespace Webima.Controllers
         {
             return View();
         }
+
         public IActionResult TermosCondicoes()
         {
             return View();

@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -13,8 +10,8 @@ namespace Webima.Areas.Identity.Pages.Account
     [AllowAnonymous]
     public class LogoutModel : PageModel
     {
-        private readonly SignInManager<IdentityUser> _signInManager;
         private readonly ILogger<LogoutModel> _logger;
+        private readonly SignInManager<IdentityUser> _signInManager;
 
         public LogoutModel(SignInManager<IdentityUser> signInManager, ILogger<LogoutModel> logger)
         {
@@ -32,13 +29,8 @@ namespace Webima.Areas.Identity.Pages.Account
             _logger.LogInformation("User logged out.");
             HttpContext.Session.Remove("UserId");
             if (returnUrl != null)
-            {
                 return LocalRedirect(returnUrl);
-            }
-            else
-            {
-                return RedirectToPage();
-            }
+            return RedirectToPage();
         }
     }
 }

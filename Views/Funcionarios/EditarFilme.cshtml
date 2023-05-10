@@ -3,7 +3,7 @@
     ViewData["Title"] = "Editar Filme";
 }
 
-<div class="maincontent">
+<div class="main-content">
     <h2> Editar Filme</h2>
     <hr /><br />
     <form asp-action="EditarFilme" enctype="multipart/form-data">
@@ -11,7 +11,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg">
-                    <input type="hidden" asp-for="IdFunc" />
+                    <input type="hidden" asp-for="FuncionarioId" />
                     <input asp-for="Estreia" type="hidden"/>
                     <div class="form-group">
                         <label asp-for="Titulo" class="control-label"></label>
@@ -39,8 +39,8 @@
                         <span asp-validation-for="Duracao" class="text-danger"></span>
                     </div>
                     <div class="form-group">
-                        <label asp-for="IdCat" class="control-label"></label>
-                        <select asp-for="IdCat" class ="form-control" asp-items="ViewBag.IdCat"></select>
+                        <label asp-for="CategoriaId" class="control-label"></label>
+                        <select asp-for="CategoriaId" class ="form-control" asp-items="ViewBag.IdCat"></select>
                     </div>
                     <div class="form-group">
                         <label asp-for="Sinopse" class="control-label"></label>
@@ -57,9 +57,9 @@
                     <div class="form-group">
                         <label asp-for="Poster" class="control-label">Poster</label>
                         <input asp-for="Poster" hidden />
-                        <input name="poster" type="file" class="form-control" onchange="preview()" />
+                        <input name="poster" type="file" class="form-control" id="poster" />
                         <span asp-validation-for="Poster" class="text-danger"></span>
-                        <img id="frame" src=""/>
+                        <img id="frame" src="" alt="Poster" width="200" height="300" />
                     </div>
                     <div class="form-group">
                         <input type="submit" value="Guardar" class="btn btn-primary" />
@@ -72,8 +72,11 @@
 
 @section Scripts{
     <script>
-        function preview() {
-            frame.src=URL.createObjectURL(event.target.files[0]);
-        }
+        const poster = document.getElementById('poster');
+        const frame = document.getElementById('frame');
+        poster.addEventListener('change', event => {
+            const file = event.target.files[0];
+            frame.src = URL.createObjectURL(file);
+        });    
     </script>
 }

@@ -1,0 +1,6427 @@
+/**
+ * @package IcoFont by ShapeBootstrap - https://shapebootstrap.net
+ * @version 1.0.0 Beta
+ * @author IcoFont http://ico-font.com
+ * @copyright Copyright (c) 2016 IcoFont
+ * @license - http://ico-font.com/license/
+*/
+
+@font-face {
+    font-family: 'ico-font';
+    src: url('../fonts/icofont7858.eot?v=1.0.0-beta');
+    src: url('../fonts/icofont7858.eot?v=1.0.0-beta#iefix') format('embedded-opentype'),
+    url('../fonts/icofont7858.ttf?v=1.0.0-beta') format('truetype'),
+    url('../fonts/icofont7858.woff?v=1.0.0-beta') format('woff'),
+    url('../fonts/icofont7858.svg?v=1.0.0-beta#ico-font') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.ico-font {
+	font-family: 'ico-font', serif !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.ico-font-angry-monster:before {
+	content: "\e901";
+}
+.ico-font-bathtub:before {
+	content: "\e902";
+}
+.ico-font-bird-wings:before {
+	content: "\e903";
+}
+.ico-font-bow:before {
+	content: "\e904";
+}
+.ico-font-brain-alt:before {
+	content: "\e905";
+}
+.ico-font-butterfly-alt:before {
+	content: "\e906";
+}
+.ico-font-castle:before {
+	content: "\e907";
+}
+.ico-font-circuit:before {
+	content: "\e908";
+}
+.ico-font-dart:before {
+	content: "\e909";
+}
+.ico-font-dice-alt:before {
+	content: "\e90a";
+}
+.ico-font-disability-race:before {
+	content: "\e90b";
+}
+.ico-font-diving-goggle:before {
+	content: "\e90c";
+}
+.ico-font-fire-alt:before {
+	content: "\e90d";
+}
+.ico-font-flame-torch:before {
+	content: "\e90e";
+}
+.ico-font-flora-flower:before {
+	content: "\e90f";
+}
+.ico-font-flora:before {
+	content: "\e910";
+}
+.ico-font-gift-box:before {
+	content: "\e911";
+}
+.ico-font-halloween-pumpkin:before {
+	content: "\e912";
+}
+.ico-font-hand-power:before {
+	content: "\e913";
+}
+.ico-font-hand-thunder:before {
+	content: "\e914";
+}
+.ico-font-king-crown:before {
+	content: "\e915";
+}
+.ico-font-king-monster:before {
+	content: "\e916";
+}
+.ico-font-love:before {
+	content: "\e917";
+}
+.ico-font-magician-hat:before {
+	content: "\e918";
+}
+.ico-font-native-american:before {
+	content: "\e919";
+}
+.ico-font-open-eye:before {
+	content: "\e91a";
+}
+.ico-font-owl-look:before {
+	content: "\e91b";
+}
+.ico-font-phoenix:before {
+	content: "\e91c";
+}
+.ico-font-queen-crown:before {
+	content: "\e91d";
+}
+.ico-font-robot-face:before {
+	content: "\e91e";
+}
+.ico-font-sand-clock:before {
+	content: "\e91f";
+}
+.ico-font-shield-alt:before {
+	content: "\e920";
+}
+.ico-font-ship-wheel:before {
+	content: "\e921";
+}
+.ico-font-skull-danger:before {
+	content: "\e922";
+}
+.ico-font-skull-face:before {
+	content: "\e923";
+}
+.ico-font-snail:before {
+	content: "\e924";
+}
+.ico-font-snow-alt:before {
+	content: "\e925";
+}
+.ico-font-snow-flake:before {
+	content: "\e926";
+}
+.ico-font-snowmobile:before {
+	content: "\e927";
+}
+.ico-font-space-shuttle:before {
+	content: "\e928";
+}
+.ico-font-star-shape:before {
+	content: "\e929";
+}
+.ico-font-swirl:before {
+	content: "\e92a";
+}
+.ico-font-tattoo-wing:before {
+	content: "\e92b";
+}
+.ico-font-throne:before {
+	content: "\e92c";
+}
+.ico-font-touch:before {
+	content: "\e92d";
+}
+.ico-font-tree-alt:before {
+	content: "\e92e";
+}
+.ico-font-triangle:before {
+	content: "\e92f";
+}
+.ico-font-unity-hand:before {
+	content: "\e930";
+}
+.ico-font-weed:before {
+	content: "\e931";
+}
+.ico-font-woman-bird:before {
+	content: "\e932";
+}
+.ico-font-animal-bat:before {
+	content: "\e933";
+}
+.ico-font-animal-bear-tracks:before {
+	content: "\e934";
+}
+.ico-font-animal-bear:before {
+	content: "\e935";
+}
+.ico-font-animal-bird-alt:before {
+	content: "\e936";
+}
+.ico-font-animal-bird:before {
+	content: "\e937";
+}
+.ico-font-animal-bone:before {
+	content: "\e938";
+}
+.ico-font-animal-bull:before {
+	content: "\e939";
+}
+.ico-font-animal-camel-alt:before {
+	content: "\e93a";
+}
+.ico-font-animal-camel-head:before {
+	content: "\e93b";
+}
+.ico-font-animal-camel:before {
+	content: "\e93c";
+}
+.ico-font-animal-cat-alt-1:before {
+	content: "\e93d";
+}
+.ico-font-animal-cat-alt-2:before {
+	content: "\e93e";
+}
+.ico-font-animal-cat-alt-3:before {
+	content: "\e93f";
+}
+.ico-font-animal-cat-alt-4:before {
+	content: "\e940";
+}
+.ico-font-animal-cat-with-dog:before {
+	content: "\e941";
+}
+.ico-font-animal-cat:before {
+	content: "\e942";
+}
+.ico-font-animal-cow-head:before {
+	content: "\e943";
+}
+.ico-font-animal-cow:before {
+	content: "\e944";
+}
+.ico-font-animal-crab:before {
+	content: "\e945";
+}
+.ico-font-animal-crocodile:before {
+	content: "\e946";
+}
+.ico-font-animal-deer-head:before {
+	content: "\e947";
+}
+.ico-font-animal-dog-alt:before {
+	content: "\e948";
+}
+.ico-font-animal-dog-barking:before {
+	content: "\e949";
+}
+.ico-font-animal-dog:before {
+	content: "\e94a";
+}
+.ico-font-animal-dolphin:before {
+	content: "\e94b";
+}
+.ico-font-animal-duck-tracks:before {
+	content: "\e94c";
+}
+.ico-font-animal-eagle-head:before {
+	content: "\e94d";
+}
+.ico-font-animal-eaten-fish:before {
+	content: "\e94e";
+}
+.ico-font-animal-elephant-alt:before {
+	content: "\e94f";
+}
+.ico-font-animal-elephant-head-alt:before {
+	content: "\e950";
+}
+.ico-font-animal-elephant-head:before {
+	content: "\e951";
+}
+.ico-font-animal-elephant:before {
+	content: "\e952";
+}
+.ico-font-animal-elk:before {
+	content: "\e953";
+}
+.ico-font-animal-fish-alt-1:before {
+	content: "\e954";
+}
+.ico-font-animal-fish-alt-2:before {
+	content: "\e955";
+}
+.ico-font-animal-fish-alt-3:before {
+	content: "\e956";
+}
+.ico-font-animal-fish-alt-4:before {
+	content: "\e957";
+}
+.ico-font-animal-fish:before {
+	content: "\e958";
+}
+.ico-font-animal-fox-alt:before {
+	content: "\e959";
+}
+.ico-font-animal-fox:before {
+	content: "\e95a";
+}
+.ico-font-animal-frog-tracks:before {
+	content: "\e95b";
+}
+.ico-font-animal-frog:before {
+	content: "\e95c";
+}
+.ico-font-animal-froggy:before {
+	content: "\e95d";
+}
+.ico-font-animal-giraffe-alt:before {
+	content: "\e95e";
+}
+.ico-font-animal-giraffe:before {
+	content: "\e95f";
+}
+.ico-font-animal-goat-head-alt-1:before {
+	content: "\e960";
+}
+.ico-font-animal-goat-head-alt-2:before {
+	content: "\e961";
+}
+.ico-font-animal-goat-head:before {
+	content: "\e962";
+}
+.ico-font-animal-gorilla:before {
+	content: "\e963";
+}
+.ico-font-animal-hen-tracks:before {
+	content: "\e964";
+}
+.ico-font-animal-horse-head-alt-1:before {
+	content: "\e965";
+}
+.ico-font-animal-horse-head-alt-2:before {
+	content: "\e966";
+}
+.ico-font-animal-horse-head:before {
+	content: "\e967";
+}
+.ico-font-animal-horse-tracks:before {
+	content: "\e968";
+}
+.ico-font-animal-jellyfish:before {
+	content: "\e969";
+}
+.ico-font-animal-kangaroo:before {
+	content: "\e96a";
+}
+.ico-font-animal-lemur:before {
+	content: "\e96b";
+}
+.ico-font-animal-lion-alt:before {
+	content: "\e96c";
+}
+.ico-font-animal-lion-head-alt:before {
+	content: "\e96d";
+}
+.ico-font-animal-lion-head:before {
+	content: "\e96e";
+}
+.ico-font-animal-lion:before {
+	content: "\e96f";
+}
+.ico-font-animal-monkey-alt-1:before {
+	content: "\e970";
+}
+.ico-font-animal-monkey-alt-2:before {
+	content: "\e971";
+}
+.ico-font-animal-monkey-alt-3:before {
+	content: "\e972";
+}
+.ico-font-animal-monkey:before {
+	content: "\e973";
+}
+.ico-font-animal-octopus-alt:before {
+	content: "\e974";
+}
+.ico-font-animal-octopus:before {
+	content: "\e975";
+}
+.ico-font-animal-owl:before {
+	content: "\e976";
+}
+.ico-font-animal-panda-alt:before {
+	content: "\e977";
+}
+.ico-font-animal-panda:before {
+	content: "\e978";
+}
+.ico-font-animal-panther:before {
+	content: "\e979";
+}
+.ico-font-animal-parrot-lip:before {
+	content: "\e97a";
+}
+.ico-font-animal-parrot:before {
+	content: "\e97b";
+}
+.ico-font-animal-paw:before {
+	content: "\e97c";
+}
+.ico-font-animal-pelican:before {
+	content: "\e97d";
+}
+.ico-font-animal-penguin:before {
+	content: "\e97e";
+}
+.ico-font-animal-pig-alt:before {
+	content: "\e97f";
+}
+.ico-font-animal-pig:before {
+	content: "\e980";
+}
+.ico-font-animal-pigeon-alt:before {
+	content: "\e981";
+}
+.ico-font-animal-pigeon:before {
+	content: "\e982";
+}
+.ico-font-animal-pigeons:before {
+	content: "\e983";
+}
+.ico-font-animal-rabbit-running:before {
+	content: "\e984";
+}
+.ico-font-animal-rat-alt:before {
+	content: "\e985";
+}
+.ico-font-animal-rhino-head:before {
+	content: "\e986";
+}
+.ico-font-animal-rhino:before {
+	content: "\e987";
+}
+.ico-font-animal-rooster:before {
+	content: "\e988";
+}
+.ico-font-animal-seahorse:before {
+	content: "\e989";
+}
+.ico-font-animal-seal:before {
+	content: "\e98a";
+}
+.ico-font-animal-shrimp:before {
+	content: "\e98b";
+}
+.ico-font-animal-snail-alt-1:before {
+	content: "\e98c";
+}
+.ico-font-animal-snail-alt-2:before {
+	content: "\e98d";
+}
+.ico-font-animal-snail:before {
+	content: "\e98e";
+}
+.ico-font-animal-snake:before {
+	content: "\e98f";
+}
+.ico-font-animal-squid:before {
+	content: "\e990";
+}
+.ico-font-animal-squirrel:before {
+	content: "\e991";
+}
+.ico-font-animal-tiger-alt:before {
+	content: "\e992";
+}
+.ico-font-animal-tiger:before {
+	content: "\e993";
+}
+.ico-font-animal-turtle:before {
+	content: "\e994";
+}
+.ico-font-animal-whale:before {
+	content: "\e995";
+}
+.ico-font-animal-woodpecker:before {
+	content: "\e996";
+}
+.ico-font-animal-zebra:before {
+	content: "\e997";
+}
+.ico-font-brand-acer:before {
+	content: "\e998";
+}
+.ico-font-brand-adidas:before {
+	content: "\e999";
+}
+.ico-font-brand-adobe:before {
+	content: "\e99a";
+}
+.ico-font-brand-air-new-zealand:before {
+	content: "\e99b";
+}
+.ico-font-brand-airbnb:before {
+	content: "\e99c";
+}
+.ico-font-brand-aircell:before {
+	content: "\e99d";
+}
+.ico-font-brand-airtel:before {
+	content: "\e99e";
+}
+.ico-font-brand-alcatel:before {
+	content: "\e99f";
+}
+.ico-font-brand-alibaba:before {
+	content: "\e9a0";
+}
+.ico-font-brand-aliexpress:before {
+	content: "\e9a1";
+}
+.ico-font-brand-alipay:before {
+	content: "\e9a2";
+}
+.ico-font-brand-amazon:before {
+	content: "\e9a3";
+}
+.ico-font-brand-amd:before {
+	content: "\e9a4";
+}
+.ico-font-brand-american-airlines:before {
+	content: "\e9a5";
+}
+.ico-font-brand-android-robot:before {
+	content: "\e9a6";
+}
+.ico-font-brand-android:before {
+	content: "\e9a7";
+}
+.ico-font-brand-aol:before {
+	content: "\e9a8";
+}
+.ico-font-brand-apple:before {
+	content: "\e9a9";
+}
+.ico-font-brand-appstore:before {
+	content: "\e9aa";
+}
+.ico-font-brand-asus:before {
+	content: "\e9ab";
+}
+.ico-font-brand-ati:before {
+	content: "\e9ac";
+}
+.ico-font-brand-att:before {
+	content: "\e9ad";
+}
+.ico-font-brand-audi:before {
+	content: "\e9ae";
+}
+.ico-font-brand-axiata:before {
+	content: "\e9af";
+}
+.ico-font-brand-bada:before {
+	content: "\e9b0";
+}
+.ico-font-brand-bbc:before {
+	content: "\e9b1";
+}
+.ico-font-brand-bing:before {
+	content: "\e9b2";
+}
+.ico-font-brand-blackberry:before {
+	content: "\e9b3";
+}
+.ico-font-brand-bmw:before {
+	content: "\e9b4";
+}
+.ico-font-brand-box:before {
+	content: "\e9b5";
+}
+.ico-font-brand-burger-king:before {
+	content: "\e9b6";
+}
+.ico-font-brand-business-insider:before {
+	content: "\e9b7";
+}
+.ico-font-brand-buzzfeed:before {
+	content: "\e9b8";
+}
+.ico-font-brand-cannon:before {
+	content: "\e9b9";
+}
+.ico-font-brand-casio:before {
+	content: "\e9ba";
+}
+.ico-font-brand-china-mobile:before {
+	content: "\e9bb";
+}
+.ico-font-brand-china-telecom:before {
+	content: "\e9bc";
+}
+.ico-font-brand-china-unicom:before {
+	content: "\e9bd";
+}
+.ico-font-brand-cisco:before {
+	content: "\e9be";
+}
+.ico-font-brand-citibank:before {
+	content: "\e9bf";
+}
+.ico-font-brand-cnet:before {
+	content: "\e9c0";
+}
+.ico-font-brand-cnn:before {
+	content: "\e9c1";
+}
+.ico-font-brand-cocal-cola:before {
+	content: "\e9c2";
+}
+.ico-font-brand-compaq:before {
+	content: "\e9c3";
+}
+.ico-font-brand-copy:before {
+	content: "\e9c4";
+}
+.ico-font-brand-debian:before {
+	content: "\e9c5";
+}
+.ico-font-brand-delicious:before {
+	content: "\e9c6";
+}
+.ico-font-brand-dell:before {
+	content: "\e9c7";
+}
+.ico-font-brand-designbump:before {
+	content: "\e9c8";
+}
+.ico-font-brand-designfloat:before {
+	content: "\e9c9";
+}
+.ico-font-brand-disney:before {
+	content: "\e9ca";
+}
+.ico-font-brand-dodge:before {
+	content: "\e9cb";
+}
+.ico-font-brand-dove:before {
+	content: "\e9cc";
+}
+.ico-font-brand-ebay:before {
+	content: "\e9cd";
+}
+.ico-font-brand-eleven:before {
+	content: "\e9ce";
+}
+.ico-font-brand-emirates:before {
+	content: "\e9cf";
+}
+.ico-font-brand-espn:before {
+	content: "\e9d0";
+}
+.ico-font-brand-etihad-airways:before {
+	content: "\e9d1";
+}
+.ico-font-brand-etisalat:before {
+	content: "\e9d2";
+}
+.ico-font-brand-etsy:before {
+	content: "\e9d3";
+}
+.ico-font-brand-facebook:before {
+	content: "\e9d4";
+}
+.ico-font-brand-fastrack:before {
+	content: "\e9d5";
+}
+.ico-font-brand-fedex:before {
+	content: "\e9d6";
+}
+.ico-font-brand-ferrari:before {
+	content: "\e9d7";
+}
+.ico-font-brand-fitbit:before {
+	content: "\e9d8";
+}
+.ico-font-brand-flikr:before {
+	content: "\e9d9";
+}
+.ico-font-brand-forbes:before {
+	content: "\e9da";
+}
+.ico-font-brand-foursquare:before {
+	content: "\e9db";
+}
+.ico-font-brand-fox:before {
+	content: "\e9dc";
+}
+.ico-font-brand-foxconn:before {
+	content: "\e9dd";
+}
+.ico-font-brand-fujitsu:before {
+	content: "\e9de";
+}
+.ico-font-brand-general-electric:before {
+	content: "\e9df";
+}
+.ico-font-brand-gillette:before {
+	content: "\e9e0";
+}
+.ico-font-brand-gizmodo:before {
+	content: "\e9e1";
+}
+.ico-font-brand-gnome:before {
+	content: "\e9e2";
+}
+.ico-font-brand-google:before {
+	content: "\e9e3";
+}
+.ico-font-brand-gopro:before {
+	content: "\e9e4";
+}
+.ico-font-brand-gucci:before {
+	content: "\e9e5";
+}
+.ico-font-brand-hallmark:before {
+	content: "\e9e6";
+}
+.ico-font-brand-hi5:before {
+	content: "\e9e7";
+}
+.ico-font-brand-honda:before {
+	content: "\e9e8";
+}
+.ico-font-brand-hp:before {
+	content: "\e9e9";
+}
+.ico-font-brand-hsbc:before {
+	content: "\e9ea";
+}
+.ico-font-brand-htc:before {
+	content: "\e9eb";
+}
+.ico-font-brand-huawei:before {
+	content: "\e9ec";
+}
+.ico-font-brand-hulu:before {
+	content: "\e9ed";
+}
+.ico-font-brand-hyundai:before {
+	content: "\e9ee";
+}
+.ico-font-brand-ibm:before {
+	content: "\e9ef";
+}
+.ico-font-brand-ico-font:before {
+	content: "\e9f0";
+}
+.ico-font-brand-icq:before {
+	content: "\e9f1";
+}
+.ico-font-brand-ikea:before {
+	content: "\e9f2";
+}
+.ico-font-brand-imdb:before {
+	content: "\e9f3";
+}
+.ico-font-brand-indiegogo:before {
+	content: "\e9f4";
+}
+.ico-font-brand-intel:before {
+	content: "\e9f5";
+}
+.ico-font-brand-ipair:before {
+	content: "\e9f6";
+}
+.ico-font-brand-jaguar:before {
+	content: "\e9f7";
+}
+.ico-font-brand-java:before {
+	content: "\e9f8";
+}
+.ico-font-brand-joomshaper:before {
+	content: "\e9f9";
+}
+.ico-font-brand-kickstarter:before {
+	content: "\e9fa";
+}
+.ico-font-brand-kik:before {
+	content: "\e9fb";
+}
+.ico-font-brand-lastfm:before {
+	content: "\e9fc";
+}
+.ico-font-brand-lego:before {
+	content: "\e9fd";
+}
+.ico-font-brand-lenovo:before {
+	content: "\e9fe";
+}
+.ico-font-brand-levis:before {
+	content: "\e9ff";
+}
+.ico-font-brand-lexus:before {
+	content: "\ea00";
+}
+.ico-font-brand-lg:before {
+	content: "\ea01";
+}
+.ico-font-brand-life-hacker:before {
+	content: "\ea02";
+}
+.ico-font-brand-line-messenger:before {
+	content: "\ea03";
+}
+.ico-font-brand-linkedin:before {
+	content: "\ea04";
+}
+.ico-font-brand-linux-mint:before {
+	content: "\ea05";
+}
+.ico-font-brand-linux:before {
+	content: "\ea06";
+}
+.ico-font-brand-lionix:before {
+	content: "\ea07";
+}
+.ico-font-brand-live-messenger:before {
+	content: "\ea08";
+}
+.ico-font-brand-loreal:before {
+	content: "\ea09";
+}
+.ico-font-brand-louis-vuitton:before {
+	content: "\ea0a";
+}
+.ico-font-brand-mac-os:before {
+	content: "\ea0b";
+}
+.ico-font-brand-marvel-app:before {
+	content: "\ea0c";
+}
+.ico-font-brand-mashable:before {
+	content: "\ea0d";
+}
+.ico-font-brand-mazda:before {
+	content: "\ea0e";
+}
+.ico-font-brand-mcdonals:before {
+	content: "\ea0f";
+}
+.ico-font-brand-mercedes:before {
+	content: "\ea10";
+}
+.ico-font-brand-micromax:before {
+	content: "\ea11";
+}
+.ico-font-brand-microsoft:before {
+	content: "\ea12";
+}
+.ico-font-brand-mobileme:before {
+	content: "\ea13";
+}
+.ico-font-brand-mobily:before {
+	content: "\ea14";
+}
+.ico-font-brand-motorola:before {
+	content: "\ea15";
+}
+.ico-font-brand-msi:before {
+	content: "\ea16";
+}
+.ico-font-brand-mts:before {
+	content: "\ea17";
+}
+.ico-font-brand-myspace:before {
+	content: "\ea18";
+}
+.ico-font-brand-mytv:before {
+	content: "\ea19";
+}
+.ico-font-brand-nasa:before {
+	content: "\ea1a";
+}
+.ico-font-brand-natgeo:before {
+	content: "\ea1b";
+}
+.ico-font-brand-nbc:before {
+	content: "\ea1c";
+}
+.ico-font-brand-nescafe:before {
+	content: "\ea1d";
+}
+.ico-font-brand-nestle:before {
+	content: "\ea1e";
+}
+.ico-font-brand-netflix:before {
+	content: "\ea1f";
+}
+.ico-font-brand-nexus:before {
+	content: "\ea20";
+}
+.ico-font-brand-nike:before {
+	content: "\ea21";
+}
+.ico-font-brand-nokia:before {
+	content: "\ea22";
+}
+.ico-font-brand-nvidia:before {
+	content: "\ea23";
+}
+.ico-font-brand-omega:before {
+	content: "\ea24";
+}
+.ico-font-brand-opensuse:before {
+	content: "\ea25";
+}
+.ico-font-brand-oracle:before {
+	content: "\ea26";
+}
+.ico-font-brand-panasonic:before {
+	content: "\ea27";
+}
+.ico-font-brand-paypal:before {
+	content: "\ea28";
+}
+.ico-font-brand-pepsi:before {
+	content: "\ea29";
+}
+.ico-font-brand-philips:before {
+	content: "\ea2a";
+}
+.ico-font-brand-pizza-hut:before {
+	content: "\ea2b";
+}
+.ico-font-brand-playstation:before {
+	content: "\ea2c";
+}
+.ico-font-brand-puma:before {
+	content: "\ea2d";
+}
+.ico-font-brand-qatar-air:before {
+	content: "\ea2e";
+}
+.ico-font-brand-qvc:before {
+	content: "\ea2f";
+}
+.ico-font-brand-readernaut:before {
+	content: "\ea30";
+}
+.ico-font-brand-redbull:before {
+	content: "\ea31";
+}
+.ico-font-brand-reebok:before {
+	content: "\ea32";
+}
+.ico-font-brand-reuters:before {
+	content: "\ea33";
+}
+.ico-font-brand-samsung:before {
+	content: "\ea34";
+}
+.ico-font-brand-sap:before {
+	content: "\ea35";
+}
+.ico-font-brand-saudia-airlines:before {
+	content: "\ea36";
+}
+.ico-font-brand-scribd:before {
+	content: "\ea37";
+}
+.ico-font-brand-shell:before {
+	content: "\ea38";
+}
+.ico-font-brand-siemens:before {
+	content: "\ea39";
+}
+.ico-font-brand-sk-telecom:before {
+	content: "\ea3a";
+}
+.ico-font-brand-slideshare:before {
+	content: "\ea3b";
+}
+.ico-font-brand-smashing-magazine:before {
+	content: "\ea3c";
+}
+.ico-font-brand-snapchat:before {
+	content: "\ea3d";
+}
+.ico-font-brand-sony-ericsson:before {
+	content: "\ea3e";
+}
+.ico-font-brand-sony:before {
+	content: "\ea3f";
+}
+.ico-font-brand-soundcloud:before {
+	content: "\ea40";
+}
+.ico-font-brand-sprint:before {
+	content: "\ea41";
+}
+.ico-font-brand-squidoo:before {
+	content: "\ea42";
+}
+.ico-font-brand-starbucks:before {
+	content: "\ea43";
+}
+.ico-font-brand-stc:before {
+	content: "\ea44";
+}
+.ico-font-brand-steam:before {
+	content: "\ea45";
+}
+.ico-font-brand-suzuki:before {
+	content: "\ea46";
+}
+.ico-font-brand-symbian:before {
+	content: "\ea47";
+}
+.ico-font-brand-t-mobile:before {
+	content: "\ea48";
+}
+.ico-font-brand-tango:before {
+	content: "\ea49";
+}
+.ico-font-brand-target:before {
+	content: "\ea4a";
+}
+.ico-font-brand-tata-indicom:before {
+	content: "\ea4b";
+}
+.ico-font-brand-techcrunch:before {
+	content: "\ea4c";
+}
+.ico-font-brand-telenor:before {
+	content: "\ea4d";
+}
+.ico-font-brand-teliasonera:before {
+	content: "\ea4e";
+}
+.ico-font-brand-tesla:before {
+	content: "\ea4f";
+}
+.ico-font-brand-the-verge:before {
+	content: "\ea50";
+}
+.ico-font-brand-thenextweb:before {
+	content: "\ea51";
+}
+.ico-font-brand-toshiba:before {
+	content: "\ea52";
+}
+.ico-font-brand-toyota:before {
+	content: "\ea53";
+}
+.ico-font-brand-tribenet:before {
+	content: "\ea54";
+}
+.ico-font-brand-ubuntu:before {
+	content: "\ea55";
+}
+.ico-font-brand-unilever:before {
+	content: "\ea56";
+}
+.ico-font-brand-vaio:before {
+	content: "\ea57";
+}
+.ico-font-brand-verizon:before {
+	content: "\ea58";
+}
+.ico-font-brand-viber:before {
+	content: "\ea59";
+}
+.ico-font-brand-vodafone:before {
+	content: "\ea5a";
+}
+.ico-font-brand-volkswagen:before {
+	content: "\ea5b";
+}
+.ico-font-brand-walmart:before {
+	content: "\ea5c";
+}
+.ico-font-brand-warnerbros:before {
+	content: "\ea5d";
+}
+.ico-font-brand-whatsapp:before {
+	content: "\ea5e";
+}
+.ico-font-brand-wikipedia:before {
+	content: "\ea5f";
+}
+.ico-font-brand-windows:before {
+	content: "\ea60";
+}
+.ico-font-brand-wire:before {
+	content: "\ea61";
+}
+.ico-font-brand-yahoobuzz:before {
+	content: "\ea62";
+}
+.ico-font-brand-yamaha:before {
+	content: "\ea63";
+}
+.ico-font-brand-youtube:before {
+	content: "\ea64";
+}
+.ico-font-brand-zain:before {
+	content: "\ea65";
+}
+.ico-font-bank-alt:before {
+	content: "\ea66";
+}
+.ico-font-barcode:before {
+	content: "\ea67";
+}
+.ico-font-basket:before {
+	content: "\ea68";
+}
+.ico-font-bill-alt:before {
+	content: "\ea69";
+}
+.ico-font-billboard:before {
+	content: "\ea6a";
+}
+.ico-font-briefcase-alt-1:before {
+	content: "\ea6b";
+}
+.ico-font-briefcase-alt-2:before {
+	content: "\ea6c";
+}
+.ico-font-building-alt:before {
+	content: "\ea6d";
+}
+.ico-font-businessman:before {
+	content: "\ea6e";
+}
+.ico-font-businesswoman:before {
+	content: "\ea6f";
+}
+.ico-font-cart-alt:before {
+	content: "\ea70";
+}
+.ico-font-chair:before {
+	content: "\ea71";
+}
+.ico-font-clip:before {
+	content: "\ea72";
+}
+.ico-font-coins:before {
+	content: "\ea73";
+}
+.ico-font-company:before {
+	content: "\ea74";
+}
+.ico-font-contact-add:before {
+	content: "\ea75";
+}
+.ico-font-deal:before {
+	content: "\ea76";
+}
+.ico-font-files:before {
+	content: "\ea77";
+}
+.ico-font-growth:before {
+	content: "\ea78";
+}
+.ico-font-id-card:before {
+	content: "\ea79";
+}
+.ico-font-idea:before {
+	content: "\ea7a";
+}
+.ico-font-list:before {
+	content: "\ea7b";
+}
+.ico-font-meeting-add:before {
+	content: "\ea7c";
+}
+.ico-font-money-bag:before {
+	content: "\ea7d";
+}
+.ico-font-people:before {
+	content: "\ea7e";
+}
+.ico-font-pie-chart:before {
+	content: "\ea7f";
+}
+.ico-font-presentation-alt:before {
+	content: "\ea80";
+}
+.ico-font-stamp:before {
+	content: "\ea81";
+}
+.ico-font-stock-mobile:before {
+	content: "\ea82";
+}
+.ico-font-support:before {
+	content: "\ea83";
+}
+.ico-font-tasks-alt:before {
+	content: "\ea84";
+}
+.ico-font-wheel:before {
+	content: "\ea85";
+}
+.ico-font-chart-arrows-axis:before {
+	content: "\ea86";
+}
+.ico-font-chart-bar-graph:before {
+	content: "\ea87";
+}
+.ico-font-chart-flow-alt-1:before {
+	content: "\ea88";
+}
+.ico-font-chart-flow-alt-2:before {
+	content: "\ea89";
+}
+.ico-font-chart-flow:before {
+	content: "\ea8a";
+}
+.ico-font-chart-histogram-alt:before {
+	content: "\ea8b";
+}
+.ico-font-chart-histogram:before {
+	content: "\ea8c";
+}
+.ico-font-chart-line-alt:before {
+	content: "\ea8d";
+}
+.ico-font-chart-line:before {
+	content: "\ea8e";
+}
+.ico-font-chart-pie-alt:before {
+	content: "\ea8f";
+}
+.ico-font-chart-pie:before {
+	content: "\ea90";
+}
+.ico-font-chart-radar-graph:before {
+	content: "\ea91";
+}
+.ico-font-cur-afghani-false:before {
+	content: "\ea92";
+}
+.ico-font-cur-afghani-minus:before {
+	content: "\ea93";
+}
+.ico-font-cur-afghani-plus:before {
+	content: "\ea94";
+}
+.ico-font-cur-afghani-true:before {
+	content: "\ea95";
+}
+.ico-font-cur-afghani:before {
+	content: "\ea96";
+}
+.ico-font-cur-baht-false:before {
+	content: "\ea97";
+}
+.ico-font-cur-baht-minus:before {
+	content: "\ea98";
+}
+.ico-font-cur-baht-plus:before {
+	content: "\ea99";
+}
+.ico-font-cur-baht-true:before {
+	content: "\ea9a";
+}
+.ico-font-cur-baht:before {
+	content: "\ea9b";
+}
+.ico-font-cur-bitcoin-false:before {
+	content: "\ea9c";
+}
+.ico-font-cur-bitcoin-minus:before {
+	content: "\ea9d";
+}
+.ico-font-cur-bitcoin-plus:before {
+	content: "\ea9e";
+}
+.ico-font-cur-bitcoin-true:before {
+	content: "\ea9f";
+}
+.ico-font-cur-bitcoin:before {
+	content: "\eaa0";
+}
+.ico-font-cur-dollar-flase:before {
+	content: "\eaa1";
+}
+.ico-font-cur-dollar-minus:before {
+	content: "\eaa2";
+}
+.ico-font-cur-dollar-plus:before {
+	content: "\eaa3";
+}
+.ico-font-cur-dollar-true:before {
+	content: "\eaa4";
+}
+.ico-font-cur-dollar:before {
+	content: "\eaa5";
+}
+.ico-font-cur-dong-false:before {
+	content: "\eaa6";
+}
+.ico-font-cur-dong-minus:before {
+	content: "\eaa7";
+}
+.ico-font-cur-dong-plus:before {
+	content: "\eaa8";
+}
+.ico-font-cur-dong-true:before {
+	content: "\eaa9";
+}
+.ico-font-cur-dong:before {
+	content: "\eaaa";
+}
+.ico-font-cur-euro-false:before {
+	content: "\eaab";
+}
+.ico-font-cur-euro-minus:before {
+	content: "\eaac";
+}
+.ico-font-cur-euro-plus:before {
+	content: "\eaad";
+}
+.ico-font-cur-euro-true:before {
+	content: "\eaae";
+}
+.ico-font-cur-euro:before {
+	content: "\eaaf";
+}
+.ico-font-cur-frank-false:before {
+	content: "\eab0";
+}
+.ico-font-cur-frank-minus:before {
+	content: "\eab1";
+}
+.ico-font-cur-frank-plus:before {
+	content: "\eab2";
+}
+.ico-font-cur-frank-true:before {
+	content: "\eab3";
+}
+.ico-font-cur-frank:before {
+	content: "\eab4";
+}
+.ico-font-cur-hryvnia-false:before {
+	content: "\eab5";
+}
+.ico-font-cur-hryvnia-minus:before {
+	content: "\eab6";
+}
+.ico-font-cur-hryvnia-plus:before {
+	content: "\eab7";
+}
+.ico-font-cur-hryvnia-true:before {
+	content: "\eab8";
+}
+.ico-font-cur-hryvnia:before {
+	content: "\eab9";
+}
+.ico-font-cur-lira-false:before {
+	content: "\eaba";
+}
+.ico-font-cur-lira-minus:before {
+	content: "\eabb";
+}
+.ico-font-cur-lira-plus:before {
+	content: "\eabc";
+}
+.ico-font-cur-lira-true:before {
+	content: "\eabd";
+}
+.ico-font-cur-lira:before {
+	content: "\eabe";
+}
+.ico-font-cur-peseta-false:before {
+	content: "\eabf";
+}
+.ico-font-cur-peseta-minus:before {
+	content: "\eac0";
+}
+.ico-font-cur-peseta-plus:before {
+	content: "\eac1";
+}
+.ico-font-cur-peseta-true:before {
+	content: "\eac2";
+}
+.ico-font-cur-peseta:before {
+	content: "\eac3";
+}
+.ico-font-cur-peso-false:before {
+	content: "\eac4";
+}
+.ico-font-cur-peso-minus:before {
+	content: "\eac5";
+}
+.ico-font-cur-peso-plus:before {
+	content: "\eac6";
+}
+.ico-font-cur-peso-true:before {
+	content: "\eac7";
+}
+.ico-font-cur-peso:before {
+	content: "\eac8";
+}
+.ico-font-cur-pound-false:before {
+	content: "\eac9";
+}
+.ico-font-cur-pound-minus:before {
+	content: "\eaca";
+}
+.ico-font-cur-pound-plus:before {
+	content: "\eacb";
+}
+.ico-font-cur-pound-true:before {
+	content: "\eacc";
+}
+.ico-font-cur-pound:before {
+	content: "\eacd";
+}
+.ico-font-cur-renminbi-false:before {
+	content: "\eace";
+}
+.ico-font-cur-renminbi-minus:before {
+	content: "\eacf";
+}
+.ico-font-cur-renminbi-plus:before {
+	content: "\ead0";
+}
+.ico-font-cur-renminbi-true:before {
+	content: "\ead1";
+}
+.ico-font-cur-renminbi:before {
+	content: "\ead2";
+}
+.ico-font-cur-riyal-false:before {
+	content: "\ead3";
+}
+.ico-font-cur-riyal-minus:before {
+	content: "\ead4";
+}
+.ico-font-cur-riyal-plus:before {
+	content: "\ead5";
+}
+.ico-font-cur-riyal-true:before {
+	content: "\ead6";
+}
+.ico-font-cur-riyal:before {
+	content: "\ead7";
+}
+.ico-font-cur-rouble-false:before {
+	content: "\ead8";
+}
+.ico-font-cur-rouble-minus:before {
+	content: "\ead9";
+}
+.ico-font-cur-rouble-plus:before {
+	content: "\eada";
+}
+.ico-font-cur-rouble-true:before {
+	content: "\eadb";
+}
+.ico-font-cur-rouble:before {
+	content: "\eadc";
+}
+.ico-font-cur-rupee-false:before {
+	content: "\eadd";
+}
+.ico-font-cur-rupee-minus:before {
+	content: "\eade";
+}
+.ico-font-cur-rupee-plus:before {
+	content: "\eadf";
+}
+.ico-font-cur-rupee-true:before {
+	content: "\eae0";
+}
+.ico-font-cur-rupee:before {
+	content: "\eae1";
+}
+.ico-font-cur-taka-false:before {
+	content: "\eae2";
+}
+.ico-font-cur-taka-minus:before {
+	content: "\eae3";
+}
+.ico-font-cur-taka-plus:before {
+	content: "\eae4";
+}
+.ico-font-cur-taka-true:before {
+	content: "\eae5";
+}
+.ico-font-cur-taka:before {
+	content: "\eae6";
+}
+.ico-font-cur-turkish-lira-false:before {
+	content: "\eae7";
+}
+.ico-font-cur-turkish-lira-minus:before {
+	content: "\eae8";
+}
+.ico-font-cur-turkish-lira-plus:before {
+	content: "\eae9";
+}
+.ico-font-cur-turkish-lira-true:before {
+	content: "\eaea";
+}
+.ico-font-cur-turkish-lira:before {
+	content: "\eaeb";
+}
+.ico-font-cur-won-false:before {
+	content: "\eaec";
+}
+.ico-font-cur-won-minus:before {
+	content: "\eaed";
+}
+.ico-font-cur-won-plus:before {
+	content: "\eaee";
+}
+.ico-font-cur-won-true:before {
+	content: "\eaef";
+}
+.ico-font-cur-won:before {
+	content: "\eaf0";
+}
+.ico-font-cur-yen-false:before {
+	content: "\eaf1";
+}
+.ico-font-cur-yen-minus:before {
+	content: "\eaf2";
+}
+.ico-font-cur-yen-plus:before {
+	content: "\eaf3";
+}
+.ico-font-cur-yen-true:before {
+	content: "\eaf4";
+}
+.ico-font-cur-yen:before {
+	content: "\eaf5";
+}
+.ico-font-android-nexus:before {
+	content: "\eaf6";
+}
+.ico-font-android-tablet:before {
+	content: "\eaf7";
+}
+.ico-font-apple-watch:before {
+	content: "\eaf8";
+}
+.ico-font-drwaing-tablet:before {
+	content: "\eaf9";
+}
+.ico-font-earphone:before {
+	content: "\eafa";
+}
+.ico-font-flash-drive:before {
+	content: "\eafb";
+}
+.ico-font-game-control:before {
+	content: "\eafc";
+}
+.ico-font-headphone-alt:before {
+	content: "\eafd";
+}
+.ico-font-htc-one:before {
+	content: "\eafe";
+}
+.ico-font-imac:before {
+	content: "\eaff";
+}
+.ico-font-ipad-touch:before {
+	content: "\eb00";
+}
+.ico-font-iphone:before {
+	content: "\eb01";
+}
+.ico-font-ipod-nano:before {
+	content: "\eb02";
+}
+.ico-font-ipod-touch:before {
+	content: "\eb03";
+}
+.ico-font-keyboard-alt:before {
+	content: "\eb04";
+}
+.ico-font-keyboard-wireless:before {
+	content: "\eb05";
+}
+.ico-font-laptop-alt:before {
+	content: "\eb06";
+}
+.ico-font-macbook:before {
+	content: "\eb07";
+}
+.ico-font-magic-mouse:before {
+	content: "\eb08";
+}
+.ico-font-microphone-alt:before {
+	content: "\eb09";
+}
+.ico-font-monitor:before {
+	content: "\eb0a";
+}
+.ico-font-mouse:before {
+	content: "\eb0b";
+}
+.ico-font-nintendo:before {
+	content: "\eb0c";
+}
+.ico-font-playstation:before {
+	content: "\eb0d";
+}
+.ico-font-psvita:before {
+	content: "\eb0e";
+}
+.ico-font-radio-mic:before {
+	content: "\eb0f";
+}
+.ico-font-refrigerator:before {
+	content: "\eb10";
+}
+.ico-font-samsung-galaxy:before {
+	content: "\eb11";
+}
+.ico-font-surface-tablet:before {
+	content: "\eb12";
+}
+.ico-font-washing-machine:before {
+	content: "\eb13";
+}
+.ico-font-wifi-router:before {
+	content: "\eb14";
+}
+.ico-font-wii-u:before {
+	content: "\eb15";
+}
+.ico-font-windows-lumia:before {
+	content: "\eb16";
+}
+.ico-font-wireless-mouse:before {
+	content: "\eb17";
+}
+.ico-font-xbox-360:before {
+	content: "\eb18";
+}
+.ico-font-arrow-down:before {
+	content: "\eb19";
+}
+.ico-font-arrow-left:before {
+	content: "\eb1a";
+}
+.ico-font-arrow-right:before {
+	content: "\eb1b";
+}
+.ico-font-arrow-up:before {
+	content: "\eb1c";
+}
+.ico-font-block-down:before {
+	content: "\eb1d";
+}
+.ico-font-block-left:before {
+	content: "\eb1e";
+}
+.ico-font-block-right:before {
+	content: "\eb1f";
+}
+.ico-font-block-up:before {
+	content: "\eb20";
+}
+.ico-font-bubble-down:before {
+	content: "\eb21";
+}
+.ico-font-bubble-left:before {
+	content: "\eb22";
+}
+.ico-font-bubble-right:before {
+	content: "\eb23";
+}
+.ico-font-bubble-up:before {
+	content: "\eb24";
+}
+.ico-font-caret-down:before {
+	content: "\eb25";
+}
+.ico-font-caret-left:before {
+	content: "\eb26";
+}
+.ico-font-caret-right:before {
+	content: "\eb27";
+}
+.ico-font-caret-up:before {
+	content: "\eb28";
+}
+.ico-font-circled-down:before {
+	content: "\eb29";
+}
+.ico-font-circled-left:before {
+	content: "\eb2a";
+}
+.ico-font-circled-right:before {
+	content: "\eb2b";
+}
+.ico-font-circled-up:before {
+	content: "\eb2c";
+}
+.ico-font-collapse:before {
+	content: "\eb2d";
+}
+.ico-font-cursor-drag:before {
+	content: "\eb2e";
+}
+.ico-font-curved-double-left:before {
+	content: "\eb2f";
+}
+.ico-font-curved-double-right:before {
+	content: "\eb30";
+}
+.ico-font-curved-down:before {
+	content: "\eb31";
+}
+.ico-font-curved-left:before {
+	content: "\eb32";
+}
+.ico-font-curved-right:before {
+	content: "\eb33";
+}
+.ico-font-curved-up:before {
+	content: "\eb34";
+}
+.ico-font-dotted-down:before {
+	content: "\eb35";
+}
+.ico-font-dotted-left:before {
+	content: "\eb36";
+}
+.ico-font-dotted-right:before {
+	content: "\eb37";
+}
+.ico-font-dotted-up:before {
+	content: "\eb38";
+}
+.ico-font-double-left:before {
+	content: "\eb39";
+}
+.ico-font-double-right:before {
+	content: "\eb3a";
+}
+.ico-font-drag:before {
+	content: "\eb3b";
+}
+.ico-font-drag1:before {
+	content: "\eb3c";
+}
+.ico-font-drag2:before {
+	content: "\eb3d";
+}
+.ico-font-drag3:before {
+	content: "\eb3e";
+}
+.ico-font-expand-alt:before {
+	content: "\eb3f";
+}
+.ico-font-hand-down:before {
+	content: "\eb40";
+}
+.ico-font-hand-drag:before {
+	content: "\eb41";
+}
+.ico-font-hand-drag1:before {
+	content: "\eb42";
+}
+.ico-font-hand-drag2:before {
+	content: "\eb43";
+}
+.ico-font-hand-drawn-alt-down:before {
+	content: "\eb44";
+}
+.ico-font-hand-drawn-alt-left:before {
+	content: "\eb45";
+}
+.ico-font-hand-drawn-alt-right:before {
+	content: "\eb46";
+}
+.ico-font-hand-drawn-alt-up:before {
+	content: "\eb47";
+}
+.ico-font-hand-drawn-down:before {
+	content: "\eb48";
+}
+.ico-font-hand-drawn-left:before {
+	content: "\eb49";
+}
+.ico-font-hand-drawn-right:before {
+	content: "\eb4a";
+}
+.ico-font-hand-drawn-up:before {
+	content: "\eb4b";
+}
+.ico-font-hand-left:before {
+	content: "\eb4c";
+}
+.ico-font-hand-right:before {
+	content: "\eb4d";
+}
+.ico-font-hand-up:before {
+	content: "\eb4e";
+}
+.ico-font-line-block-down:before {
+	content: "\eb4f";
+}
+.ico-font-line-block-left:before {
+	content: "\eb50";
+}
+.ico-font-line-block-right:before {
+	content: "\eb51";
+}
+.ico-font-line-block-up:before {
+	content: "\eb52";
+}
+.ico-font-long-arrow-down:before {
+	content: "\eb53";
+}
+.ico-font-long-arrow-left:before {
+	content: "\eb54";
+}
+.ico-font-long-arrow-right:before {
+	content: "\eb55";
+}
+.ico-font-long-arrow-up:before {
+	content: "\eb56";
+}
+.ico-font-rounded-collapse:before {
+	content: "\eb57";
+}
+.ico-font-rounded-double-left:before {
+	content: "\eb58";
+}
+.ico-font-rounded-double-right:before {
+	content: "\eb59";
+}
+.ico-font-rounded-down:before {
+	content: "\eb5a";
+}
+.ico-font-rounded-expand:before {
+	content: "\eb5b";
+}
+.ico-font-rounded-left-down:before {
+	content: "\eb5c";
+}
+.ico-font-rounded-left-up:before {
+	content: "\eb5d";
+}
+.ico-font-rounded-left:before {
+	content: "\eb5e";
+}
+.ico-font-rounded-right-down:before {
+	content: "\eb5f";
+}
+.ico-font-rounded-right-up:before {
+	content: "\eb60";
+}
+.ico-font-rounded-right:before {
+	content: "\eb61";
+}
+.ico-font-rounded-up:before {
+	content: "\eb62";
+}
+.ico-font-scroll-bubble-down:before {
+	content: "\eb63";
+}
+.ico-font-scroll-bubble-left:before {
+	content: "\eb64";
+}
+.ico-font-scroll-bubble-right:before {
+	content: "\eb65";
+}
+.ico-font-scroll-bubble-up:before {
+	content: "\eb66";
+}
+.ico-font-scroll-double-down:before {
+	content: "\eb67";
+}
+.ico-font-scroll-double-left:before {
+	content: "\eb68";
+}
+.ico-font-scroll-double-right:before {
+	content: "\eb69";
+}
+.ico-font-scroll-double-up:before {
+	content: "\eb6a";
+}
+.ico-font-scroll-down:before {
+	content: "\eb6b";
+}
+.ico-font-scroll-left:before {
+	content: "\eb6c";
+}
+.ico-font-scroll-long-down:before {
+	content: "\eb6d";
+}
+.ico-font-scroll-long-left:before {
+	content: "\eb6e";
+}
+.ico-font-scroll-long-right:before {
+	content: "\eb6f";
+}
+.ico-font-scroll-long-up:before {
+	content: "\eb70";
+}
+.ico-font-scroll-right:before {
+	content: "\eb71";
+}
+.ico-font-scroll-up:before {
+	content: "\eb72";
+}
+.ico-font-simple-down:before {
+	content: "\eb73";
+}
+.ico-font-simple-left-down:before {
+	content: "\eb74";
+}
+.ico-font-simple-left-up:before {
+	content: "\eb75";
+}
+.ico-font-simple-left:before {
+	content: "\eb76";
+}
+.ico-font-simple-right-down:before {
+	content: "\eb77";
+}
+.ico-font-simple-right-up:before {
+	content: "\eb78";
+}
+.ico-font-simple-right:before {
+	content: "\eb79";
+}
+.ico-font-simple-up:before {
+	content: "\eb7a";
+}
+.ico-font-square-down:before {
+	content: "\eb7b";
+}
+.ico-font-square-left:before {
+	content: "\eb7c";
+}
+.ico-font-square-right:before {
+	content: "\eb7d";
+}
+.ico-font-square-up:before {
+	content: "\eb7e";
+}
+.ico-font-stylish-down:before {
+	content: "\eb7f";
+}
+.ico-font-stylish-left:before {
+	content: "\eb80";
+}
+.ico-font-stylish-right:before {
+	content: "\eb81";
+}
+.ico-font-stylish-up:before {
+	content: "\eb82";
+}
+.ico-font-swoosh-down:before {
+	content: "\eb83";
+}
+.ico-font-swoosh-left:before {
+	content: "\eb84";
+}
+.ico-font-swoosh-right:before {
+	content: "\eb85";
+}
+.ico-font-swoosh-up:before {
+	content: "\eb86";
+}
+.ico-font-thin-double-left:before {
+	content: "\eb87";
+}
+.ico-font-thin-double-right:before {
+	content: "\eb88";
+}
+.ico-font-thin-down:before {
+	content: "\eb89";
+}
+.ico-font-thin-left:before {
+	content: "\eb8a";
+}
+.ico-font-thin-right:before {
+	content: "\eb8b";
+}
+.ico-font-thin-up:before {
+	content: "\eb8c";
+}
+.ico-font-atom:before {
+	content: "\eb8d";
+}
+.ico-font-award:before {
+	content: "\eb8e";
+}
+.ico-font-bell-alt:before {
+	content: "\eb8f";
+}
+.ico-font-book-alt:before {
+	content: "\eb90";
+}
+.ico-font-brainstorming:before {
+	content: "\eb91";
+}
+.ico-font-certificate-alt-1:before {
+	content: "\eb92";
+}
+.ico-font-certificate-alt-2:before {
+	content: "\eb93";
+}
+.ico-font-dna-alt-2:before {
+	content: "\eb94";
+}
+.ico-font-education:before {
+	content: "\eb95";
+}
+.ico-font-electron:before {
+	content: "\eb96";
+}
+.ico-font-fountain-pen:before {
+	content: "\eb97";
+}
+.ico-font-globe-alt:before {
+	content: "\eb98";
+}
+.ico-font-graduate-alt:before {
+	content: "\eb99";
+}
+.ico-font-group-students:before {
+	content: "\eb9a";
+}
+.ico-font-hat-alt:before {
+	content: "\eb9b";
+}
+.ico-font-hat:before {
+	content: "\eb9c";
+}
+.ico-font-instrument:before {
+	content: "\eb9d";
+}
+.ico-font-lamp-light:before {
+	content: "\eb9e";
+}
+.ico-font-microscope-alt:before {
+	content: "\eb9f";
+}
+.ico-font-paper:before {
+	content: "\eba0";
+}
+.ico-font-pen-alt-4:before {
+	content: "\eba1";
+}
+.ico-font-pen-nib:before {
+	content: "\eba2";
+}
+.ico-font-pencil-alt-5:before {
+	content: "\eba3";
+}
+.ico-font-quill-pen:before {
+	content: "\eba4";
+}
+.ico-font-read-book-alt:before {
+	content: "\eba5";
+}
+.ico-font-read-book:before {
+	content: "\eba6";
+}
+.ico-font-school-bag:before {
+	content: "\eba7";
+}
+.ico-font-school-bus:before {
+	content: "\eba8";
+}
+.ico-font-student-alt:before {
+	content: "\eba9";
+}
+.ico-font-student:before {
+	content: "\ebaa";
+}
+.ico-font-teacher:before {
+	content: "\ebab";
+}
+.ico-font-test-bulb:before {
+	content: "\ebac";
+}
+.ico-font-test-tube-alt:before {
+	content: "\ebad";
+}
+.ico-font-university:before {
+	content: "\ebae";
+}
+.ico-font-emo-angry:before {
+	content: "\ebaf";
+}
+.ico-font-emo-astonished:before {
+	content: "\ebb0";
+}
+.ico-font-emo-confounded:before {
+	content: "\ebb1";
+}
+.ico-font-emo-confused:before {
+	content: "\ebb2";
+}
+.ico-font-emo-crying:before {
+	content: "\ebb3";
+}
+.ico-font-emo-dizzy:before {
+	content: "\ebb4";
+}
+.ico-font-emo-expressionless:before {
+	content: "\ebb5";
+}
+.ico-font-emo-heart-eyes:before {
+	content: "\ebb6";
+}
+.ico-font-emo-laughing:before {
+	content: "\ebb7";
+}
+.ico-font-emo-nerd-smile:before {
+	content: "\ebb8";
+}
+.ico-font-emo-open-mouth:before {
+	content: "\ebb9";
+}
+.ico-font-emo-rage:before {
+	content: "\ebba";
+}
+.ico-font-emo-rolling-eyes:before {
+	content: "\ebbb";
+}
+.ico-font-emo-sad:before {
+	content: "\ebbc";
+}
+.ico-font-emo-simple-smile:before {
+	content: "\ebbd";
+}
+.ico-font-emo-slightly-smile:before {
+	content: "\ebbe";
+}
+.ico-font-emo-smirk:before {
+	content: "\ebbf";
+}
+.ico-font-emo-stuck-out-tongue:before {
+	content: "\ebc0";
+}
+.ico-font-emo-wink-smile:before {
+	content: "\ebc1";
+}
+.ico-font-emo-worried:before {
+	content: "\ebc2";
+}
+.ico-font-architecture-alt:before {
+	content: "\ebc3";
+}
+.ico-font-architecture:before {
+	content: "\ebc4";
+}
+.ico-font-barricade:before {
+	content: "\ebc5";
+}
+.ico-font-bricks:before {
+	content: "\ebc6";
+}
+.ico-font-calculations:before {
+	content: "\ebc7";
+}
+.ico-font-cement-mix:before {
+	content: "\ebc8";
+}
+.ico-font-cement-mixer:before {
+	content: "\ebc9";
+}
+.ico-font-danger-zone:before {
+	content: "\ebca";
+}
+.ico-font-drill:before {
+	content: "\ebcb";
+}
+.ico-font-eco-energy:before {
+	content: "\ebcc";
+}
+.ico-font-eco-environmen:before {
+	content: "\ebcd";
+}
+.ico-font-energy-air:before {
+	content: "\ebce";
+}
+.ico-font-energy-oil:before {
+	content: "\ebcf";
+}
+.ico-font-energy-savings:before {
+	content: "\ebd0";
+}
+.ico-font-energy-solar:before {
+	content: "\ebd1";
+}
+.ico-font-energy-water:before {
+	content: "\ebd2";
+}
+.ico-font-engineer:before {
+	content: "\ebd3";
+}
+.ico-font-fire-extinguisher-alt:before {
+	content: "\ebd4";
+}
+.ico-font-fix-tools:before {
+	content: "\ebd5";
+}
+.ico-font-glue-oil:before {
+	content: "\ebd6";
+}
+.ico-font-hammer-alt:before {
+	content: "\ebd7";
+}
+.ico-font-help-robot:before {
+	content: "\ebd8";
+}
+.ico-font-industries-alt-1:before {
+	content: "\ebd9";
+}
+.ico-font-industries-alt-2:before {
+	content: "\ebda";
+}
+.ico-font-industries-alt-3:before {
+	content: "\ebdb";
+}
+.ico-font-industries-alt-4:before {
+	content: "\ebdc";
+}
+.ico-font-industries-alt-5:before {
+	content: "\ebdd";
+}
+.ico-font-industries:before {
+	content: "\ebde";
+}
+.ico-font-labour:before {
+	content: "\ebdf";
+}
+.ico-font-mining:before {
+	content: "\ebe0";
+}
+.ico-font-paint-brush:before {
+	content: "\ebe1";
+}
+.ico-font-pollution:before {
+	content: "\ebe2";
+}
+.ico-font-power-zone:before {
+	content: "\ebe3";
+}
+.ico-font-radio-active:before {
+	content: "\ebe4";
+}
+.ico-font-recycle-alt:before {
+	content: "\ebe5";
+}
+.ico-font-recycling-man:before {
+	content: "\ebe6";
+}
+.ico-font-safety-hat-light:before {
+	content: "\ebe7";
+}
+.ico-font-safety-hat:before {
+	content: "\ebe8";
+}
+.ico-font-saw:before {
+	content: "\ebe9";
+}
+.ico-font-screw-driver:before {
+	content: "\ebea";
+}
+.ico-font-settings-alt:before {
+	content: "\ebeb";
+}
+.ico-font-tools-alt-1:before {
+	content: "\ebec";
+}
+.ico-font-tools-alt-2:before {
+	content: "\ebed";
+}
+.ico-font-tools-bag:before {
+	content: "\ebee";
+}
+.ico-font-trolley:before {
+	content: "\ebef";
+}
+.ico-font-trowel:before {
+	content: "\ebf0";
+}
+.ico-font-under-construction-alt:before {
+	content: "\ebf1";
+}
+.ico-font-under-construction:before {
+	content: "\ebf2";
+}
+.ico-font-vehicle-cement:before {
+	content: "\ebf3";
+}
+.ico-font-vehicle-crane:before {
+	content: "\ebf4";
+}
+.ico-font-vehicle-delivery-van:before {
+	content: "\ebf5";
+}
+.ico-font-vehicle-dozer:before {
+	content: "\ebf6";
+}
+.ico-font-vehicle-excavator:before {
+	content: "\ebf7";
+}
+.ico-font-vehicle-trucktor:before {
+	content: "\ebf8";
+}
+.ico-font-vehicle-wrecking:before {
+	content: "\ebf9";
+}
+.ico-font-worker-group:before {
+	content: "\ebfa";
+}
+.ico-font-worker:before {
+	content: "\ebfb";
+}
+.ico-font-wrench:before {
+	content: "\ebfc";
+}
+.ico-font-file-audio:before {
+	content: "\ebfd";
+}
+.ico-font-file-avi-mp4:before {
+	content: "\ebfe";
+}
+.ico-font-file-bmp:before {
+	content: "\ebff";
+}
+.ico-font-file-code:before {
+	content: "\ec00";
+}
+.ico-font-file-css:before {
+	content: "\ec01";
+}
+.ico-font-file-document:before {
+	content: "\ec02";
+}
+.ico-font-file-eps:before {
+	content: "\ec03";
+}
+.ico-font-file-excel:before {
+	content: "\ec04";
+}
+.ico-font-file-exe:before {
+	content: "\ec05";
+}
+.ico-font-file-file:before {
+	content: "\ec06";
+}
+.ico-font-file-flv:before {
+	content: "\ec07";
+}
+.ico-font-file-gif:before {
+	content: "\ec08";
+}
+.ico-font-file-html5:before {
+	content: "\ec09";
+}
+.ico-font-file-image:before {
+	content: "\ec0a";
+}
+.ico-font-file-iso:before {
+	content: "\ec0b";
+}
+.ico-font-file-java:before {
+	content: "\ec0c";
+}
+.ico-font-file-javascript:before {
+	content: "\ec0d";
+}
+.ico-font-file-jpg:before {
+	content: "\ec0e";
+}
+.ico-font-file-midi:before {
+	content: "\ec0f";
+}
+.ico-font-file-mov:before {
+	content: "\ec10";
+}
+.ico-font-file-mp3:before {
+	content: "\ec11";
+}
+.ico-font-file-pdf:before {
+	content: "\ec12";
+}
+.ico-font-file-php:before {
+	content: "\ec13";
+}
+.ico-font-file-png:before {
+	content: "\ec14";
+}
+.ico-font-file-powerpoint:before {
+	content: "\ec15";
+}
+.ico-font-file-presentation:before {
+	content: "\ec16";
+}
+.ico-font-file-psb:before {
+	content: "\ec17";
+}
+.ico-font-file-psd:before {
+	content: "\ec18";
+}
+.ico-font-file-python:before {
+	content: "\ec19";
+}
+.ico-font-file-ruby:before {
+	content: "\ec1a";
+}
+.ico-font-file-spreadsheet:before {
+	content: "\ec1b";
+}
+.ico-font-file-sql:before {
+	content: "\ec1c";
+}
+.ico-font-file-svg:before {
+	content: "\ec1d";
+}
+.ico-font-file-text:before {
+	content: "\ec1e";
+}
+.ico-font-file-tiff:before {
+	content: "\ec1f";
+}
+.ico-font-file-video:before {
+	content: "\ec20";
+}
+.ico-font-file-wave:before {
+	content: "\ec21";
+}
+.ico-font-file-wmv:before {
+	content: "\ec22";
+}
+.ico-font-file-word:before {
+	content: "\ec23";
+}
+.ico-font-file-zip:before {
+	content: "\ec24";
+}
+.ico-font-apple:before {
+	content: "\ec25";
+}
+.ico-font-arabian-coffee:before {
+	content: "\ec26";
+}
+.ico-font-artichoke:before {
+	content: "\ec27";
+}
+.ico-font-asparagus:before {
+	content: "\ec28";
+}
+.ico-font-avocado:before {
+	content: "\ec29";
+}
+.ico-font-baby-food:before {
+	content: "\ec2a";
+}
+.ico-font-banana:before {
+	content: "\ec2b";
+}
+.ico-font-bbq:before {
+	content: "\ec2c";
+}
+.ico-font-beans:before {
+	content: "\ec2d";
+}
+.ico-font-beer:before {
+	content: "\ec2e";
+}
+.ico-font-bell-pepper-capsicum:before {
+	content: "\ec2f";
+}
+.ico-font-birthday-cake:before {
+	content: "\ec30";
+}
+.ico-font-bread:before {
+	content: "\ec31";
+}
+.ico-font-broccoli:before {
+	content: "\ec32";
+}
+.ico-font-burger:before {
+	content: "\ec33";
+}
+.ico-font-cabbage:before {
+	content: "\ec34";
+}
+.ico-font-carrot:before {
+	content: "\ec35";
+}
+.ico-font-cauli-flower:before {
+	content: "\ec36";
+}
+.ico-font-cheese:before {
+	content: "\ec37";
+}
+.ico-font-chef:before {
+	content: "\ec38";
+}
+.ico-font-cherry:before {
+	content: "\ec39";
+}
+.ico-font-chicken-fry:before {
+	content: "\ec3a";
+}
+.ico-font-chicken:before {
+	content: "\ec3b";
+}
+.ico-font-cocktail:before {
+	content: "\ec3c";
+}
+.ico-font-coconut:before {
+	content: "\ec3d";
+}
+.ico-font-coffee-alt:before {
+	content: "\ec3e";
+}
+.ico-font-coffee-mug:before {
+	content: "\ec3f";
+}
+.ico-font-coffee-pot:before {
+	content: "\ec40";
+}
+.ico-font-cola:before {
+	content: "\ec41";
+}
+.ico-font-corn:before {
+	content: "\ec42";
+}
+.ico-font-croissant:before {
+	content: "\ec43";
+}
+.ico-font-crop-plant:before {
+	content: "\ec44";
+}
+.ico-font-cucumber:before {
+	content: "\ec45";
+}
+.ico-font-cup-cake:before {
+	content: "\ec46";
+}
+.ico-font-dining-table:before {
+	content: "\ec47";
+}
+.ico-font-donut:before {
+	content: "\ec48";
+}
+.ico-font-egg-plant:before {
+	content: "\ec49";
+}
+.ico-font-egg-poached:before {
+	content: "\ec4a";
+}
+.ico-font-farmer:before {
+	content: "\ec4b";
+}
+.ico-font-farmer1:before {
+	content: "\ec4c";
+}
+.ico-font-fast-food:before {
+	content: "\ec4d";
+}
+.ico-font-fish:before {
+	content: "\ec4e";
+}
+.ico-font-food-basket:before {
+	content: "\ec4f";
+}
+.ico-font-food-cart:before {
+	content: "\ec50";
+}
+.ico-font-fork-and-knife:before {
+	content: "\ec51";
+}
+.ico-font-french-fries:before {
+	content: "\ec52";
+}
+.ico-font-fresh-juice:before {
+	content: "\ec53";
+}
+.ico-font-fruits:before {
+	content: "\ec54";
+}
+.ico-font-grapes:before {
+	content: "\ec55";
+}
+.ico-font-honey:before {
+	content: "\ec56";
+}
+.ico-font-hot-dog:before {
+	content: "\ec57";
+}
+.ico-font-hotel-alt:before {
+	content: "\ec58";
+}
+.ico-font-ice-cream-alt:before {
+	content: "\ec59";
+}
+.ico-font-ice-cream:before {
+	content: "\ec5a";
+}
+.ico-font-ketchup:before {
+	content: "\ec5b";
+}
+.ico-font-kiwi:before {
+	content: "\ec5c";
+}
+.ico-font-layered-cake:before {
+	content: "\ec5d";
+}
+.ico-font-lemon-alt:before {
+	content: "\ec5e";
+}
+.ico-font-lobster:before {
+	content: "\ec5f";
+}
+.ico-font-mango:before {
+	content: "\ec60";
+}
+.ico-font-milk:before {
+	content: "\ec61";
+}
+.ico-font-mushroom:before {
+	content: "\ec62";
+}
+.ico-font-noodles:before {
+	content: "\ec63";
+}
+.ico-font-onion:before {
+	content: "\ec64";
+}
+.ico-font-orange:before {
+	content: "\ec65";
+}
+.ico-font-pear:before {
+	content: "\ec66";
+}
+.ico-font-peas:before {
+	content: "\ec67";
+}
+.ico-font-pepper:before {
+	content: "\ec68";
+}
+.ico-font-pie-alt:before {
+	content: "\ec69";
+}
+.ico-font-pineapple:before {
+	content: "\ec6a";
+}
+.ico-font-pizza-slice:before {
+	content: "\ec6b";
+}
+.ico-font-pizza:before {
+	content: "\ec6c";
+}
+.ico-font-plant:before {
+	content: "\ec6d";
+}
+.ico-font-popcorn:before {
+	content: "\ec6e";
+}
+.ico-font-potato:before {
+	content: "\ec6f";
+}
+.ico-font-pumpkin:before {
+	content: "\ec70";
+}
+.ico-font-raddish:before {
+	content: "\ec71";
+}
+.ico-font-restaurant-menu:before {
+	content: "\ec72";
+}
+.ico-font-restaurant:before {
+	content: "\ec73";
+}
+.ico-font-salt-and-pepper:before {
+	content: "\ec74";
+}
+.ico-font-sandwich:before {
+	content: "\ec75";
+}
+.ico-font-sausage:before {
+	content: "\ec76";
+}
+.ico-font-shrimp:before {
+	content: "\ec77";
+}
+.ico-font-sof-drinks:before {
+	content: "\ec78";
+}
+.ico-font-soup-bowl:before {
+	content: "\ec79";
+}
+.ico-font-spoon-and-fork:before {
+	content: "\ec7a";
+}
+.ico-font-steak:before {
+	content: "\ec7b";
+}
+.ico-font-strawberry:before {
+	content: "\ec7c";
+}
+.ico-font-sub-sandwich:before {
+	content: "\ec7d";
+}
+.ico-font-sushi:before {
+	content: "\ec7e";
+}
+.ico-font-taco:before {
+	content: "\ec7f";
+}
+.ico-font-tea-pot:before {
+	content: "\ec80";
+}
+.ico-font-tea:before {
+	content: "\ec81";
+}
+.ico-font-tomato:before {
+	content: "\ec82";
+}
+.ico-font-waiter-alt:before {
+	content: "\ec83";
+}
+.ico-font-watermelon:before {
+	content: "\ec84";
+}
+.ico-font-wheat:before {
+	content: "\ec85";
+}
+.ico-font-abc:before {
+	content: "\ec86";
+}
+.ico-font-baby-cloth:before {
+	content: "\ec87";
+}
+.ico-font-baby-milk-bottle:before {
+	content: "\ec88";
+}
+.ico-font-baby-trolley:before {
+	content: "\ec89";
+}
+.ico-font-back-pack:before {
+	content: "\ec8a";
+}
+.ico-font-candy:before {
+	content: "\ec8b";
+}
+.ico-font-cycling:before {
+	content: "\ec8c";
+}
+.ico-font-holding-hands:before {
+	content: "\ec8d";
+}
+.ico-font-infant-nipple:before {
+	content: "\ec8e";
+}
+.ico-font-kids-scooter:before {
+	content: "\ec8f";
+}
+.ico-font-safety-pin:before {
+	content: "\ec90";
+}
+.ico-font-teddy-bear:before {
+	content: "\ec91";
+}
+.ico-font-toy-ball:before {
+	content: "\ec92";
+}
+.ico-font-toy-cat:before {
+	content: "\ec93";
+}
+.ico-font-toy-duck:before {
+	content: "\ec94";
+}
+.ico-font-toy-elephant:before {
+	content: "\ec95";
+}
+.ico-font-toy-hand:before {
+	content: "\ec96";
+}
+.ico-font-toy-horse:before {
+	content: "\ec97";
+}
+.ico-font-toy-lattu:before {
+	content: "\ec98";
+}
+.ico-font-toy-train:before {
+	content: "\ec99";
+}
+.ico-font-unique-idea:before {
+	content: "\ec9a";
+}
+.ico-font-bag-alt:before {
+	content: "\ec9b";
+}
+.ico-font-burglar:before {
+	content: "\ec9c";
+}
+.ico-font-cannon-firing:before {
+	content: "\ec9d";
+}
+.ico-font-cc-camera:before {
+	content: "\ec9e";
+}
+.ico-font-cop-badge:before {
+	content: "\ec9f";
+}
+.ico-font-cop:before {
+	content: "\eca0";
+}
+.ico-font-court-hammer:before {
+	content: "\eca1";
+}
+.ico-font-court:before {
+	content: "\eca2";
+}
+.ico-font-finger-print:before {
+	content: "\eca3";
+}
+.ico-font-handcuff-alt:before {
+	content: "\eca4";
+}
+.ico-font-handcuff:before {
+	content: "\eca5";
+}
+.ico-font-investigation:before {
+	content: "\eca6";
+}
+.ico-font-investigator:before {
+	content: "\eca7";
+}
+.ico-font-jail:before {
+	content: "\eca8";
+}
+.ico-font-judge:before {
+	content: "\eca9";
+}
+.ico-font-law-alt-1:before {
+	content: "\ecaa";
+}
+.ico-font-law-alt-2:before {
+	content: "\ecab";
+}
+.ico-font-law-alt-3:before {
+	content: "\ecac";
+}
+.ico-font-law-book:before {
+	content: "\ecad";
+}
+.ico-font-law-document:before {
+	content: "\ecae";
+}
+.ico-font-law:before {
+	content: "\ecaf";
+}
+.ico-font-lawyer-alt-1:before {
+	content: "\ecb0";
+}
+.ico-font-lawyer-alt-2:before {
+	content: "\ecb1";
+}
+.ico-font-lawyer:before {
+	content: "\ecb2";
+}
+.ico-font-order:before {
+	content: "\ecb3";
+}
+.ico-font-pistol:before {
+	content: "\ecb4";
+}
+.ico-font-police-badge:before {
+	content: "\ecb5";
+}
+.ico-font-police-cap:before {
+	content: "\ecb6";
+}
+.ico-font-police-car-alt-1:before {
+	content: "\ecb7";
+}
+.ico-font-police-car-alt-2:before {
+	content: "\ecb8";
+}
+.ico-font-police-hat:before {
+	content: "\ecb9";
+}
+.ico-font-police-van:before {
+	content: "\ecba";
+}
+.ico-font-police:before {
+	content: "\ecbb";
+}
+.ico-font-protect:before {
+	content: "\ecbc";
+}
+.ico-font-scales:before {
+	content: "\ecbd";
+}
+.ico-font-thief-alt:before {
+	content: "\ecbe";
+}
+.ico-font-thief:before {
+	content: "\ecbf";
+}
+.ico-font-abacus-alt:before {
+	content: "\ecc0";
+}
+.ico-font-abacus:before {
+	content: "\ecc1";
+}
+.ico-font-angle:before {
+	content: "\ecc2";
+}
+.ico-font-calculator-alt-1:before {
+	content: "\ecc3";
+}
+.ico-font-calculator-alt-2:before {
+	content: "\ecc4";
+}
+.ico-font-circle-ruler-alt:before {
+	content: "\ecc5";
+}
+.ico-font-circle-ruler:before {
+	content: "\ecc6";
+}
+.ico-font-compass-alt-1:before {
+	content: "\ecc7";
+}
+.ico-font-compass-alt-2:before {
+	content: "\ecc8";
+}
+.ico-font-compass-alt-3:before {
+	content: "\ecc9";
+}
+.ico-font-compass-alt-4:before {
+	content: "\ecca";
+}
+.ico-font-degrees-alt-1:before {
+	content: "\eccb";
+}
+.ico-font-degrees-alt-2:before {
+	content: "\eccc";
+}
+.ico-font-degrees:before {
+	content: "\eccd";
+}
+.ico-font-golden-ratio:before {
+	content: "\ecce";
+}
+.ico-font-marker-alt-1:before {
+	content: "\eccf";
+}
+.ico-font-marker-alt-2:before {
+	content: "\ecd0";
+}
+.ico-font-marker-alt-3:before {
+	content: "\ecd1";
+}
+.ico-font-mathematical-alt-1:before {
+	content: "\ecd2";
+}
+.ico-font-mathematical-alt-2:before {
+	content: "\ecd3";
+}
+.ico-font-mathematical:before {
+	content: "\ecd4";
+}
+.ico-font-pen-alt-1:before {
+	content: "\ecd5";
+}
+.ico-font-pen-alt-2:before {
+	content: "\ecd6";
+}
+.ico-font-pen-alt-3:before {
+	content: "\ecd7";
+}
+.ico-font-pen-holder-alt-1:before {
+	content: "\ecd8";
+}
+.ico-font-pen-holder:before {
+	content: "\ecd9";
+}
+.ico-font-pencil-alt-1:before {
+	content: "\ecda";
+}
+.ico-font-pencil-alt-2:before {
+	content: "\ecdb";
+}
+.ico-font-pencil-alt-3:before {
+	content: "\ecdc";
+}
+.ico-font-pencil-alt-4:before {
+	content: "\ecdd";
+}
+.ico-font-ruler-alt-1:before {
+	content: "\ecde";
+}
+.ico-font-ruler-alt-2:before {
+	content: "\ecdf";
+}
+.ico-font-ruler-compass-alt:before {
+	content: "\ece0";
+}
+.ico-font-ruler-compass:before {
+	content: "\ece1";
+}
+.ico-font-ruler-pencil-alt-1:before {
+	content: "\ece2";
+}
+.ico-font-ruler-pencil-alt-2:before {
+	content: "\ece3";
+}
+.ico-font-ruler-pencil:before {
+	content: "\ece4";
+}
+.ico-font-ruler:before {
+	content: "\ece5";
+}
+.ico-font-rulers-alt:before {
+	content: "\ece6";
+}
+.ico-font-rulers:before {
+	content: "\ece7";
+}
+.ico-font-square-root:before {
+	content: "\ece8";
+}
+.ico-font-aids:before {
+	content: "\ece9";
+}
+.ico-font-ambulance:before {
+	content: "\ecea";
+}
+.ico-font-autism:before {
+	content: "\eceb";
+}
+.ico-font-bandage:before {
+	content: "\ecec";
+}
+.ico-font-bed-patient:before {
+	content: "\eced";
+}
+.ico-font-blind:before {
+	content: "\ecee";
+}
+.ico-font-blood-drop:before {
+	content: "\ecef";
+}
+.ico-font-blood-test:before {
+	content: "\ecf0";
+}
+.ico-font-blood:before {
+	content: "\ecf1";
+}
+.ico-font-capsule:before {
+	content: "\ecf2";
+}
+.ico-font-crutches:before {
+	content: "\ecf3";
+}
+.ico-font-dna-alt-1:before {
+	content: "\ecf4";
+}
+.ico-font-dna:before {
+	content: "\ecf5";
+}
+.ico-font-doctor-alt:before {
+	content: "\ecf6";
+}
+.ico-font-doctor:before {
+	content: "\ecf7";
+}
+.ico-font-drug-pack:before {
+	content: "\ecf8";
+}
+.ico-font-drug:before {
+	content: "\ecf9";
+}
+.ico-font-eye-alt:before {
+	content: "\ecfa";
+}
+.ico-font-first-aid-alt:before {
+	content: "\ecfb";
+}
+.ico-font-garbage:before {
+	content: "\ecfc";
+}
+.ico-font-heart-alt:before {
+	content: "\ecfd";
+}
+.ico-font-heartbeat:before {
+	content: "\ecfe";
+}
+.ico-font-herbal:before {
+	content: "\ecff";
+}
+.ico-font-hospital:before {
+	content: "\ed00";
+}
+.ico-font-icu:before {
+	content: "\ed01";
+}
+.ico-font-injection-syringe:before {
+	content: "\ed02";
+}
+.ico-font-laboratory:before {
+	content: "\ed03";
+}
+.ico-font-medical-sign-alt:before {
+	content: "\ed04";
+}
+.ico-font-medical-sign:before {
+	content: "\ed05";
+}
+.ico-font-nurse-alt:before {
+	content: "\ed06";
+}
+.ico-font-nurse:before {
+	content: "\ed07";
+}
+.ico-font-nursing-home:before {
+	content: "\ed08";
+}
+.ico-font-operation-theater:before {
+	content: "\ed09";
+}
+.ico-font-paralysis-disability:before {
+	content: "\ed0a";
+}
+.ico-font-pills:before {
+	content: "\ed0b";
+}
+.ico-font-prescription:before {
+	content: "\ed0c";
+}
+.ico-font-pulse:before {
+	content: "\ed0d";
+}
+.ico-font-stethoscope-alt:before {
+	content: "\ed0e";
+}
+.ico-font-stethoscope:before {
+	content: "\ed0f";
+}
+.ico-font-stretcher:before {
+	content: "\ed10";
+}
+.ico-font-surgeon-alt:before {
+	content: "\ed11";
+}
+.ico-font-surgeon:before {
+	content: "\ed12";
+}
+.ico-font-tablets:before {
+	content: "\ed13";
+}
+.ico-font-test-bottle:before {
+	content: "\ed14";
+}
+.ico-font-test-tube:before {
+	content: "\ed15";
+}
+.ico-font-thermometer-alt:before {
+	content: "\ed16";
+}
+.ico-font-tooth:before {
+	content: "\ed17";
+}
+.ico-font-xray:before {
+	content: "\ed18";
+}
+.ico-font-ui-add:before {
+	content: "\ed19";
+}
+.ico-font-ui-alarm:before {
+	content: "\ed1a";
+}
+.ico-font-ui-battery:before {
+	content: "\ed1b";
+}
+.ico-font-ui-block:before {
+	content: "\ed1c";
+}
+.ico-font-ui-bluetooth:before {
+	content: "\ed1d";
+}
+.ico-font-ui-brightness:before {
+	content: "\ed1e";
+}
+.ico-font-ui-browser:before {
+	content: "\ed1f";
+}
+.ico-font-ui-calculator:before {
+	content: "\ed20";
+}
+.ico-font-ui-calendar:before {
+	content: "\ed21";
+}
+.ico-font-ui-call:before {
+	content: "\ed22";
+}
+.ico-font-ui-camera:before {
+	content: "\ed23";
+}
+.ico-font-ui-cart:before {
+	content: "\ed24";
+}
+.ico-font-ui-cell-phone:before {
+	content: "\ed25";
+}
+.ico-font-ui-chat:before {
+	content: "\ed26";
+}
+.ico-font-ui-check:before {
+	content: "\ed27";
+}
+.ico-font-ui-clip-board:before {
+	content: "\ed28";
+}
+.ico-font-ui-clip:before {
+	content: "\ed29";
+}
+.ico-font-ui-clock:before {
+	content: "\ed2a";
+}
+.ico-font-ui-close:before {
+	content: "\ed2b";
+}
+.ico-font-ui-contact-list:before {
+	content: "\ed2c";
+}
+.ico-font-ui-copy:before {
+	content: "\ed2d";
+}
+.ico-font-ui-cut:before {
+	content: "\ed2e";
+}
+.ico-font-ui-delete:before {
+	content: "\ed2f";
+}
+.ico-font-ui-dial-phone:before {
+	content: "\ed30";
+}
+.ico-font-ui-edit:before {
+	content: "\ed31";
+}
+.ico-font-ui-email:before {
+	content: "\ed32";
+}
+.ico-font-ui-file:before {
+	content: "\ed33";
+}
+.ico-font-ui-fire-wall:before {
+	content: "\ed34";
+}
+.ico-font-ui-flash-light:before {
+	content: "\ed35";
+}
+.ico-font-ui-flight:before {
+	content: "\ed36";
+}
+.ico-font-ui-folder:before {
+	content: "\ed37";
+}
+.ico-font-ui-game:before {
+	content: "\ed38";
+}
+.ico-font-ui-handicapped:before {
+	content: "\ed39";
+}
+.ico-font-ui-head-phone:before {
+	content: "\ed3a";
+}
+.ico-font-ui-home:before {
+	content: "\ed3b";
+}
+.ico-font-ui-image:before {
+	content: "\ed3c";
+}
+.ico-font-ui-keyboard:before {
+	content: "\ed3d";
+}
+.ico-font-ui-laoding:before {
+	content: "\ed3e";
+}
+.ico-font-ui-lock:before {
+	content: "\ed3f";
+}
+.ico-font-ui-love-add:before {
+	content: "\ed40";
+}
+.ico-font-ui-love-broken:before {
+	content: "\ed41";
+}
+.ico-font-ui-love-remove:before {
+	content: "\ed42";
+}
+.ico-font-ui-love:before {
+	content: "\ed43";
+}
+.ico-font-ui-map:before {
+	content: "\ed44";
+}
+.ico-font-ui-message:before {
+	content: "\ed45";
+}
+.ico-font-ui-messaging:before {
+	content: "\ed46";
+}
+.ico-font-ui-movie:before {
+	content: "\ed47";
+}
+.ico-font-ui-music-player:before {
+	content: "\ed48";
+}
+.ico-font-ui-music:before {
+	content: "\ed49";
+}
+.ico-font-ui-mute:before {
+	content: "\ed4a";
+}
+.ico-font-ui-network:before {
+	content: "\ed4b";
+}
+.ico-font-ui-next:before {
+	content: "\ed4c";
+}
+.ico-font-ui-note:before {
+	content: "\ed4d";
+}
+.ico-font-ui-office:before {
+	content: "\ed4e";
+}
+.ico-font-ui-password:before {
+	content: "\ed4f";
+}
+.ico-font-ui-pause:before {
+	content: "\ed50";
+}
+.ico-font-ui-play-stop:before {
+	content: "\ed51";
+}
+.ico-font-ui-play:before {
+	content: "\ed52";
+}
+.ico-font-ui-pointer:before {
+	content: "\ed53";
+}
+.ico-font-ui-power:before {
+	content: "\ed54";
+}
+.ico-font-ui-press:before {
+	content: "\ed55";
+}
+.ico-font-ui-previous:before {
+	content: "\ed56";
+}
+.ico-font-ui-rate-add:before {
+	content: "\ed57";
+}
+.ico-font-ui-rate-blank:before {
+	content: "\ed58";
+}
+.ico-font-ui-rate-remove:before {
+	content: "\ed59";
+}
+.ico-font-ui-rating:before {
+	content: "\ed5a";
+}
+.ico-font-ui-record:before {
+	content: "\ed5b";
+}
+.ico-font-ui-remove:before {
+	content: "\ed5c";
+}
+.ico-font-ui-reply:before {
+	content: "\ed5d";
+}
+.ico-font-ui-rotation:before {
+	content: "\ed5e";
+}
+.ico-font-ui-rss:before {
+	content: "\ed5f";
+}
+.ico-font-ui-search:before {
+	content: "\ed60";
+}
+.ico-font-ui-settings:before {
+	content: "\ed61";
+}
+.ico-font-ui-social-link:before {
+	content: "\ed62";
+}
+.ico-font-ui-tag:before {
+	content: "\ed63";
+}
+.ico-font-ui-text-chat:before {
+	content: "\ed64";
+}
+.ico-font-ui-text-loading:before {
+	content: "\ed65";
+}
+.ico-font-ui-theme:before {
+	content: "\ed66";
+}
+.ico-font-ui-timer:before {
+	content: "\ed67";
+}
+.ico-font-ui-touch-phone:before {
+	content: "\ed68";
+}
+.ico-font-ui-travel:before {
+	content: "\ed69";
+}
+.ico-font-ui-unlock:before {
+	content: "\ed6a";
+}
+.ico-font-ui-user-group:before {
+	content: "\ed6b";
+}
+.ico-font-ui-user:before {
+	content: "\ed6c";
+}
+.ico-font-ui-v-card:before {
+	content: "\ed6d";
+}
+.ico-font-ui-video-chat:before {
+	content: "\ed6e";
+}
+.ico-font-ui-video-message:before {
+	content: "\ed6f";
+}
+.ico-font-ui-video-play:before {
+	content: "\ed70";
+}
+.ico-font-ui-video:before {
+	content: "\ed71";
+}
+.ico-font-ui-volume:before {
+	content: "\ed72";
+}
+.ico-font-ui-weather:before {
+	content: "\ed73";
+}
+.ico-font-ui-wifi:before {
+	content: "\ed74";
+}
+.ico-font-ui-zoom-in:before {
+	content: "\ed75";
+}
+.ico-font-ui-zoom-out:before {
+	content: "\ed76";
+}
+.ico-font-cassette-player:before {
+	content: "\ed77";
+}
+.ico-font-cassette:before {
+	content: "\ed78";
+}
+.ico-font-forward:before {
+	content: "\ed79";
+}
+.ico-font-game:before {
+	content: "\ed7a";
+}
+.ico-font-guiter:before {
+	content: "\ed7b";
+}
+.ico-font-headphone-alt-1:before {
+	content: "\ed7c";
+}
+.ico-font-headphone-alt-2:before {
+	content: "\ed7d";
+}
+.ico-font-headphone-alt-3:before {
+	content: "\ed7e";
+}
+.ico-font-listening:before {
+	content: "\ed7f";
+}
+.ico-font-megaphone-alt:before {
+	content: "\ed80";
+}
+.ico-font-megaphone:before {
+	content: "\ed81";
+}
+.ico-font-movie:before {
+	content: "\ed82";
+}
+.ico-font-mp3-player:before {
+	content: "\ed83";
+}
+.ico-font-multimedia:before {
+	content: "\ed84";
+}
+.ico-font-music-disk:before {
+	content: "\ed85";
+}
+.ico-font-music-note:before {
+	content: "\ed86";
+}
+.ico-font-pause:before {
+	content: "\ed87";
+}
+.ico-font-play-alt-1:before {
+	content: "\ed88";
+}
+.ico-font-play-alt-2:before {
+	content: "\ed89";
+}
+.ico-font-play-alt-3:before {
+	content: "\ed8a";
+}
+.ico-font-play-pause:before {
+	content: "\ed8b";
+}
+.ico-font-record:before {
+	content: "\ed8c";
+}
+.ico-font-retro-music-disk:before {
+	content: "\ed8d";
+}
+.ico-font-rewind:before {
+	content: "\ed8e";
+}
+.ico-font-song-notes:before {
+	content: "\ed8f";
+}
+.ico-font-sound-wave-alt:before {
+	content: "\ed90";
+}
+.ico-font-sound-wave:before {
+	content: "\ed91";
+}
+.ico-font-stop:before {
+	content: "\ed92";
+}
+.ico-font-video-alt:before {
+	content: "\ed93";
+}
+.ico-font-video-cam:before {
+	content: "\ed94";
+}
+.ico-font-volume-bar:before {
+	content: "\ed95";
+}
+.ico-font-volume-mute:before {
+	content: "\ed96";
+}
+.ico-font-youtube-play:before {
+	content: "\ed97";
+}
+.ico-font-amazon-alt:before {
+	content: "\ed98";
+}
+.ico-font-amazon:before {
+	content: "\ed99";
+}
+.ico-font-american-express-alt:before {
+	content: "\ed9a";
+}
+.ico-font-american-express:before {
+	content: "\ed9b";
+}
+.ico-font-apple-pay-alt:before {
+	content: "\ed9c";
+}
+.ico-font-apple-pay:before {
+	content: "\ed9d";
+}
+.ico-font-bank-transfer-alt:before {
+	content: "\ed9e";
+}
+.ico-font-bank-transfer:before {
+	content: "\ed9f";
+}
+.ico-font-braintree-alt:before {
+	content: "\eda0";
+}
+.ico-font-braintree:before {
+	content: "\eda1";
+}
+.ico-font-cash-on-delivery-alt:before {
+	content: "\eda2";
+}
+.ico-font-cash-on-delivery:before {
+	content: "\eda3";
+}
+.ico-font-checkout-alt:before {
+	content: "\eda4";
+}
+.ico-font-checkout:before {
+	content: "\eda5";
+}
+.ico-font-diners-club-alt-1:before {
+	content: "\eda6";
+}
+.ico-font-diners-club-alt-2:before {
+	content: "\eda7";
+}
+.ico-font-diners-club-alt-3:before {
+	content: "\eda8";
+}
+.ico-font-diners-club:before {
+	content: "\eda9";
+}
+.ico-font-discover-alt:before {
+	content: "\edaa";
+}
+.ico-font-discover:before {
+	content: "\edab";
+}
+.ico-font-eway-alt:before {
+	content: "\edac";
+}
+.ico-font-eway:before {
+	content: "\edad";
+}
+.ico-font-google-wallet-alt-1:before {
+	content: "\edae";
+}
+.ico-font-google-wallet-alt-2:before {
+	content: "\edaf";
+}
+.ico-font-google-wallet-alt-3:before {
+	content: "\edb0";
+}
+.ico-font-google-wallet:before {
+	content: "\edb1";
+}
+.ico-font-jcb-alt:before {
+	content: "\edb2";
+}
+.ico-font-jcb:before {
+	content: "\edb3";
+}
+.ico-font-maestro-alt:before {
+	content: "\edb4";
+}
+.ico-font-maestro:before {
+	content: "\edb5";
+}
+.ico-font-mastercard-alt:before {
+	content: "\edb6";
+}
+.ico-font-mastercard:before {
+	content: "\edb7";
+}
+.ico-font-payoneer-alt:before {
+	content: "\edb8";
+}
+.ico-font-payoneer:before {
+	content: "\edb9";
+}
+.ico-font-paypal-alt:before {
+	content: "\edba";
+}
+.ico-font-paypal:before {
+	content: "\edbb";
+}
+.ico-font-sage-alt:before {
+	content: "\edbc";
+}
+.ico-font-sage:before {
+	content: "\edbd";
+}
+.ico-font-skrill-alt:before {
+	content: "\edbe";
+}
+.ico-font-skrill:before {
+	content: "\edbf";
+}
+.ico-font-stripe-alt:before {
+	content: "\edc0";
+}
+.ico-font-stripe:before {
+	content: "\edc1";
+}
+.ico-font-visa-alt:before {
+	content: "\edc2";
+}
+.ico-font-visa-electron:before {
+	content: "\edc3";
+}
+.ico-font-visa:before {
+	content: "\edc4";
+}
+.ico-font-western-union-alt:before {
+	content: "\edc5";
+}
+.ico-font-western-union:before {
+	content: "\edc6";
+}
+.ico-font-boy:before {
+	content: "\edc7";
+}
+.ico-font-business-man-alt-1:before {
+	content: "\edc8";
+}
+.ico-font-business-man-alt-2:before {
+	content: "\edc9";
+}
+.ico-font-business-man-alt-3:before {
+	content: "\edca";
+}
+.ico-font-business-man:before {
+	content: "\edcb";
+}
+.ico-font-funky-man:before {
+	content: "\edcc";
+}
+.ico-font-girl-alt:before {
+	content: "\edcd";
+}
+.ico-font-girl:before {
+	content: "\edce";
+}
+.ico-font-hotel-boy-alt:before {
+	content: "\edcf";
+}
+.ico-font-hotel-boy:before {
+	content: "\edd0";
+}
+.ico-font-man-in-glasses:before {
+	content: "\edd1";
+}
+.ico-font-user-alt-1:before {
+	content: "\edd2";
+}
+.ico-font-user-alt-2:before {
+	content: "\edd3";
+}
+.ico-font-user-alt-3:before {
+	content: "\edd4";
+}
+.ico-font-user-alt-4:before {
+	content: "\edd5";
+}
+.ico-font-user-alt-5:before {
+	content: "\edd6";
+}
+.ico-font-user-alt-6:before {
+	content: "\edd7";
+}
+.ico-font-user-alt-7:before {
+	content: "\edd8";
+}
+.ico-font-user-female:before {
+	content: "\edd9";
+}
+.ico-font-user-male:before {
+	content: "\edda";
+}
+.ico-font-user-suited:before {
+	content: "\eddb";
+}
+.ico-font-user:before {
+	content: "\eddc";
+}
+.ico-font-users-alt-1:before {
+	content: "\eddd";
+}
+.ico-font-users-alt-2:before {
+	content: "\edde";
+}
+.ico-font-users-alt-3:before {
+	content: "\eddf";
+}
+.ico-font-users-alt-4:before {
+	content: "\ede0";
+}
+.ico-font-users-alt-5:before {
+	content: "\ede1";
+}
+.ico-font-users-alt-6:before {
+	content: "\ede2";
+}
+.ico-font-users-social:before {
+	content: "\ede3";
+}
+.ico-font-users:before {
+	content: "\ede4";
+}
+.ico-font-waiter:before {
+	content: "\ede5";
+}
+.ico-font-woman-in-glasses:before {
+	content: "\ede6";
+}
+.ico-font-document-search:before {
+	content: "\ede7";
+}
+.ico-font-folder-search:before {
+	content: "\ede8";
+}
+.ico-font-home-search:before {
+	content: "\ede9";
+}
+.ico-font-job-search:before {
+	content: "\edea";
+}
+.ico-font-map-search:before {
+	content: "\edeb";
+}
+.ico-font-restaurant-search:before {
+	content: "\edec";
+}
+.ico-font-search-alt-1:before {
+	content: "\eded";
+}
+.ico-font-search-alt-2:before {
+	content: "\edee";
+}
+.ico-font-search:before {
+	content: "\edef";
+}
+.ico-font-stock-search:before {
+	content: "\edf0";
+}
+.ico-font-user-search:before {
+	content: "\edf1";
+}
+.ico-font-social-aim:before {
+	content: "\edf2";
+}
+.ico-font-social-badoo:before {
+	content: "\edf3";
+}
+.ico-font-social-bebo:before {
+	content: "\edf4";
+}
+.ico-font-social-behance:before {
+	content: "\edf5";
+}
+.ico-font-social-blogger:before {
+	content: "\edf6";
+}
+.ico-font-social-bootstrap:before {
+	content: "\edf7";
+}
+.ico-font-social-brightkite:before {
+	content: "\edf8";
+}
+.ico-font-social-cloudapp:before {
+	content: "\edf9";
+}
+.ico-font-social-concrete5:before {
+	content: "\edfa";
+}
+.ico-font-social-designbump:before {
+	content: "\edfb";
+}
+.ico-font-social-designfloat:before {
+	content: "\edfc";
+}
+.ico-font-social-deviantart:before {
+	content: "\edfd";
+}
+.ico-font-social-digg:before {
+	content: "\edfe";
+}
+.ico-font-social-dotcms:before {
+	content: "\edff";
+}
+.ico-font-social-dribble:before {
+	content: "\ee00";
+}
+.ico-font-social-dropbox:before {
+	content: "\ee01";
+}
+.ico-font-brand-drupal:before {
+	content: "\ee02";
+}
+.ico-font-social-ebuddy:before {
+	content: "\ee03";
+}
+.ico-font-social-ello:before {
+	content: "\ee04";
+}
+.ico-font-social-ember:before {
+	content: "\ee05";
+}
+.ico-font-social-envato:before {
+	content: "\ee06";
+}
+.ico-font-social-evernote:before {
+	content: "\ee07";
+}
+.ico-font-social-facebook:before {
+	content: "\ee08";
+}
+.ico-font-social-feedburner:before {
+	content: "\ee09";
+}
+.ico-font-social-folkd:before {
+	content: "\ee0a";
+}
+.ico-font-social-friendfeed:before {
+	content: "\ee0b";
+}
+.ico-font-social-ghost:before {
+	content: "\ee0c";
+}
+.ico-font-social-github:before {
+	content: "\ee0d";
+}
+.ico-font-social-gnome:before {
+	content: "\ee0e";
+}
+.ico-font-social-google-buzz:before {
+	content: "\ee0f";
+}
+.ico-font-social-google-map:before {
+	content: "\ee10";
+}
+.ico-font-social-google-plus:before {
+	content: "\ee11";
+}
+.ico-font-social-google-talk:before {
+	content: "\ee12";
+}
+.ico-font-social-hype-machine:before {
+	content: "\ee13";
+}
+.ico-font-social-instagram:before {
+	content: "\ee14";
+}
+.ico-font-brand-joomla:before {
+	content: "\ee15";
+}
+.ico-font-social-kickstarter:before {
+	content: "\ee16";
+}
+.ico-font-social-line:before {
+	content: "\ee17";
+}
+.ico-font-social-linux-mint:before {
+	content: "\ee18";
+}
+.ico-font-social-livejournal:before {
+	content: "\ee19";
+}
+.ico-font-social-magento:before {
+	content: "\ee1a";
+}
+.ico-font-social-meetup:before {
+	content: "\ee1b";
+}
+.ico-font-social-mixx:before {
+	content: "\ee1c";
+}
+.ico-font-social-newsvine:before {
+	content: "\ee1d";
+}
+.ico-font-social-nimbuss:before {
+	content: "\ee1e";
+}
+.ico-font-social-opencart:before {
+	content: "\ee1f";
+}
+.ico-font-social-oscommerce:before {
+	content: "\ee20";
+}
+.ico-font-social-pandora:before {
+	content: "\ee21";
+}
+.ico-font-social-picasa:before {
+	content: "\ee22";
+}
+.ico-font-social-pinterest:before {
+	content: "\ee23";
+}
+.ico-font-social-prestashop:before {
+	content: "\ee24";
+}
+.ico-font-social-qik:before {
+	content: "\ee25";
+}
+.ico-font-social-readernaut:before {
+	content: "\ee26";
+}
+.ico-font-social-reddit:before {
+	content: "\ee27";
+}
+.ico-font-social-rss:before {
+	content: "\ee28";
+}
+.ico-font-social-shopify:before {
+	content: "\ee29";
+}
+.ico-font-social-silverstripe:before {
+	content: "\ee2a";
+}
+.ico-font-social-skype:before {
+	content: "\ee2b";
+}
+.ico-font-social-slashdot:before {
+	content: "\ee2c";
+}
+.ico-font-social-smugmug:before {
+	content: "\ee2d";
+}
+.ico-font-social-steam:before {
+	content: "\ee2e";
+}
+.ico-font-social-stumbleupon:before {
+	content: "\ee2f";
+}
+.ico-font-social-technorati:before {
+	content: "\ee30";
+}
+.ico-font-social-telegram:before {
+	content: "\ee31";
+}
+.ico-font-social-tinder:before {
+	content: "\ee32";
+}
+.ico-font-social-tumblr:before {
+	content: "\ee33";
+}
+.ico-font-social-twitter:before {
+	content: "\ee34";
+}
+.ico-font-social-typo3:before {
+	content: "\ee35";
+}
+.ico-font-social-ubercart:before {
+	content: "\ee36";
+}
+.ico-font-social-viber:before {
+	content: "\ee37";
+}
+.ico-font-social-viddler:before {
+	content: "\ee38";
+}
+.ico-font-social-vimeo:before {
+	content: "\ee39";
+}
+.ico-font-social-vine:before {
+	content: "\ee3a";
+}
+.ico-font-social-virb:before {
+	content: "\ee3b";
+}
+.ico-font-social-virtuemart:before {
+	content: "\ee3c";
+}
+.ico-font-social-wechat:before {
+	content: "\ee3d";
+}
+.ico-font-brand-wordpress:before {
+	content: "\ee3e";
+}
+.ico-font-social-xing:before {
+	content: "\ee3f";
+}
+.ico-font-social-yahoo:before {
+	content: "\ee40";
+}
+.ico-font-social-yelp:before {
+	content: "\ee41";
+}
+.ico-font-social-zencart:before {
+	content: "\ee42";
+}
+.ico-font-badminton-birdie:before {
+	content: "\ee43";
+}
+.ico-font-baseball:before {
+	content: "\ee44";
+}
+.ico-font-baseballer:before {
+	content: "\ee45";
+}
+.ico-font-basketball-hoop:before {
+	content: "\ee46";
+}
+.ico-font-basketball:before {
+	content: "\ee47";
+}
+.ico-font-billiard-ball:before {
+	content: "\ee48";
+}
+.ico-font-boot-alt-1:before {
+	content: "\ee49";
+}
+.ico-font-boot-alt-2:before {
+	content: "\ee4a";
+}
+.ico-font-bowling-alt:before {
+	content: "\ee4b";
+}
+.ico-font-bowling:before {
+	content: "\ee4c";
+}
+.ico-font-canoe:before {
+	content: "\ee4d";
+}
+.ico-font-cheer-leader:before {
+	content: "\ee4e";
+}
+.ico-font-climbing:before {
+	content: "\ee4f";
+}
+.ico-font-corner:before {
+	content: "\ee50";
+}
+.ico-font-cyclist:before {
+	content: "\ee51";
+}
+.ico-font-dumbbell-alt:before {
+	content: "\ee52";
+}
+.ico-font-dumbbell:before {
+	content: "\ee53";
+}
+.ico-font-field-alt:before {
+	content: "\ee54";
+}
+.ico-font-field:before {
+	content: "\ee55";
+}
+.ico-font-football-alt:before {
+	content: "\ee56";
+}
+.ico-font-foul:before {
+	content: "\ee57";
+}
+.ico-font-goal-keeper:before {
+	content: "\ee58";
+}
+.ico-font-goal:before {
+	content: "\ee59";
+}
+.ico-font-golf-alt:before {
+	content: "\ee5a";
+}
+.ico-font-golf-bag:before {
+	content: "\ee5b";
+}
+.ico-font-golf-field:before {
+	content: "\ee5c";
+}
+.ico-font-golf:before {
+	content: "\ee5d";
+}
+.ico-font-golfer:before {
+	content: "\ee5e";
+}
+.ico-font-gym-alt-1:before {
+	content: "\ee5f";
+}
+.ico-font-gym-alt-2:before {
+	content: "\ee60";
+}
+.ico-font-gym-alt-3:before {
+	content: "\ee61";
+}
+.ico-font-gym:before {
+	content: "\ee62";
+}
+.ico-font-hand-grippers:before {
+	content: "\ee63";
+}
+.ico-font-heart-beat-alt:before {
+	content: "\ee64";
+}
+.ico-font-helmet:before {
+	content: "\ee65";
+}
+.ico-font-hockey-alt:before {
+	content: "\ee66";
+}
+.ico-font-hockey:before {
+	content: "\ee67";
+}
+.ico-font-ice-skate:before {
+	content: "\ee68";
+}
+.ico-font-jersey-alt:before {
+	content: "\ee69";
+}
+.ico-font-jersey:before {
+	content: "\ee6a";
+}
+.ico-font-jumping:before {
+	content: "\ee6b";
+}
+.ico-font-kick:before {
+	content: "\ee6c";
+}
+.ico-font-leg:before {
+	content: "\ee6d";
+}
+.ico-font-match-review:before {
+	content: "\ee6e";
+}
+.ico-font-medal-alt:before {
+	content: "\ee6f";
+}
+.ico-font-muscle-alt:before {
+	content: "\ee70";
+}
+.ico-font-muscle:before {
+	content: "\ee71";
+}
+.ico-font-offside:before {
+	content: "\ee72";
+}
+.ico-font-olympic-logo:before {
+	content: "\ee73";
+}
+.ico-font-olympic:before {
+	content: "\ee74";
+}
+.ico-font-padding:before {
+	content: "\ee75";
+}
+.ico-font-penalty-card:before {
+	content: "\ee76";
+}
+.ico-font-racer:before {
+	content: "\ee77";
+}
+.ico-font-racing-car:before {
+	content: "\ee78";
+}
+.ico-font-racing-flag-alt:before {
+	content: "\ee79";
+}
+.ico-font-racing-flag:before {
+	content: "\ee7a";
+}
+.ico-font-racings-wheel:before {
+	content: "\ee7b";
+}
+.ico-font-referee:before {
+	content: "\ee7c";
+}
+.ico-font-refree-jersey:before {
+	content: "\ee7d";
+}
+.ico-font-result:before {
+	content: "\ee7e";
+}
+.ico-font-rugby-ball:before {
+	content: "\ee7f";
+}
+.ico-font-rugby-player:before {
+	content: "\ee80";
+}
+.ico-font-rugby:before {
+	content: "\ee81";
+}
+.ico-font-runner-alt-1:before {
+	content: "\ee82";
+}
+.ico-font-runner-alt-2:before {
+	content: "\ee83";
+}
+.ico-font-runner:before {
+	content: "\ee84";
+}
+.ico-font-score-board:before {
+	content: "\ee85";
+}
+.ico-font-skiing-man:before {
+	content: "\ee86";
+}
+.ico-font-skydiving-goggles:before {
+	content: "\ee87";
+}
+.ico-font-snow-mobile:before {
+	content: "\ee88";
+}
+.ico-font-steering:before {
+	content: "\ee89";
+}
+.ico-font-substitute:before {
+	content: "\ee8a";
+}
+.ico-font-swimmer:before {
+	content: "\ee8b";
+}
+.ico-font-table-tennis:before {
+	content: "\ee8c";
+}
+.ico-font-team-alt:before {
+	content: "\ee8d";
+}
+.ico-font-team:before {
+	content: "\ee8e";
+}
+.ico-font-tennis-player:before {
+	content: "\ee8f";
+}
+.ico-font-tennis:before {
+	content: "\ee90";
+}
+.ico-font-time:before {
+	content: "\ee91";
+}
+.ico-font-track:before {
+	content: "\ee92";
+}
+.ico-font-tracking:before {
+	content: "\ee93";
+}
+.ico-font-trophy-alt:before {
+	content: "\ee94";
+}
+.ico-font-trophy:before {
+	content: "\ee95";
+}
+.ico-font-volleyball-alt:before {
+	content: "\ee96";
+}
+.ico-font-volleyball-fire:before {
+	content: "\ee97";
+}
+.ico-font-volleyball:before {
+	content: "\ee98";
+}
+.ico-font-water-bottle:before {
+	content: "\ee99";
+}
+.ico-font-whisle:before {
+	content: "\ee9a";
+}
+.ico-font-win-trophy:before {
+	content: "\ee9b";
+}
+.ico-font-align-center:before {
+	content: "\ee9c";
+}
+.ico-font-align-left:before {
+	content: "\ee9d";
+}
+.ico-font-align-right:before {
+	content: "\ee9e";
+}
+.ico-font-all-caps:before {
+	content: "\ee9f";
+}
+.ico-font-bold:before {
+	content: "\eea0";
+}
+.ico-font-brush:before {
+	content: "\eea1";
+}
+.ico-font-clip-board:before {
+	content: "\eea2";
+}
+.ico-font-code-alt:before {
+	content: "\eea3";
+}
+.ico-font-color-bucket:before {
+	content: "\eea4";
+}
+.ico-font-color-picker:before {
+	content: "\eea5";
+}
+.ico-font-copy-alt:before {
+	content: "\eea6";
+}
+.ico-font-copy-black:before {
+	content: "\eea7";
+}
+.ico-font-cut:before {
+	content: "\eea8";
+}
+.ico-font-delete-alt:before {
+	content: "\eea9";
+}
+.ico-font-edit-alt:before {
+	content: "\eeaa";
+}
+.ico-font-eraser-alt:before {
+	content: "\eeab";
+}
+.ico-font-file-alt:before {
+	content: "\eeac";
+}
+.ico-font-font:before {
+	content: "\eead";
+}
+.ico-font-header:before {
+	content: "\eeae";
+}
+.ico-font-indent:before {
+	content: "\eeaf";
+}
+.ico-font-italic-alt:before {
+	content: "\eeb0";
+}
+.ico-font-justify-all:before {
+	content: "\eeb1";
+}
+.ico-font-justify-center:before {
+	content: "\eeb2";
+}
+.ico-font-justify-left:before {
+	content: "\eeb3";
+}
+.ico-font-justify-right:before {
+	content: "\eeb4";
+}
+.ico-font-line-height:before {
+	content: "\eeb5";
+}
+.ico-font-link-alt:before {
+	content: "\eeb6";
+}
+.ico-font-listine-dots:before {
+	content: "\eeb7";
+}
+.ico-font-listing-box:before {
+	content: "\eeb8";
+}
+.ico-font-listing-number:before {
+	content: "\eeb9";
+}
+.ico-font-marker:before {
+	content: "\eeba";
+}
+.ico-font-outdent:before {
+	content: "\eebb";
+}
+.ico-font-paper-clip:before {
+	content: "\eebc";
+}
+.ico-font-paragraph:before {
+	content: "\eebd";
+}
+.ico-font-pin:before {
+	content: "\eebe";
+}
+.ico-font-printer:before {
+	content: "\eebf";
+}
+.ico-font-redo:before {
+	content: "\eec0";
+}
+.ico-font-rotation:before {
+	content: "\eec1";
+}
+.ico-font-save:before {
+	content: "\eec2";
+}
+.ico-font-small-cap:before {
+	content: "\eec3";
+}
+.ico-font-strike-through:before {
+	content: "\eec4";
+}
+.ico-font-sub-listing:before {
+	content: "\eec5";
+}
+.ico-font-subscript:before {
+	content: "\eec6";
+}
+.ico-font-superscript:before {
+	content: "\eec7";
+}
+.ico-font-table:before {
+	content: "\eec8";
+}
+.ico-font-text-height:before {
+	content: "\eec9";
+}
+.ico-font-text-width:before {
+	content: "\eeca";
+}
+.ico-font-trash:before {
+	content: "\eecb";
+}
+.ico-font-underline:before {
+	content: "\eecc";
+}
+.ico-font-undo:before {
+	content: "\eecd";
+}
+.ico-font-unlink:before {
+	content: "\eece";
+}
+.ico-font-air-balloon:before {
+	content: "\eecf";
+}
+.ico-font-airplane-alt:before {
+	content: "\eed0";
+}
+.ico-font-airplane:before {
+	content: "\eed1";
+}
+.ico-font-ambulance-crescent:before {
+	content: "\eed2";
+}
+.ico-font-ambulance-cross:before {
+	content: "\eed3";
+}
+.ico-font-articulated-truck:before {
+	content: "\eed4";
+}
+.ico-font-auto-rickshaw:before {
+	content: "\eed5";
+}
+.ico-font-bicycle-alt-1:before {
+	content: "\eed6";
+}
+.ico-font-bicycle-alt-2:before {
+	content: "\eed7";
+}
+.ico-font-bull-dozer:before {
+	content: "\eed8";
+}
+.ico-font-bus-alt-1:before {
+	content: "\eed9";
+}
+.ico-font-bus-alt-2:before {
+	content: "\eeda";
+}
+.ico-font-bus-alt-3:before {
+	content: "\eedb";
+}
+.ico-font-cable-car:before {
+	content: "\eedc";
+}
+.ico-font-car-alt-1:before {
+	content: "\eedd";
+}
+.ico-font-car-alt-2:before {
+	content: "\eede";
+}
+.ico-font-car-alt-3:before {
+	content: "\eedf";
+}
+.ico-font-car-alt-4:before {
+	content: "\eee0";
+}
+.ico-font-concrete-mixer:before {
+	content: "\eee1";
+}
+.ico-font-delivery-time:before {
+	content: "\eee2";
+}
+.ico-font-excavator:before {
+	content: "\eee3";
+}
+.ico-font-fast-delivery:before {
+	content: "\eee4";
+}
+.ico-font-fire-truck-alt:before {
+	content: "\eee5";
+}
+.ico-font-fire-truck:before {
+	content: "\eee6";
+}
+.ico-font-fork-lift:before {
+	content: "\eee7";
+}
+.ico-font-free-delivery:before {
+	content: "\eee8";
+}
+.ico-font-golf-cart:before {
+	content: "\eee9";
+}
+.ico-font-helicopter:before {
+	content: "\eeea";
+}
+.ico-font-motor-bike-alt:before {
+	content: "\eeeb";
+}
+.ico-font-motor-bike:before {
+	content: "\eeec";
+}
+.ico-font-motor-biker:before {
+	content: "\eeed";
+}
+.ico-font-oil-truck:before {
+	content: "\eeee";
+}
+.ico-font-police-car:before {
+	content: "\eeef";
+}
+.ico-font-rickshaw:before {
+	content: "\eef0";
+}
+.ico-font-rocket-alt-1:before {
+	content: "\eef1";
+}
+.ico-font-rocket-alt-2:before {
+	content: "\eef2";
+}
+.ico-font-sail-boat:before {
+	content: "\eef3";
+}
+.ico-font-scooter:before {
+	content: "\eef4";
+}
+.ico-font-sea-plane:before {
+	content: "\eef5";
+}
+.ico-font-ship-alt:before {
+	content: "\eef6";
+}
+.ico-font-speed-boat:before {
+	content: "\eef7";
+}
+.ico-font-taxi:before {
+	content: "\eef8";
+}
+.ico-font-tow-truck:before {
+	content: "\eef9";
+}
+.ico-font-tractor:before {
+	content: "\eefa";
+}
+.ico-font-traffic-light:before {
+	content: "\eefb";
+}
+.ico-font-train-line:before {
+	content: "\eefc";
+}
+.ico-font-train-steam:before {
+	content: "\eefd";
+}
+.ico-font-tram:before {
+	content: "\eefe";
+}
+.ico-font-truck-alt:before {
+	content: "\eeff";
+}
+.ico-font-truck-loaded:before {
+	content: "\ef00";
+}
+.ico-font-truck:before {
+	content: "\ef01";
+}
+.ico-font-van-alt:before {
+	content: "\ef02";
+}
+.ico-font-van:before {
+	content: "\ef03";
+}
+.ico-font-yacht:before {
+	content: "\ef04";
+}
+.ico-font-5-star-hotel:before {
+	content: "\ef05";
+}
+.ico-font-anchor-alt:before {
+	content: "\ef06";
+}
+.ico-font-beach-bed:before {
+	content: "\ef07";
+}
+.ico-font-camping-vest:before {
+	content: "\ef08";
+}
+.ico-font-coconut-alt:before {
+	content: "\ef09";
+}
+.ico-font-direction-sign:before {
+	content: "\ef0a";
+}
+.ico-font-hill-side:before {
+	content: "\ef0b";
+}
+.ico-font-island-alt:before {
+	content: "\ef0c";
+}
+.ico-font-long-drive:before {
+	content: "\ef0d";
+}
+.ico-font-map-pins:before {
+	content: "\ef0e";
+}
+.ico-font-plane-ticket:before {
+	content: "\ef0f";
+}
+.ico-font-sail-boat-alt-1:before {
+	content: "\ef10";
+}
+.ico-font-sail-boat-alt-2:before {
+	content: "\ef11";
+}
+.ico-font-sandals-female:before {
+	content: "\ef12";
+}
+.ico-font-sandals-male:before {
+	content: "\ef13";
+}
+.ico-font-travelling:before {
+	content: "\ef14";
+}
+.ico-font-breakdown:before {
+	content: "\ef15";
+}
+.ico-font-celsius:before {
+	content: "\ef16";
+}
+.ico-font-clouds:before {
+	content: "\ef17";
+}
+.ico-font-cloudy:before {
+	content: "\ef18";
+}
+.ico-font-compass-alt:before {
+	content: "\ef19";
+}
+.ico-font-dust:before {
+	content: "\ef1a";
+}
+.ico-font-eclipse:before {
+	content: "\ef1b";
+}
+.ico-font-fahrenheit:before {
+	content: "\ef1c";
+}
+.ico-font-forest-fire:before {
+	content: "\ef1d";
+}
+.ico-font-full-night:before {
+	content: "\ef1e";
+}
+.ico-font-full-sunny:before {
+	content: "\ef1f";
+}
+.ico-font-hail-night:before {
+	content: "\ef20";
+}
+.ico-font-hail-rainy-night:before {
+	content: "\ef21";
+}
+.ico-font-hail-rainy-sunny:before {
+	content: "\ef22";
+}
+.ico-font-hail-rainy:before {
+	content: "\ef23";
+}
+.ico-font-hail-sunny:before {
+	content: "\ef24";
+}
+.ico-font-hail-thunder-night:before {
+	content: "\ef25";
+}
+.ico-font-hail-thunder-sunny:before {
+	content: "\ef26";
+}
+.ico-font-hail-thunder:before {
+	content: "\ef27";
+}
+.ico-font-hail:before {
+	content: "\ef28";
+}
+.ico-font-hill-night:before {
+	content: "\ef29";
+}
+.ico-font-hill-sunny:before {
+	content: "\ef2a";
+}
+.ico-font-hill:before {
+	content: "\ef2b";
+}
+.ico-font-hurricane:before {
+	content: "\ef2c";
+}
+.ico-font-island:before {
+	content: "\ef2d";
+}
+.ico-font-meteor:before {
+	content: "\ef2e";
+}
+.ico-font-night:before {
+	content: "\ef2f";
+}
+.ico-font-rainy-night:before {
+	content: "\ef30";
+}
+.ico-font-rainy-sunny:before {
+	content: "\ef31";
+}
+.ico-font-rainy-thunder:before {
+	content: "\ef32";
+}
+.ico-font-rainy:before {
+	content: "\ef33";
+}
+.ico-font-showy-night-hail:before {
+	content: "\ef34";
+}
+.ico-font-snow-temp:before {
+	content: "\ef35";
+}
+.ico-font-snow:before {
+	content: "\ef36";
+}
+.ico-font-snowy-hail:before {
+	content: "\ef37";
+}
+.ico-font-snowy-night-rainy:before {
+	content: "\ef38";
+}
+.ico-font-snowy-night:before {
+	content: "\ef39";
+}
+.ico-font-snowy-rainy:before {
+	content: "\ef3a";
+}
+.ico-font-snowy-sunny-hail:before {
+	content: "\ef3b";
+}
+.ico-font-snowy-sunny-rainy:before {
+	content: "\ef3c";
+}
+.ico-font-snowy-sunny:before {
+	content: "\ef3d";
+}
+.ico-font-snowy-thunder-night:before {
+	content: "\ef3e";
+}
+.ico-font-snowy-thunder-sunny:before {
+	content: "\ef3f";
+}
+.ico-font-snowy-thunder:before {
+	content: "\ef40";
+}
+.ico-font-snowy-windy-night:before {
+	content: "\ef41";
+}
+.ico-font-snowy-windy-sunny:before {
+	content: "\ef42";
+}
+.ico-font-snowy-windy:before {
+	content: "\ef43";
+}
+.ico-font-snowy:before {
+	content: "\ef44";
+}
+.ico-font-sun-alt:before {
+	content: "\ef45";
+}
+.ico-font-sun-rise:before {
+	content: "\ef46";
+}
+.ico-font-sun-set:before {
+	content: "\ef47";
+}
+.ico-font-sunny-day-temp:before {
+	content: "\ef48";
+}
+.ico-font-sunny:before {
+	content: "\ef49";
+}
+.ico-font-thermometer:before {
+	content: "\ef4a";
+}
+.ico-font-thinder-light:before {
+	content: "\ef4b";
+}
+.ico-font-tornado:before {
+	content: "\ef4c";
+}
+.ico-font-umbrella-alt:before {
+	content: "\ef4d";
+}
+.ico-font-volcano:before {
+	content: "\ef4e";
+}
+.ico-font-wave:before {
+	content: "\ef4f";
+}
+.ico-font-wind-scale-0:before {
+	content: "\ef50";
+}
+.ico-font-wind-scale-1:before {
+	content: "\ef51";
+}
+.ico-font-wind-scale-2:before {
+	content: "\ef52";
+}
+.ico-font-wind-scale-3:before {
+	content: "\ef53";
+}
+.ico-font-wind-scale-4:before {
+	content: "\ef54";
+}
+.ico-font-wind-scale-5:before {
+	content: "\ef55";
+}
+.ico-font-wind-scale-6:before {
+	content: "\ef56";
+}
+.ico-font-wind-scale-7:before {
+	content: "\ef57";
+}
+.ico-font-wind-scale-8:before {
+	content: "\ef58";
+}
+.ico-font-wind-scale-9:before {
+	content: "\ef59";
+}
+.ico-font-wind-scale-10:before {
+	content: "\ef5a";
+}
+.ico-font-wind-scale-11:before {
+	content: "\ef5b";
+}
+.ico-font-wind-scale-12:before {
+	content: "\ef5c";
+}
+.ico-font-wind-waves:before {
+	content: "\ef5d";
+}
+.ico-font-wind:before {
+	content: "\ef5e";
+}
+.ico-font-windy-hail:before {
+	content: "\ef5f";
+}
+.ico-font-windy-night:before {
+	content: "\ef60";
+}
+.ico-font-windy-raining:before {
+	content: "\ef61";
+}
+.ico-font-windy-sunny:before {
+	content: "\ef62";
+}
+.ico-font-windy-thunder-raining:before {
+	content: "\ef63";
+}
+.ico-font-windy-thunder:before {
+	content: "\ef64";
+}
+.ico-font-windy:before {
+	content: "\ef65";
+}
+.ico-font-addons:before {
+	content: "\ef66";
+}
+.ico-font-address-book:before {
+	content: "\ef67";
+}
+.ico-font-adjust:before {
+	content: "\ef68";
+}
+.ico-font-alarm:before {
+	content: "\ef69";
+}
+.ico-font-anchor:before {
+	content: "\ef6a";
+}
+.ico-font-archive:before {
+	content: "\ef6b";
+}
+.ico-font-at:before {
+	content: "\ef6c";
+}
+.ico-font-attachment:before {
+	content: "\ef6d";
+}
+.ico-font-audio:before {
+	content: "\ef6e";
+}
+.ico-font-auto-mobile:before {
+	content: "\ef6f";
+}
+.ico-font-automation:before {
+	content: "\ef70";
+}
+.ico-font-baby:before {
+	content: "\ef71";
+}
+.ico-font-badge:before {
+	content: "\ef72";
+}
+.ico-font-bag:before {
+	content: "\ef73";
+}
+.ico-font-ban:before {
+	content: "\ef74";
+}
+.ico-font-bank:before {
+	content: "\ef75";
+}
+.ico-font-bar-code:before {
+	content: "\ef76";
+}
+.ico-font-bars:before {
+	content: "\ef77";
+}
+.ico-font-battery-empty:before {
+	content: "\ef78";
+}
+.ico-font-battery-full:before {
+	content: "\ef79";
+}
+.ico-font-battery-half:before {
+	content: "\ef7a";
+}
+.ico-font-battery-low:before {
+	content: "\ef7b";
+}
+.ico-font-beach:before {
+	content: "\ef7c";
+}
+.ico-font-beaker:before {
+	content: "\ef7d";
+}
+.ico-font-bear:before {
+	content: "\ef7e";
+}
+.ico-font-beard:before {
+	content: "\ef7f";
+}
+.ico-font-bed:before {
+	content: "\ef80";
+}
+.ico-font-bell:before {
+	content: "\ef81";
+}
+.ico-font-beverage:before {
+	content: "\ef82";
+}
+.ico-font-bicycle:before {
+	content: "\ef83";
+}
+.ico-font-bill:before {
+	content: "\ef84";
+}
+.ico-font-bin:before {
+	content: "\ef85";
+}
+.ico-font-binary:before {
+	content: "\ef86";
+}
+.ico-font-binoculars:before {
+	content: "\ef87";
+}
+.ico-font-bird:before {
+	content: "\ef88";
+}
+.ico-font-birds:before {
+	content: "\ef89";
+}
+.ico-font-black-board:before {
+	content: "\ef8a";
+}
+.ico-font-bluetooth:before {
+	content: "\ef8b";
+}
+.ico-font-bolt:before {
+	content: "\ef8c";
+}
+.ico-font-bomb:before {
+	content: "\ef8d";
+}
+.ico-font-book-mark:before {
+	content: "\ef8e";
+}
+.ico-font-book:before {
+	content: "\ef8f";
+}
+.ico-font-boot:before {
+	content: "\ef90";
+}
+.ico-font-box:before {
+	content: "\ef91";
+}
+.ico-font-brain:before {
+	content: "\ef92";
+}
+.ico-font-briefcase:before {
+	content: "\ef93";
+}
+.ico-font-broken:before {
+	content: "\ef94";
+}
+.ico-font-bucket:before {
+	content: "\ef95";
+}
+.ico-font-bucket1:before {
+	content: "\ef96";
+}
+.ico-font-bucket2:before {
+	content: "\ef97";
+}
+.ico-font-bug:before {
+	content: "\ef98";
+}
+.ico-font-building:before {
+	content: "\ef99";
+}
+.ico-font-bullet:before {
+	content: "\ef9a";
+}
+.ico-font-bullhorn:before {
+	content: "\ef9b";
+}
+.ico-font-bullseye:before {
+	content: "\ef9c";
+}
+.ico-font-bus:before {
+	content: "\ef9d";
+}
+.ico-font-butterfly:before {
+	content: "\ef9e";
+}
+.ico-font-cab:before {
+	content: "\ef9f";
+}
+.ico-font-calculator:before {
+	content: "\efa0";
+}
+.ico-font-calendar:before {
+	content: "\efa1";
+}
+.ico-font-camera-alt:before {
+	content: "\efa2";
+}
+.ico-font-camera:before {
+	content: "\efa3";
+}
+.ico-font-car:before {
+	content: "\efa4";
+}
+.ico-font-card:before {
+	content: "\efa5";
+}
+.ico-font-cart:before {
+	content: "\efa6";
+}
+.ico-font-cc:before {
+	content: "\efa7";
+}
+.ico-font-certificate:before {
+	content: "\efa8";
+}
+.ico-font-charging:before {
+	content: "\efa9";
+}
+.ico-font-chat:before {
+	content: "\efaa";
+}
+.ico-font-check-alt:before {
+	content: "\efab";
+}
+.ico-font-check-circled:before {
+	content: "\efac";
+}
+.ico-font-check:before {
+	content: "\efad";
+}
+.ico-font-checked:before {
+	content: "\efae";
+}
+.ico-font-children-care:before {
+	content: "\efaf";
+}
+.ico-font-clock-time:before {
+	content: "\efb0";
+}
+.ico-font-close-circled:before {
+	content: "\efb1";
+}
+.ico-font-close-line-circled:before {
+	content: "\efb2";
+}
+.ico-font-close-line-squared-alt:before {
+	content: "\efb3";
+}
+.ico-font-close-line-squared:before {
+	content: "\efb4";
+}
+.ico-font-close-line:before {
+	content: "\efb5";
+}
+.ico-font-close-squared-alt:before {
+	content: "\efb6";
+}
+.ico-font-close-squared:before {
+	content: "\efb7";
+}
+.ico-font-close:before {
+	content: "\efb8";
+}
+.ico-font-cloud-download:before {
+	content: "\efb9";
+}
+.ico-font-cloud-refresh:before {
+	content: "\efba";
+}
+.ico-font-cloud-upload:before {
+	content: "\efbb";
+}
+.ico-font-cloud:before {
+	content: "\efbc";
+}
+.ico-font-code-not-allowed:before {
+	content: "\efbd";
+}
+.ico-font-code:before {
+	content: "\efbe";
+}
+.ico-font-coffee-cup:before {
+	content: "\efbf";
+}
+.ico-font-comment:before {
+	content: "\efc0";
+}
+.ico-font-compass:before {
+	content: "\efc1";
+}
+.ico-font-computer:before {
+	content: "\efc2";
+}
+.ico-font-connection:before {
+	content: "\efc3";
+}
+.ico-font-console:before {
+	content: "\efc4";
+}
+.ico-font-contacts:before {
+	content: "\efc5";
+}
+.ico-font-contrast:before {
+	content: "\efc6";
+}
+.ico-font-copy:before {
+	content: "\efc7";
+}
+.ico-font-copyright:before {
+	content: "\efc8";
+}
+.ico-font-credit-card:before {
+	content: "\efc9";
+}
+.ico-font-crop:before {
+	content: "\efca";
+}
+.ico-font-crown:before {
+	content: "\efcb";
+}
+.ico-font-cube:before {
+	content: "\efcc";
+}
+.ico-font-cubes:before {
+	content: "\efcd";
+}
+.ico-font-culinary:before {
+	content: "\efce";
+}
+.ico-font-dashboard-web:before {
+	content: "\efcf";
+}
+.ico-font-dashboard:before {
+	content: "\efd0";
+}
+.ico-font-data:before {
+	content: "\efd1";
+}
+.ico-font-database-add:before {
+	content: "\efd2";
+}
+.ico-font-database-locked:before {
+	content: "\efd3";
+}
+.ico-font-database-remove:before {
+	content: "\efd4";
+}
+.ico-font-database:before {
+	content: "\efd5";
+}
+.ico-font-delete:before {
+	content: "\efd6";
+}
+.ico-font-diamond:before {
+	content: "\efd7";
+}
+.ico-font-dice:before {
+	content: "\efd8";
+}
+.ico-font-disabled:before {
+	content: "\efd9";
+}
+.ico-font-disc:before {
+	content: "\efda";
+}
+.ico-font-diskette:before {
+	content: "\efdb";
+}
+.ico-font-document-folder:before {
+	content: "\efdc";
+}
+.ico-font-download-alt:before {
+	content: "\efdd";
+}
+.ico-font-download:before {
+	content: "\efde";
+}
+.ico-font-downloaded:before {
+	content: "\efdf";
+}
+.ico-font-earth:before {
+	content: "\efe0";
+}
+.ico-font-ebook:before {
+	content: "\efe1";
+}
+.ico-font-edit:before {
+	content: "\efe2";
+}
+.ico-font-eject:before {
+	content: "\efe3";
+}
+.ico-font-email:before {
+	content: "\efe4";
+}
+.ico-font-envelope-open:before {
+	content: "\efe5";
+}
+.ico-font-envelope:before {
+	content: "\efe6";
+}
+.ico-font-eraser:before {
+	content: "\efe7";
+}
+.ico-font-error:before {
+	content: "\efe8";
+}
+.ico-font-exchange:before {
+	content: "\efe9";
+}
+.ico-font-exclamation-circle:before {
+	content: "\efea";
+}
+.ico-font-exclamation-square:before {
+	content: "\efeb";
+}
+.ico-font-exclamation-tringle:before {
+	content: "\efec";
+}
+.ico-font-exclamation:before {
+	content: "\efed";
+}
+.ico-font-exit:before {
+	content: "\efee";
+}
+.ico-font-expand:before {
+	content: "\efef";
+}
+.ico-font-external-link:before {
+	content: "\eff0";
+}
+.ico-font-external:before {
+	content: "\eff1";
+}
+.ico-font-eye-blocked:before {
+	content: "\eff2";
+}
+.ico-font-eye-dropper:before {
+	content: "\eff3";
+}
+.ico-font-eye:before {
+	content: "\eff4";
+}
+.ico-font-favourite:before {
+	content: "\eff5";
+}
+.ico-font-fax:before {
+	content: "\eff6";
+}
+.ico-font-female:before {
+	content: "\eff7";
+}
+.ico-font-file:before {
+	content: "\eff8";
+}
+.ico-font-film:before {
+	content: "\eff9";
+}
+.ico-font-filter:before {
+	content: "\effa";
+}
+.ico-font-fire-burn:before {
+	content: "\effb";
+}
+.ico-font-fire-extinguisher:before {
+	content: "\effc";
+}
+.ico-font-fire:before {
+	content: "\effd";
+}
+.ico-font-first-aid:before {
+	content: "\effe";
+}
+.ico-font-flag-alt-1:before {
+	content: "\efff";
+}
+.ico-font-flag-alt-2:before {
+	content: "\f000";
+}
+.ico-font-flag:before {
+	content: "\f001";
+}
+.ico-font-flash-light:before {
+	content: "\f002";
+}
+.ico-font-flash:before {
+	content: "\f003";
+}
+.ico-font-flask:before {
+	content: "\f004";
+}
+.ico-font-focus:before {
+	content: "\f005";
+}
+.ico-font-folder-open:before {
+	content: "\f006";
+}
+.ico-font-folder:before {
+	content: "\f007";
+}
+.ico-font-foot-print:before {
+	content: "\f008";
+}
+.ico-font-football-american:before {
+	content: "\f009";
+}
+.ico-font-football:before {
+	content: "\f00a";
+}
+.ico-font-game-console:before {
+	content: "\f00b";
+}
+.ico-font-game-pad:before {
+	content: "\f00c";
+}
+.ico-font-gavel:before {
+	content: "\f00d";
+}
+.ico-font-gear:before {
+	content: "\f00e";
+}
+.ico-font-gears:before {
+	content: "\f00f";
+}
+.ico-font-gift:before {
+	content: "\f010";
+}
+.ico-font-glass:before {
+	content: "\f011";
+}
+.ico-font-globe:before {
+	content: "\f012";
+}
+.ico-font-graduate:before {
+	content: "\f013";
+}
+.ico-font-graffiti:before {
+	content: "\f014";
+}
+.ico-font-grocery:before {
+	content: "\f015";
+}
+.ico-font-group:before {
+	content: "\f016";
+}
+.ico-font-hammer:before {
+	content: "\f017";
+}
+.ico-font-hand:before {
+	content: "\f018";
+}
+.ico-font-hanger:before {
+	content: "\f019";
+}
+.ico-font-hard-disk:before {
+	content: "\f01a";
+}
+.ico-font-headphone:before {
+	content: "\f01b";
+}
+.ico-font-heart-beat:before {
+	content: "\f01c";
+}
+.ico-font-heart:before {
+	content: "\f01d";
+}
+.ico-font-history:before {
+	content: "\f01e";
+}
+.ico-font-home:before {
+	content: "\f01f";
+}
+.ico-font-horn:before {
+	content: "\f020";
+}
+.ico-font-hotel:before {
+	content: "\f021";
+}
+.ico-font-hour-glass:before {
+	content: "\f022";
+}
+.ico-font-id:before {
+	content: "\f023";
+}
+.ico-font-image:before {
+	content: "\f024";
+}
+.ico-font-inbox:before {
+	content: "\f025";
+}
+.ico-font-infinite:before {
+	content: "\f026";
+}
+.ico-font-info-circle:before {
+	content: "\f027";
+}
+.ico-font-info-square:before {
+	content: "\f028";
+}
+.ico-font-info:before {
+	content: "\f029";
+}
+.ico-font-institution:before {
+	content: "\f02a";
+}
+.ico-font-interface:before {
+	content: "\f02b";
+}
+.ico-font-invisible:before {
+	content: "\f02c";
+}
+.ico-font-italic:before {
+	content: "\f02d";
+}
+.ico-font-jacket:before {
+	content: "\f02e";
+}
+.ico-font-jar:before {
+	content: "\f02f";
+}
+.ico-font-jewlery:before {
+	content: "\f030";
+}
+.ico-font-karate:before {
+	content: "\f031";
+}
+.ico-font-key-hole:before {
+	content: "\f032";
+}
+.ico-font-key:before {
+	content: "\f033";
+}
+.ico-font-keyboard:before {
+	content: "\f034";
+}
+.ico-font-kid:before {
+	content: "\f035";
+}
+.ico-font-label:before {
+	content: "\f036";
+}
+.ico-font-lamp:before {
+	content: "\f037";
+}
+.ico-font-laptop:before {
+	content: "\f038";
+}
+.ico-font-layers:before {
+	content: "\f039";
+}
+.ico-font-layout:before {
+	content: "\f03a";
+}
+.ico-font-leaf:before {
+	content: "\f03b";
+}
+.ico-font-leaflet:before {
+	content: "\f03c";
+}
+.ico-font-learn:before {
+	content: "\f03d";
+}
+.ico-font-legal:before {
+	content: "\f03e";
+}
+.ico-font-lego:before {
+	content: "\f03f";
+}
+.ico-font-lemon:before {
+	content: "\f040";
+}
+.ico-font-lens:before {
+	content: "\f041";
+}
+.ico-font-letter:before {
+	content: "\f042";
+}
+.ico-font-letterbox:before {
+	content: "\f043";
+}
+.ico-font-library:before {
+	content: "\f044";
+}
+.ico-font-license:before {
+	content: "\f045";
+}
+.ico-font-life-bouy:before {
+	content: "\f046";
+}
+.ico-font-life-buoy:before {
+	content: "\f047";
+}
+.ico-font-life-jacket:before {
+	content: "\f048";
+}
+.ico-font-life-ring:before {
+	content: "\f049";
+}
+.ico-font-light-bulb:before {
+	content: "\f04a";
+}
+.ico-font-lighter:before {
+	content: "\f04b";
+}
+.ico-font-lightning-ray:before {
+	content: "\f04c";
+}
+.ico-font-like:before {
+	content: "\f04d";
+}
+.ico-font-link:before {
+	content: "\f04e";
+}
+.ico-font-live-support:before {
+	content: "\f04f";
+}
+.ico-font-location-arrow:before {
+	content: "\f050";
+}
+.ico-font-location-pin:before {
+	content: "\f051";
+}
+.ico-font-lock:before {
+	content: "\f052";
+}
+.ico-font-login:before {
+	content: "\f053";
+}
+.ico-font-logout:before {
+	content: "\f054";
+}
+.ico-font-lollipop:before {
+	content: "\f055";
+}
+.ico-font-look:before {
+	content: "\f056";
+}
+.ico-font-loop:before {
+	content: "\f057";
+}
+.ico-font-luggage:before {
+	content: "\f058";
+}
+.ico-font-lunch:before {
+	content: "\f059";
+}
+.ico-font-lungs:before {
+	content: "\f05a";
+}
+.ico-font-magic-alt:before {
+	content: "\f05b";
+}
+.ico-font-magic:before {
+	content: "\f05c";
+}
+.ico-font-magnet:before {
+	content: "\f05d";
+}
+.ico-font-mail-box:before {
+	content: "\f05e";
+}
+.ico-font-mail:before {
+	content: "\f05f";
+}
+.ico-font-male:before {
+	content: "\f060";
+}
+.ico-font-map:before {
+	content: "\f061";
+}
+.ico-font-math:before {
+	content: "\f062";
+}
+.ico-font-maximize:before {
+	content: "\f063";
+}
+.ico-font-measure:before {
+	content: "\f064";
+}
+.ico-font-medal:before {
+	content: "\f065";
+}
+.ico-font-medical:before {
+	content: "\f066";
+}
+.ico-font-medicine:before {
+	content: "\f067";
+}
+.ico-font-mega-phone:before {
+	content: "\f068";
+}
+.ico-font-memorial:before {
+	content: "\f069";
+}
+.ico-font-memory-card:before {
+	content: "\f06a";
+}
+.ico-font-mic-mute:before {
+	content: "\f06b";
+}
+.ico-font-mic:before {
+	content: "\f06c";
+}
+.ico-font-micro-chip:before {
+	content: "\f06d";
+}
+.ico-font-microphone:before {
+	content: "\f06e";
+}
+.ico-font-microscope:before {
+	content: "\f06f";
+}
+.ico-font-military:before {
+	content: "\f070";
+}
+.ico-font-mill:before {
+	content: "\f071";
+}
+.ico-font-minus-circle:before {
+	content: "\f072";
+}
+.ico-font-minus-square:before {
+	content: "\f073";
+}
+.ico-font-minus:before {
+	content: "\f074";
+}
+.ico-font-mobile-phone:before {
+	content: "\f075";
+}
+.ico-font-molecule:before {
+	content: "\f076";
+}
+.ico-font-money:before {
+	content: "\f077";
+}
+.ico-font-moon:before {
+	content: "\f078";
+}
+.ico-font-mop:before {
+	content: "\f079";
+}
+.ico-font-muffin:before {
+	content: "\f07a";
+}
+.ico-font-music-alt:before {
+	content: "\f07b";
+}
+.ico-font-music-notes:before {
+	content: "\f07c";
+}
+.ico-font-music:before {
+	content: "\f07d";
+}
+.ico-font-mustache:before {
+	content: "\f07e";
+}
+.ico-font-mute-volume:before {
+	content: "\f07f";
+}
+.ico-font-navigation-menu:before {
+	content: "\f080";
+}
+.ico-font-navigation:before {
+	content: "\f081";
+}
+.ico-font-network-tower:before {
+	content: "\f082";
+}
+.ico-font-network:before {
+	content: "\f083";
+}
+.ico-font-news:before {
+	content: "\f084";
+}
+.ico-font-newspaper:before {
+	content: "\f085";
+}
+.ico-font-no-smoking:before {
+	content: "\f086";
+}
+.ico-font-not-allowed:before {
+	content: "\f087";
+}
+.ico-font-notebook:before {
+	content: "\f088";
+}
+.ico-font-notepad:before {
+	content: "\f089";
+}
+.ico-font-notification:before {
+	content: "\f08a";
+}
+.ico-font-numbered:before {
+	content: "\f08b";
+}
+.ico-font-opposite:before {
+	content: "\f08c";
+}
+.ico-font-optic:before {
+	content: "\f08d";
+}
+.ico-font-options:before {
+	content: "\f08e";
+}
+.ico-font-package:before {
+	content: "\f08f";
+}
+.ico-font-page:before {
+	content: "\f090";
+}
+.ico-font-paint:before {
+	content: "\f091";
+}
+.ico-font-paper-plane:before {
+	content: "\f092";
+}
+.ico-font-paperclip:before {
+	content: "\f093";
+}
+.ico-font-papers:before {
+	content: "\f094";
+}
+.ico-font-paw:before {
+	content: "\f095";
+}
+.ico-font-pay:before {
+	content: "\f096";
+}
+.ico-font-pen:before {
+	content: "\f097";
+}
+.ico-font-pencil:before {
+	content: "\f098";
+}
+.ico-font-penguin-linux:before {
+	content: "\f099";
+}
+.ico-font-pestle:before {
+	content: "\f09a";
+}
+.ico-font-phone-circle:before {
+	content: "\f09b";
+}
+.ico-font-phone:before {
+	content: "\f09c";
+}
+.ico-font-picture:before {
+	content: "\f09d";
+}
+.ico-font-pie:before {
+	content: "\f09e";
+}
+.ico-font-pine:before {
+	content: "\f09f";
+}
+.ico-font-pixels:before {
+	content: "\f0a0";
+}
+.ico-font-play:before {
+	content: "\f0a1";
+}
+.ico-font-plugin:before {
+	content: "\f0a2";
+}
+.ico-font-plus-circle:before {
+	content: "\f0a3";
+}
+.ico-font-plus-square:before {
+	content: "\f0a4";
+}
+.ico-font-plus:before {
+	content: "\f0a5";
+}
+.ico-font-polygonal:before {
+	content: "\f0a6";
+}
+.ico-font-power:before {
+	content: "\f0a7";
+}
+.ico-font-presentation:before {
+	content: "\f0a8";
+}
+.ico-font-price:before {
+	content: "\f0a9";
+}
+.ico-font-print:before {
+	content: "\f0aa";
+}
+.ico-font-puzzle:before {
+	content: "\f0ab";
+}
+.ico-font-qr-code:before {
+	content: "\f0ac";
+}
+.ico-font-queen:before {
+	content: "\f0ad";
+}
+.ico-font-question-circle:before {
+	content: "\f0ae";
+}
+.ico-font-question-square:before {
+	content: "\f0af";
+}
+.ico-font-question:before {
+	content: "\f0b0";
+}
+.ico-font-quote-left:before {
+	content: "\f0b1";
+}
+.ico-font-quote-right:before {
+	content: "\f0b2";
+}
+.ico-font-radio:before {
+	content: "\f0b3";
+}
+.ico-font-random:before {
+	content: "\f0b4";
+}
+.ico-font-recycle:before {
+	content: "\f0b5";
+}
+.ico-font-refresh:before {
+	content: "\f0b6";
+}
+.ico-font-repair:before {
+	content: "\f0b7";
+}
+.ico-font-reply-all:before {
+	content: "\f0b8";
+}
+.ico-font-reply:before {
+	content: "\f0b9";
+}
+.ico-font-resize:before {
+	content: "\f0ba";
+}
+.ico-font-responsive:before {
+	content: "\f0bb";
+}
+.ico-font-retweet:before {
+	content: "\f0bc";
+}
+.ico-font-road:before {
+	content: "\f0bd";
+}
+.ico-font-robot:before {
+	content: "\f0be";
+}
+.ico-font-rocket:before {
+	content: "\f0bf";
+}
+.ico-font-royal:before {
+	content: "\f0c0";
+}
+.ico-font-rss-feed:before {
+	content: "\f0c1";
+}
+.ico-font-safety:before {
+	content: "\f0c2";
+}
+.ico-font-sale-discount:before {
+	content: "\f0c3";
+}
+.ico-font-satellite:before {
+	content: "\f0c4";
+}
+.ico-font-send-mail:before {
+	content: "\f0c5";
+}
+.ico-font-server:before {
+	content: "\f0c6";
+}
+.ico-font-settings:before {
+	content: "\f0c7";
+}
+.ico-font-share-alt:before {
+	content: "\f0c8";
+}
+.ico-font-share-boxed:before {
+	content: "\f0c9";
+}
+.ico-font-share:before {
+	content: "\f0ca";
+}
+.ico-font-shield:before {
+	content: "\f0cb";
+}
+.ico-font-ship:before {
+	content: "\f0cc";
+}
+.ico-font-shopping-cart:before {
+	content: "\f0cd";
+}
+.ico-font-sign-in:before {
+	content: "\f0ce";
+}
+.ico-font-sign-out:before {
+	content: "\f0cf";
+}
+.ico-font-signal:before {
+	content: "\f0d0";
+}
+.ico-font-site-map:before {
+	content: "\f0d1";
+}
+.ico-font-smart-phone:before {
+	content: "\f0d2";
+}
+.ico-font-soccer:before {
+	content: "\f0d3";
+}
+.ico-font-sort-alt:before {
+	content: "\f0d4";
+}
+.ico-font-sort:before {
+	content: "\f0d5";
+}
+.ico-font-space:before {
+	content: "\f0d6";
+}
+.ico-font-spanner:before {
+	content: "\f0d7";
+}
+.ico-font-speech-comments:before {
+	content: "\f0d8";
+}
+.ico-font-speed-meter:before {
+	content: "\f0d9";
+}
+.ico-font-spinner-alt-1:before {
+	content: "\f0da";
+}
+.ico-font-spinner-alt-2:before {
+	content: "\f0db";
+}
+.ico-font-spinner-alt-3:before {
+	content: "\f0dc";
+}
+.ico-font-spinner-alt-4:before {
+	content: "\f0dd";
+}
+.ico-font-spinner-alt-5:before {
+	content: "\f0de";
+}
+.ico-font-spinner-alt-6:before {
+	content: "\f0df";
+}
+.ico-font-spinner:before {
+	content: "\f0e0";
+}
+.ico-font-spreadsheet:before {
+	content: "\f0e1";
+}
+.ico-font-square:before {
+	content: "\f0e2";
+}
+.ico-font-ssl-security:before {
+	content: "\f0e3";
+}
+.ico-font-star-alt-1:before {
+	content: "\f0e4";
+}
+.ico-font-star-alt-2:before {
+	content: "\f0e5";
+}
+.ico-font-star:before {
+	content: "\f0e6";
+}
+.ico-font-street-view:before {
+	content: "\f0e7";
+}
+.ico-font-sun:before {
+	content: "\f0e8";
+}
+.ico-font-support-faq:before {
+	content: "\f0e9";
+}
+.ico-font-tack-pin:before {
+	content: "\f0ea";
+}
+.ico-font-tag:before {
+	content: "\f0eb";
+}
+.ico-font-tags:before {
+	content: "\f0ec";
+}
+.ico-font-tasks:before {
+	content: "\f0ed";
+}
+.ico-font-telephone:before {
+	content: "\f0ee";
+}
+.ico-font-telescope:before {
+	content: "\f0ef";
+}
+.ico-font-terminal:before {
+	content: "\f0f0";
+}
+.ico-font-thumbs-down:before {
+	content: "\f0f1";
+}
+.ico-font-thumbs-up:before {
+	content: "\f0f2";
+}
+.ico-font-tick-boxed:before {
+	content: "\f0f3";
+}
+.ico-font-tick-mark:before {
+	content: "\f0f4";
+}
+.ico-font-ticket:before {
+	content: "\f0f5";
+}
+.ico-font-tie:before {
+	content: "\f0f6";
+}
+.ico-font-toggle-off:before {
+	content: "\f0f7";
+}
+.ico-font-toggle-on:before {
+	content: "\f0f8";
+}
+.ico-font-tools:before {
+	content: "\f0f9";
+}
+.ico-font-transparent:before {
+	content: "\f0fa";
+}
+.ico-font-tree:before {
+	content: "\f0fb";
+}
+.ico-font-umbrella:before {
+	content: "\f0fc";
+}
+.ico-font-unlock:before {
+	content: "\f0fd";
+}
+.ico-font-unlocked:before {
+	content: "\f0fe";
+}
+.ico-font-upload-alt:before {
+	content: "\f0ff";
+}
+.ico-font-upload:before {
+	content: "\f100";
+}
+.ico-font-usb-drive:before {
+	content: "\f101";
+}
+.ico-font-usb:before {
+	content: "\f102";
+}
+.ico-font-vector-path:before {
+	content: "\f103";
+}
+.ico-font-verification-check:before {
+	content: "\f104";
+}
+.ico-font-video-clapper:before {
+	content: "\f105";
+}
+.ico-font-video:before {
+	content: "\f106";
+}
+.ico-font-volume-down:before {
+	content: "\f107";
+}
+.ico-font-volume-off:before {
+	content: "\f108";
+}
+.ico-font-volume-up:before {
+	content: "\f109";
+}
+.ico-font-wall-clock:before {
+	content: "\f10a";
+}
+.ico-font-wall:before {
+	content: "\f10b";
+}
+.ico-font-wallet:before {
+	content: "\f10c";
+}
+.ico-font-warning-alt:before {
+	content: "\f10d";
+}
+.ico-font-warning:before {
+	content: "\f10e";
+}
+.ico-font-water-drop:before {
+	content: "\f10f";
+}
+.ico-font-web:before {
+	content: "\f110";
+}
+.ico-font-wheelchair:before {
+	content: "\f111";
+}
+.ico-font-wifi-alt:before {
+	content: "\f112";
+}
+.ico-font-wifi:before {
+	content: "\f113";
+}
+.ico-font-world:before {
+	content: "\f114";
+}
+.ico-font-zigzag:before {
+	content: "\f115";
+}
+.ico-font-zipped:before {
+	content: "\f116";
+}
+.ico-font-social-500px:before {
+	content: "\f117";
+}
+.ico-font-social-baidu-tieba:before {
+	content: "\f118";
+}
+.ico-font-social-bbm-messenger:before {
+	content: "\f119";
+}
+.ico-font-social-delicious:before {
+	content: "\f11a";
+}
+.ico-font-social-dribbble:before {
+	content: "\f11b";
+}
+.ico-font-social-facebook-messenger:before {
+	content: "\f11c";
+}
+.ico-font-social-flikr:before {
+	content: "\f11d";
+}
+.ico-font-social-foursquare:before {
+	content: "\f11e";
+}
+.ico-font-social-google-hangouts:before {
+	content: "\f11f";
+}
+.ico-font-social-kakaotalk:before {
+	content: "\f120";
+}
+.ico-font-social-kik:before {
+	content: "\f121";
+}
+.ico-font-social-kiwibox:before {
+	content: "\f122";
+}
+.ico-font-social-linkedin:before {
+	content: "\f123";
+}
+.ico-font-social-meetme:before {
+	content: "\f124";
+}
+.ico-font-social-odnoklassniki:before {
+	content: "\f125";
+}
+.ico-font-social-photobucket:before {
+	content: "\f126";
+}
+.ico-font-social-qq:before {
+	content: "\f127";
+}
+.ico-font-social-renren:before {
+	content: "\f128";
+}
+.ico-font-social-slack:before {
+	content: "\f129";
+}
+.ico-font-social-slidshare:before {
+	content: "\f12a";
+}
+.ico-font-social-snapchat:before {
+	content: "\f12b";
+}
+.ico-font-social-soundcloud:before {
+	content: "\f12c";
+}
+.ico-font-social-spotify:before {
+	content: "\f12d";
+}
+.ico-font-social-stack-exchange:before {
+	content: "\f12e";
+}
+.ico-font-social-stack-overflow:before {
+	content: "\f12f";
+}
+.ico-font-social-tagged:before {
+	content: "\f130";
+}
+.ico-font-social-trello:before {
+	content: "\f131";
+}
+.ico-font-social-twitch:before {
+	content: "\f132";
+}
+.ico-font-social-vk:before {
+	content: "\f133";
+}
+.ico-font-social-weibo:before {
+	content: "\f134";
+}
+.ico-font-social-whatsapp:before {
+	content: "\f135";
+}
+.ico-font-social-youku:before {
+	content: "\f136";
+}
+.ico-font-social-youtube-play:before {
+	content: "\f137";
+}
+.ico-font-social-youtube:before {
+	content: "\f138";
+}
+.ico-font-brand-xiaomi:before {
+	content: "\f139";
+}
+
+/*Font size*/
+.ico-font-lg {
+    font-size: 1.33333333em;
+    line-height: .75em;
+    vertical-align: -15%
+}
+
+.ico-font-2x {
+    font-size: 2em
+}
+
+.ico-font-3x {
+    font-size: 3em
+}
+
+.ico-font-4x {
+    font-size: 4em
+}
+
+.ico-font-5x {
+    font-size: 5em
+}
+
+.ico-font-fw {
+    display: inline-block;
+    width: 1.28571429em;
+    text-align: center
+}
+
+/*Fixed Width Icons*/
+.ico-font-fw {
+    width: 1.28571429em;
+    text-align: center;
+}
+
+/*Custom list icons*/
+.ico-font-ul {
+    padding-left: 0;
+    margin-left: 2.14285714em;
+    list-style-type: none;
+}
+.ico-font-ul>li {
+    position: relative;
+}
+.ico-font-li {
+    position: absolute;
+    left: -2.14285714em;
+    width: 2.14285714em;
+    top: .14285714em;
+    text-align: center;
+}
+
+/*Animation*/
+.ico-font-rotate {
+    -webkit-animation: ico-font-rotate 2s infinite linear;
+    animation: ico-font-rotate 2s infinite linear
+}
+
+@-webkit-keyframes ico-font-rotate {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg)
+    }
+    100% {
+        -webkit-transform: rotate(359deg);
+        transform: rotate(359deg)
+    }
+}
+
+@keyframes ico-font-rotate {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg)
+    }
+    100% {
+        -webkit-transform: rotate(359deg);
+        transform: rotate(359deg)
+    }
+}

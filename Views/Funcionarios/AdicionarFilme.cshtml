@@ -1,45 +1,45 @@
-﻿@model Webima.Models.FilmeViewModel
+﻿@model Webima.ViewModels.FilmeViewModel
 @{
     ViewData["Title"] = "Adicionar Filme";
 }
 
-<div class="maincontent">
+<div class="main-content">
     <h2> Adicionar Filme</h2>
-    <hr /><br />
+    <hr/><br/>
     <form asp-action="AdicionarFilme" enctype="multipart/form-data">
         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
         <div class="container">
             <div class="row">
                 <div class="col-lg">
-                    <input type="hidden" asp-for="IdFunc" />
+                    <input type="hidden" asp-for="FuncionarioId"/>
                     <div class="form-group">
                         <label asp-for="Titulo" class="control-label"></label>
-                        <input asp-for="Titulo" class="form-control" />
+                        <input asp-for="Titulo" class="form-control"/>
                         <span asp-validation-for="Titulo" class="text-danger"></span>
                     </div>
                     <div class="form-group">
                         <label asp-for="Realizador" class="control-label"></label>
-                        <input asp-for="Realizador" class="form-control" />
+                        <input asp-for="Realizador" class="form-control"/>
                         <span asp-validation-for="Realizador" class="text-danger"></span>
                     </div>
                     <div class="form-group">
                         <label asp-for="Elenco" class="control-label"></label>
-                        <input asp-for="Elenco" class="form-control" />
+                        <input asp-for="Elenco" class="form-control"/>
                         <span asp-validation-for="Elenco" class="text-danger"></span>
                     </div>
                     <div class="form-group">
                         <label asp-for="Ano" class="control-label"></label>
-                        <input asp-for="Ano" class="form-control" />
+                        <input asp-for="Ano" class="form-control"/>
                         <span asp-validation-for="Ano" class="text-danger"></span>
                     </div>
                     <div class="form-group">
                         <label asp-for="Duracao" class="control-label"></label>
-                        <input asp-for="Duracao" class="form-control" />
+                        <input asp-for="Duracao" class="form-control"/>
                         <span asp-validation-for="Duracao" class="text-danger"></span>
                     </div>
                     <div class="form-group">
-                        <label asp-for="IdCat" class="control-label"></label>
-                        <select asp-for="IdCat" class ="form-control" asp-items="ViewBag.IdCat"></select>
+                        <label asp-for="CategoriaId" class="control-label"></label>
+                        <select asp-for="CategoriaId" class="form-control" asp-items="ViewBag.IdCat"></select>
                     </div>
                     <div class="form-group">
                         <label asp-for="Sinopse" class="control-label"></label>
@@ -50,58 +50,59 @@
                 <div class="col-lg">
                     <div class="form-group">
                         <label asp-for="Trailer" class="control-label"></label>
-                        <input asp-for="Trailer" class="form-control" />
+                        <input asp-for="Trailer" class="form-control"/>
                         <span asp-validation-for="Trailer" class="text-danger"></span>
                     </div>
                     <div class="form-group">
                         <label asp-for="Poster" class="control-label">Poster</label>
-                        <input asp-for="Poster" type="file" class="form-control" onchange="preview()" />
+                        <input asp-for="Poster" type="file" class="form-control" id="poster"/>
                         <span asp-validation-for="Poster" class="text-danger"></span>
-                        <img id="frame" src=""/>
+                        <img id="frame" src="" alt="Poster" style="width: 100%; height: 100%"/>
                     </div>
                 </div>
                 <div class="col-lg">
                     <div class="form-group">
                         <label asp-for="Estreia" class="control-label"></label>
-                        <input asp-for="Estreia" class="form-control" />
+                        <input asp-for="Estreia" class="form-control"/>
                         <span asp-validation-for="Estreia" class="text-danger"></span>
                     </div>
                     <div class="form-group">
                         <label asp-for="DataFim" class="control-label"></label>
-                        <input asp-for="DataFim" class="form-control" />
+                        <input asp-for="DataFim" class="form-control"/>
                         <span asp-validation-for="DataFim" class="text-danger"></span>
                     </div>
                     <div class="form-group">
                         <label asp-for="IdSala" class="control-label"></label>
-                        <select asp-for="IdSala" class ="form-control" asp-items="ViewBag.IdSala"></select>
+                        <select asp-for="IdSala" class="form-control" asp-items="ViewBag.IdSala"></select>
                     </div>
                     <div class="form-group">
                         <label>Sessões</label>
-                        @for(int i = 0; i < Model.Sessoes.Count; i++ ) {
-                            <br />
-					        <div class="cbx" style="font-size: 1.2em">
-                                <input type="checkbox" asp-for="@Model.Sessoes[i].Selected" />
+                        @foreach (var i in Enumerable.Range(0, Model.Sessoes.Count))
+                        {
+                            <br/>
+                            <div class="cbx" style="font-size: 1.2em">
+                                <input type="checkbox" asp-for="@Model.Sessoes[i].Selected"/>
                                 <label asp-for="@Model.Sessoes[i].Selected" style="padding-left: 30px">
                                     @Model.Sessoes[i].Horas.ToString(@"hh\:mm")
                                 </label>
-						        <svg width="15" height="14" viewBox="0 0 15 14" fill="none">
-							        <path d="M2 8.36364L6.23077 12L13 2"></path>
-						        </svg>
+                                <svg width="15" height="14" viewBox="0 0 15 14" fill="none">
+                                    <path d="M2 8.36364L6.23077 12L13 2"></path>
+                                </svg>
                             </div>
-                            <input type="hidden" asp-for="@Model.Sessoes[i].Id" />
-                            <input type="hidden" asp-for="@Model.Sessoes[i].Horas" />
-                            <input type="hidden" asp-for="@Model.Sessoes[i].Estado" />
-                            <br />
-                        } 
+                            <input type="hidden" asp-for="@Model.Sessoes[i].Id"/>
+                            <input type="hidden" asp-for="@Model.Sessoes[i].Horas"/>
+                            <input type="hidden" asp-for="@Model.Sessoes[i].Estado"/>
+                            <br/>
+                        }
                     </div>
-                    <br />
+                    <br/>
                     <div class="form-group">
                         <label asp-for="Preco" class="control-label"></label>
-                        <input asp-for="Preco" class="form-control" />
+                        <input asp-for="Preco" class="form-control"/>
                         <span asp-validation-for="Preco" class="text-danger"></span>
                     </div>
                     <div class="form-group">
-                        <input type="submit" value="Adicionar" class="btn btn-primary" />
+                        <input type="submit" value="Adicionar" class="btn btn-primary"/>
                     </div>
                 </div>
             </div>
@@ -111,8 +112,11 @@
 
 @section Scripts{
     <script>
-        function preview() {
-            frame.src=URL.createObjectURL(event.target.files[0]);
-        }
+        const poster = document.getElementById('poster');
+        const frame = document.getElementById('frame');
+        poster.addEventListener('change', event => {
+            const file = event.target.files[0];
+            frame.src = URL.createObjectURL(file);
+        });
     </script>
 }

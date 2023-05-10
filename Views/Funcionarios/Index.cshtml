@@ -1,53 +1,57 @@
-﻿@model Webima.Models.Funcionario
+﻿@model Funcionario
 
 @{
-	ViewData["Title"] = "Perfil";
+    ViewData["Title"] = "Perfil";
 }
 
-<div class="maincontent"> 
+<div class="main-content">
     <div class="container">
-		<h1>Detalhes da conta</h1>
-		<br />
+        <h1>Detalhes da conta</h1>
+        <br/>
         <div class="row">
-			<div class="col-lg">
-				<h3>Dados do funcionário</h3>
-				<br /><br />
-				<div class="transformers-content" style="font-size: 1.2em;">
-					<ul>
-						<li>
-							<div class="transformers-left">@Html.DisplayNameFor(model => model.IdNavigation.Nome):</div>
-							<div class="transformers-right" id="nome">@Html.DisplayFor(model => model.IdNavigation.Nome)</div>
-							<a asp-controller="Conta" asp-action="AlterarNome" asp-route-id="@Model.Id"
-								data-ajax="true" data-ajax-method="get"
-								data-ajax-mode="replace" data-ajax-update="#nome">&nbsp;<i class="bi bi-pencil"></i></a>
+            <div class="col-lg">
+                <h3>Dados do funcionário</h3>
+                <br/><br/>
+                <div class="transformers-content" style="font-size: 1.2em;">
+                    <ul>
+                        <li>
+                            <div class="transformers-left">@Html.DisplayNameFor(model => model.Utilizador.Nome):</div>
+                            <div class="transformers-right" id="nome">@Html.DisplayFor(model => model.Utilizador.Nome)</div>
+                            <a asp-controller="Conta" asp-action="AlterarNome" asp-route-id="@Model.Id"
+                               data-ajax="true" data-ajax-method="get"
+                               data-ajax-mode="replace" data-ajax-update="#nome">
+                                &nbsp;<i class="bi bi-pencil"></i>
+                            </a>
 
-						</li>
-						<li>
-							<div class="transformers-left">@Html.DisplayNameFor(model => model.IdNavigation.Username):</div>
-							<div class="transformers-right">@Html.DisplayFor(model => model.IdNavigation.Username)</div>
-						</li>
-						<li>
-							<div class="transformers-left">Email: </div>
-							<div class="transformers-right">@ViewData["Email"]</div>
-						</li>
-						<li>
-							<div class="transformers-left">@Html.DisplayNameFor(model => model.Telefone):</div>
-							<div class="transformers-right" id="telefone">@Html.DisplayFor(model => model.Telefone)</div>
-							<a asp-action="AlterarTelefone" asp-route-id="@Model.Id"
-								data-ajax="true" data-ajax-method="get"
-								data-ajax-mode="replace" data-ajax-update="#telefone">&nbsp;<i class="bi bi-pencil"></i></a>
-						</li>
-					</ul>
-				</div>
-				<br /><br />
-				<a class="theme-btn" asp-area="Identity" asp-page="/Account/Manage/Index" title="Gerir a sua conta" >Gerir a sua conta</a>
-				<br />
-			</div>
-			<div class="col-lg-4">
-				<h3>Filmes</h3>
-				<br /><hr /><br />
-				<a class="theme-btn" asp-action="AdicionarFilme">Adicionar Filme</a>
-			</div>
+                        </li>
+                        <li>
+                            <div class="transformers-left">@Html.DisplayNameFor(model => model.Utilizador.UserName):</div>
+                            <div class="transformers-right">@Html.DisplayFor(model => model.Utilizador.UserName)</div>
+                        </li>
+                        <li>
+                            <div class="transformers-left">Email: </div>
+                            <div class="transformers-right">@ViewData["Email"]</div>
+                        </li>
+                        <li>
+                            <div class="transformers-left">@Html.DisplayNameFor(model => model.Utilizador.PhoneNumber):</div>
+                            <div class="transformers-right" id="telefone">@Html.DisplayFor(model => model.Utilizador.PhoneNumber)</div>
+                            <a asp-action="AlterarTelefone" asp-route-id="@Model.Id"
+                               data-ajax="true" data-ajax-method="get"
+                               data-ajax-mode="replace" data-ajax-update="#telefone">
+                                &nbsp;<i class="bi bi-pencil"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <br/><br/>
+                <a class="theme-btn" asp-area="Identity" asp-page="/Account/Manage/Index" title="Gerir a sua conta">Gerir a sua conta</a>
+                <br/>
+            </div>
+            <div class="col-lg-4">
+                <h3>Filmes</h3>
+                <br/><hr/><br/>
+                <a class="theme-btn" asp-action="AdicionarFilme">Adicionar Filme</a>
+            </div>
         </div>
     </div>
 </div>

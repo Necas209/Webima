@@ -1,9 +1,10 @@
-﻿namespace Webima.Models
-{
-    public class PreferidasViewModel
-    {
-        public Categoria Categoria { get; set; }
+﻿using Webima.Models;
 
-        public bool IsChecked { get; set; }
-    }
+namespace Webima.ViewModels;
+
+public class PreferidasViewModel
+{
+    public Categoria Categoria { get; init; }
+
+    public bool IsChecked { get; init; }
 }

@@ -1,10 +1,3 @@
-/*
-Theme Name: Movie Point
-Version: 1.0
-Author: Jsoft
-Description: Online Movie,Vedio and TV Show HTML Template
-*/
-
 /**
  *** CSS Indexing ***
  * THEME DEFAULT CSS
@@ -27,12 +20,13 @@ Description: Online Movie,Vedio and TV Show HTML Template
 --------- THEME DEFAULT CSS --------
 ----------------------------------*/
 @import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,900');
+
 body {
     line-height: 24px;
     font-size: 14px;
     color: #b6b7b9;
-	background: #13151f;
-	font-family: 'Poppins', sans-serif;
+    background: #13151f;
+    font-family: 'Poppins', sans-serif;
     font-weight: 400;
     position: relative;
 }
@@ -47,8 +41,9 @@ h4,
 h5,
 h6 {
     font-weight: 500;
-	color: #fff;
+    color: #fff;
 }
+
 h1,
 h2,
 h3,
@@ -56,35 +51,44 @@ h4,
 h5,
 h6,
 p {
-    margin: 0px;
+    margin: 0;
 }
+
 h1 {
     font-size: 36px;
 }
+
 h2 {
     font-size: 30px;
 }
+
 h4 {
     font-size: 18px;
 }
+
 h6 {
     font-size: 14px;
 }
+
 a {
     transition: 0.6s;
 }
+
 a,
 a:hover {
     color: #fff;
 }
+
 img {
     max-width: 100%;
     height: auto;
 }
+
 iframe {
     width: 100%;
     border: none;
 }
+
 a,
 a:hover,
 a:focus,
@@ -94,32 +98,39 @@ button:focus {
     border: none;
     outline: 0;
 }
+
 ul {
     list-style: none;
     margin: 0;
     padding: 0;
 }
+
 ol {
     margin-bottom: 0;
 }
+
 select:focus,
 select:active {
     box-shadow: none;
     border: 0;
     outline: 0
 }
+
 input:focus,
 textarea:focus,
 select:focus,
 button:focus {
     outline: none;
 }
-button{
+
+button {
     cursor: pointer;
 }
+
 textarea {
-	height: 160px;
+    height: 160px;
 }
+
 input[type="text"],
 input[type="submit"],
 button[type="submit"],
@@ -135,45 +146,57 @@ textarea {
     padding: 8px 15px;
     border: none;
 }
+
 input[type="submit"],
 button[type="submit"] {
     width: auto;
     color: #666;
     padding: 4px 15px;
 }
+
 textarea:focus {
     outline: none !important;
     box-shadow: none !important;
 }
+
 .section-title h1 i {
     color: #fece50;
-	font-size: 40px;
-	margin-right: 5px;
+    font-size: 40px;
+    margin-right: 5px;
 }
+
 .mt-100 {
     margin-top: 100px;
 }
+
 .mt-30 {
     margin-top: 30px;
 }
+
 .mt-20 {
     margin-top: 20px;
 }
+
 .pt-60 {
-	padding-top: 60px;
+    padding-top: 60px;
 }
+
 .pb-90 {
-	padding-bottom: 90px;
+    padding-bottom: 90px;
 }
+
 .pb-20 {
-	padding-bottom: 20px;
+    padding-bottom: 20px;
 }
+
 .ptb-100 {
     padding: 100px 0;
 }
+
 .ptb-90 {
     padding: 90px 0;
 }
+
 .owl-nav div {
     position: absolute;
     top: 50%;
@@ -189,64 +212,75 @@ textarea:focus {
     transition: 0.4s;
     margin-top: -60px;
 }
+
 .owl-nav div:hover {
     background: #000;
     color: #fff;
 }
+
 .owl-nav div.owl-next {
     right: 20px;
     left: auto;
 }
+
 .owl-dots {
     text-align: center;
     margin-top: 35px;
 }
+
 .owl-dot {
     width: 20px;
     height: 6px;
-	border-radius: 5px;
+    border-radius: 5px;
     background: #595a5f;
     display: inline-block;
     margin: 0 5px;
 }
+
 .owl-dot.active {
     width: 28px;
     background: #eb315a;
 }
+
 .display-table {
     display: table;
     height: 100%;
     width: 100%;
 }
-.display-tablecell {
+
+.display-table-cell {
     display: table-cell;
     vertical-align: middle;
 }
+
 .theme-btn {
-	background: #eb315a;
+    background: #eb315a;
     border: 1px solid #eb315a;
     color: #fff;
-	border-radius: 35px;
+    border-radius: 35px;
     padding: 5px 25px;
     display: inline-block;
     font-size: 16px;
-	cursor: pointer;
-	font-weight: 500;
+    cursor: pointer;
+    font-weight: 500;
 }
+
 .theme-btn:hover {
     border: 1px solid #eb315a;
-	background: transparent;
+    background: transparent;
     color: #eb315a;
 }
+
 .theme-btn2:hover,
 .theme-btn2 {
     color: #fff;
-	background: #963dad; /* Old browsers */
-	background: -moz-linear-gradient(top, #963dad 0%, #9c3db1 34%, #ba3fc4 65%, #c340ca 100%); /* FF3.6-15 */
-	background: -webkit-linear-gradient(top, #963dad 0%,#9c3db1 34%,#ba3fc4 65%,#c340ca 100%); /* Chrome10-25,Safari5.1-6 */
-	background: linear-gradient(to bottom, #963dad 0%,#9c3db1 34%,#ba3fc4 65%,#c340ca 100%); 
-	border: none;
+    background: #963dad; /* Old browsers */
+    background: -moz-linear-gradient(top, #963dad 0%, #9c3db1 34%, #ba3fc4 65%, #c340ca 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #963dad 0%, #9c3db1 34%, #ba3fc4 65%, #c340ca 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #963dad 0%, #9c3db1 34%, #ba3fc4 65%, #c340ca 100%);
+    border: none;
 }
+
 .flexbox-center {
     display: -moz-flex;
     display: -ms-flex;
@@ -261,9 +295,10 @@ textarea:focus {
     -ms-flex-align: center;
     align-items: center;
 }
+
 textarea,
 input,
-textarea::-webkit-input-placeholder ,
+textarea::-webkit-input-placeholder,
 input::-webkit-input-placeholder {
     color: #fff;
 }
@@ -272,25 +307,28 @@ input::-webkit-input-placeholder {
 -------- HEADER AREA CSS START --------
 ---------------------------------------*/
 .header {
-	padding: 18px 0;
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	z-index: 99;
+    padding: 18px 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99;
 }
+
 .header-area {
     display: grid;
-    grid-template-rows: repeat(2,1fr);
-    grid-template-columns: repeat(12,1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(12, 1fr);
     align-items: center;
     grid-gap: 20px;
 }
+
 .logo {
     grid-column: span 2;
     grid-row: span 2;
     padding-right: 15px;
 }
+
 .header-right {
     grid-column: span 10;
     text-align: right;
@@ -301,39 +339,49 @@ input::-webkit-input-placeholder {
 .menu-area {
     grid-column: span 10;
 }
-.mainmenu {
+
+.main-menu {
     text-align: right;
 }
-.mainmenu li {
+
+.main-menu li {
     display: inline-block;
-	position: relative;
+    position: relative;
 }
-.mainmenu li a:not(.theme-btn) {
+
+.main-menu li a:not(.theme-btn) {
     display: inline-block;
-	margin-right: 30px;
-	padding: 3px 0;
+    margin-right: 30px;
+    padding: 3px 0;
 }
+
 .slicknav_menu {
-	padding: 0;
+    padding: 0;
     background: transparent;
 }
-.mainmenu {
+
+.main-menu {
     display: block;
 }
+
 .slicknav_menu {
-	display: none;
+    display: none;
 }
+
 .header.sticky {
-	border-bottom: 1px solid #fff;
-	background: #000;
+    border-bottom: 1px solid #fff;
+    background: #000;
 }
-.mainmenu li:hover ul {
+
+.main-menu li:hover ul {
     transform: scaleY(1);
 }
-.mainmenu li ul li {
-	display: block;
+
+.main-menu li ul li {
+    display: block;
 }
-.mainmenu li ul {
+
+.main-menu li ul {
     position: absolute;
     top: 100%;
     background: #000;
@@ -344,9 +392,11 @@ input::-webkit-input-placeholder {
     transform: scaleY(0);
     transition: all 0.4s;
 }
-.mainmenu li a.active, .mainmenu li a:hover {
+
+.main-menu li a.active, .main-menu li a:hover {
     color: #eb315a;
 }
+
 .header-right form {
     display: flex;
     max-width: 380px;
@@ -354,6 +404,7 @@ input::-webkit-input-placeholder {
     border-radius: 30px;
     margin-left: auto;
 }
+
 .header-right form button {
     background: transparent;
     color: #fff;
@@ -363,21 +414,22 @@ input::-webkit-input-placeholder {
 
 .header-right form input {
     width: auto;
-	background: transparent;
-	color: #fff;
+    background: transparent;
+    color: #fff;
     border: none;
-    margin: 0;
-    margin-left: 20px;
+    margin: 0 0 0 20px;
 }
 
 .header-right ul li a:hover {
-	color: #eb315a;
+    color: #eb315a;
 }
+
 .header-right ul li {
     padding: 8px 0 0;
     margin-left: 15px;
     display: inline-block;
 }
+
 /*--------------------------------------
 --------- HEADER AREA CSS END ---------
 ---------------------------------------*/
@@ -393,6 +445,7 @@ input::-webkit-input-placeholder {
     background-size: cover;
     overflow: hidden;
 }
+
 .hero-area-slide {
     background: #13151f;
     margin: 320px 15px 50px;
@@ -404,9 +457,10 @@ input::-webkit-input-placeholder {
     position: relative;
     margin-top: -120px;
 }
+
 .hero-area-slider {
-	margin: auto;
-	max-width: 950px;
+    margin: auto;
+    max-width: 950px;
 }
 
 .author-review {
@@ -415,7 +469,7 @@ input::-webkit-input-placeholder {
 }
 
 .review h4 {
-    padding-left: 0px;
+    padding-left: 0;
     overflow: hidden;
 }
 
@@ -429,8 +483,8 @@ input::-webkit-input-placeholder {
 
 .single-slide-cast {
     width: 11.5%;
-	margin-right: 1%;
-	float: left;
+    margin-right: 1%;
+    float: left;
     margin-top: 15px;
 }
 
@@ -446,11 +500,13 @@ input::-webkit-input-placeholder {
     border: 2px solid #eb315a;
     color: #eb315a;
 }
+
 .pr-50 {
-	padding-right: 10px;
-	margin-left: -15px;
+    padding-right: 10px;
+    margin-left: -15px;
 }
-.slide-trailor {
+
+.slide-trailer {
     overflow: hidden;
     margin-top: 40px;
 }
@@ -459,14 +515,15 @@ input::-webkit-input-placeholder {
     overflow: hidden;
 }
 
-.slide-trailor h3 {
+.slide-trailer h3 {
     float: left;
-    margin: 0;
-    margin-right: 25px;
+    margin: 0 25px 0 0;
 }
+
 .hero-area-thumb .hero-area-slide {
-	margin: 0 15px;
+    margin: 0 15px;
 }
+
 .thumb-prev {
     position: absolute;
     bottom: 0;
@@ -475,6 +532,7 @@ input::-webkit-input-placeholder {
     -webkit-perspective: 80px;
     perspective: 80px;
 }
+
 .thumb-prev .hero-area-slide {
     -webkit-transform-style: preserve-3d;
     -webkit-transform: rotateY(2deg);
@@ -482,6 +540,7 @@ input::-webkit-input-placeholder {
     transform: rotateY(2deg);
     cursor: pointer;
 }
+
 .thumb-next {
     position: absolute;
     bottom: 0;
@@ -490,6 +549,7 @@ input::-webkit-input-placeholder {
     -webkit-perspective: 80px;
     perspective: 80px;
 }
+
 .thumb-next .hero-area-slide {
     -webkit-transform-style: preserve-3d;
     -webkit-transform: rotateY(-2deg);
@@ -497,6 +557,7 @@ input::-webkit-input-placeholder {
     transform: rotateY(-2deg);
     cursor: pointer;
 }
+
 /*----------------------------------
 --------- HERO AREA CSS END --------
 -----------------------------------*/
@@ -505,11 +566,12 @@ input::-webkit-input-placeholder {
 -------- portfolio AREA CSS START -------
 ------------------------------------*/
 hr {
-	margin: 0;
-	border-top: 1px solid #ddd;
+    margin: 0;
+    border-top: 1px solid #ddd;
 }
+
 .portfolio-menu {
-	padding-top: 30px;
+    padding-top: 30px;
 }
 
 .portfolio-menu li {
@@ -536,9 +598,10 @@ hr {
     color: #fff;
 }
 
-.portfolio-menu li.active::before,.portfolio-menu li:hover::before {
+.portfolio-menu li.active::before, .portfolio-menu li:hover::before {
     background: #eb315a;
 }
+
 .portfolio-content h2 {
     margin-top: 20px;
 }
@@ -546,37 +609,44 @@ hr {
 .single-portfolio {
     margin-top: 50px;
 }
+
 .video-area,
 .single-portfolio-img {
-	overflow: hidden;
-	position: relative;
+    overflow: hidden;
+    position: relative;
 }
+
 .single-portfolio-img:hover .popup-youtube i {
-	opacity: 1;
+    opacity: 1;
 }
+
 .single-portfolio-img .popup-youtube i {
-	opacity: 0;
+    opacity: 0;
 }
+
 .video-area img,
 .single-portfolio-img img {
-	transition: 0.9s;
+    transition: 0.9s;
 }
+
 .video-area:hover img,
 .single-portfolio:hover img {
-	transform: scale(1.2);
+    transform: scale(1.2);
 }
+
 .single-portfolio .review {
     margin-bottom: 0;
 }
 
 .portfolio-sidebar img {
     margin-top: 30px;
-	border-radius: 10px;
+    border-radius: 10px;
 }
 
 .portfolio-sidebar {
     margin-top: 20px;
 }
+
 /*----------------------------------
 --------- portfolio AREA CSS END --------
 -----------------------------------*/
@@ -587,18 +657,19 @@ hr {
 ------------------------------------*/
 .video-area {
     position: relative;
-	margin-top: 35px;
+    margin-top: 35px;
 }
 
 .popup-youtube i:hover {
     color: #fece50;
     border: 2px solid #fece50;
 }
+
 .popup-youtube i {
     width: 60px;
     height: 60px;
     line-height: 60px;
-	color: #fff;
+    color: #fff;
     border: 2px solid #fff;
     border-radius: 50%;
     text-align: center;
@@ -617,7 +688,7 @@ hr {
     position: absolute;
     left: 0;
     bottom: 0;
-    background: rgba(19,21,31,0.6);
+    background: rgba(19, 21, 31, 0.6);
     padding: 20px 35px;
     width: 100%;
 }
@@ -625,6 +696,7 @@ hr {
 .video-text .review {
     margin-bottom: 0;
 }
+
 /*----------------------------------
 --------- video AREA CSS END --------
 -----------------------------------*/
@@ -633,57 +705,52 @@ hr {
 -------- news AREA CSS START -------
 ------------------------------------*/
 .single-news {
-	position: relative;
-	color: #fff;
+    position: relative;
+    color: #fff;
 }
+
 .news-content {
     position: absolute;
     left: 60px;
     bottom: 35px;
     right: 420px;
 }
-.news-bg-1 {
-	background: url('../img/news/news1.jpg') no-repeat center / cover;
-    height: 350px;
-}
-.news-bg-2 {
-	background: url('../img/news/news2.jpg') no-repeat center / cover;
-    height: 350px;
-}
-.news-bg-3 {
-	background: url('../img/news/news3.jpg') no-repeat center / cover;
-    height: 350px;
-}
+
 .news-date {
-	position: absolute;
-	left: 60px;
-	top: 0;
-	background: #f09819; /* Old browsers */
-	background: -moz-linear-gradient(-45deg, #f09819 0%, #ef8128 34%, #ec474c 64%, #eb315a 100%); /* FF3.6-15 */
-	background: -webkit-linear-gradient(-45deg, #f09819 0%,#ef8128 34%,#ec474c 64%,#eb315a 100%); /* Chrome10-25,Safari5.1-6 */
-	background: linear-gradient(135deg, #f09819 0%,#ef8128 34%,#ec474c 64%,#eb315a 100%);
-	padding: 20px;
+    position: absolute;
+    left: 60px;
+    top: 0;
+    background: #f09819; /* Old browsers */
+    background: -moz-linear-gradient(-45deg, #f09819 0%, #ef8128 34%, #ec474c 64%, #eb315a 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, #f09819 0%, #ef8128 34%, #ec474c 64%, #eb315a 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, #f09819 0%, #ef8128 34%, #ec474c 64%, #eb315a 100%);
+    padding: 20px;
 }
+
 .news-date h2 span {
-	font-size: 16px;
+    font-size: 16px;
 }
+
 .news-content > h2 {
     margin-bottom: 15px;
 }
 
-.news-slider .single-news{
+.news-slider .single-news {
     max-width: 950px;
     margin: 50px auto 0;
 }
+
 .single-news a {
     position: absolute;
     right: 40px;
     bottom: 40px;
 }
+
 .news-slide-area {
     position: relative;
     overflow: hidden;
 }
+
 .news-next {
     position: absolute;
     width: 950px;
@@ -704,6 +771,7 @@ hr {
     cursor: pointer;
     height: 350px;
 }
+
 /*----------------------------------
 --------- news AREA CSS END --------
 -----------------------------------*/
@@ -712,10 +780,11 @@ hr {
 --------- footer AREA CSS START --------
 -----------------------------------*/
 .footer {
-	background: url('../img/footer-bg.png') no-repeat bottom center / cover;
+    background: url('../img/footer-bg.png') no-repeat bottom center / cover;
     position: relative;
-	padding: 90px 0 30px;
+    padding: 90px 0 30px;
 }
+
 .footer::before {
     position: absolute;
     background: #13151f;
@@ -726,7 +795,8 @@ hr {
     height: 100%;
     opacity: 0.9;
 }
-.widget h4,.widget img {
+
+.widget h4, .widget img {
     margin-bottom: 40px;
 }
 
@@ -752,9 +822,11 @@ hr {
 .widget form {
     margin-top: 25px;
 }
+
 .copyright {
     padding-top: 25px;
 }
+
 /*----------------------------------
 --------- footer AREA CSS END --------
 -----------------------------------*/
@@ -768,14 +840,17 @@ hr {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-	padding: 280px 0 200px;
+    padding: 280px 0 200px;
 }
+
 .breadcrumb-area-content {
-	text-align: center;
+    text-align: center;
 }
+
 .breadcrumb-area-content h1 {
-	font-size: 60px;
+    font-size: 60px;
 }
+
 .transformers-box {
     padding: 35px;
     box-shadow: 0 0 20px #000000;
@@ -792,6 +867,7 @@ hr {
     position: relative;
     padding-left: 70px;
 }
+
 .transformers-content > h2 + a.theme-btn {
     margin: 12px 10px 20px 0;
 }
@@ -821,7 +897,7 @@ hr {
 
 .transformers-right .theme-btn {
     margin: 0 8px;
-	padding: 2px 15px;
+    padding: 2px 15px;
 }
 
 .transformers-bottom {
@@ -838,6 +914,7 @@ hr {
 .transformers-bottom p {
     margin-bottom: 8px;
 }
+
 .transformers-box > .theme-btn {
     position: absolute;
     right: 0;
@@ -845,7 +922,7 @@ hr {
     border-radius: 5px 0 0;
 }
 
-.details-content >div {
+.details-content > div {
     margin-top: 30px;
 }
 
@@ -855,7 +932,7 @@ hr {
     padding-bottom: 50px;
 }
 
-.details-content >div h2 {
+.details-content > div h2 {
     margin-bottom: 20px;
 }
 
@@ -873,19 +950,23 @@ hr {
     width: 50px;
     height: 2px;
 }
+
 .select-container {
     position: relative;
     margin-bottom: 30px;
 }
+
 .textarea-container {
     position: relative;
 }
+
 .textarea-container button {
-	color: #fff;
-	background: transparent;
-	font-size: 20px;
-	border: none;
+    color: #fff;
+    background: transparent;
+    font-size: 20px;
+    border: none;
 }
+
 .textarea-container button,
 .select-container i {
     position: absolute;
@@ -893,6 +974,7 @@ hr {
     bottom: 12px;
     margin: auto;
 }
+
 .details-comment {
     display: flex;
     align-items: center;
@@ -900,7 +982,7 @@ hr {
 
 .details-comment a {
     flex: 1;
-	text-align: center;
+    text-align: center;
 }
 
 .details-comment p {
@@ -920,7 +1002,7 @@ hr {
 }
 
 .thumb-text {
-	flex: 5;
+    flex: 5;
 }
 
 .details-thumb {
@@ -929,12 +1011,14 @@ hr {
 
 .details-thumb > div h4,
 .details-thumb > div i {
-	transition: 0.4s;
+    transition: 0.4s;
 }
+
 .details-thumb > div:hover h4,
 .details-thumb > div:hover i {
-	color: #eb315a
+    color: #eb315a
 }
+
 .details-thumb-next {
     text-align: right;
 }
@@ -942,6 +1026,7 @@ hr {
 .thumb-text h4 {
     margin-bottom: 2px;
 }
+
 /*----------------------------------
 ----- Movie details PAGE CSS END ----
 -----------------------------------*/
@@ -955,8 +1040,8 @@ hr {
     left: 0;
     right: 0;
     height: 100%;
-	display: none;
-    background: rgba(0,0,0,0.4);
+    display: none;
+    background: rgba(0, 0, 0, 0.4);
     z-index: 99;
     color: #171717;
 }
@@ -964,10 +1049,11 @@ hr {
 .buy-ticket-area {
     margin-top: 140px;
     background: #f5f5f5;
-	box-shadow: 0 0 5px #222;
+    box-shadow: 0 0 5px #222;
     position: relative;
     padding: 100px 120px 120px;
 }
+
 .buy-ticket-area > a {
     color: #171717;
     font-size: 50px;
@@ -995,16 +1081,17 @@ hr {
 
 .ticket-box-table {
     display: flex;
-	padding-top: 35px;
-	justify-content: space-between;
+    padding-top: 35px;
+    justify-content: space-between;
 }
 
 .ticket-table-seat td.active,
 .ticket-table-seat td:hover {
-	background: #eb315a;
-	border-color: #eb315a;
-	color: #fff;
+    background: #eb315a;
+    border-color: #eb315a;
+    color: #fff;
 }
+
 .ticket-table-seat td {
     width: 19px;
     height: 19px;
@@ -1014,7 +1101,7 @@ hr {
     line-height: 15px;
     border-collapse: collapse;
     margin: 3px;
-	font-size: 10px;
+    font-size: 10px;
     display: inline-block;
 }
 
@@ -1023,17 +1110,20 @@ hr {
 }
 
 .ticket-box-available span {
-	display: inline-block;
-	margin-right: 30px;
+    display: inline-block;
+    margin-right: 30px;
 }
+
 .ticket-box-available input {
-	margin-right: 5px;
-	position: relative;
-	top: 2px;
+    margin-right: 5px;
+    position: relative;
+    top: 2px;
 }
+
 .ticket-box-available {
     margin: 50px 0;
 }
+
 .buy-ticket-box ul li p {
     text-transform: uppercase;
     font-weight: 600;
@@ -1065,6 +1155,7 @@ hr {
 .buy-ticket-box > a.theme-btn {
     margin-right: 5px;
 }
+
 /*----------------------------------
 --------- seat plan PAGE CSS END --------
 -----------------------------------*/
@@ -1082,11 +1173,11 @@ hr {
     left: 0;
     right: 0;
     margin: auto;
-	display: none;
+    display: none;
     height: 100%;
-    background: rgba(0,0,0,0.4);
+    background: rgba(0, 0, 0, 0.4);
     z-index: 99;
-	padding: 0 15px;
+    padding: 0 15px;
 }
 
 .login-box {
@@ -1121,7 +1212,8 @@ hr {
     margin-bottom: 20px;
 }
 
-.login-box h6 {}
+.login-box h6 {
+}
 
 .login-box h6 {
     color: #03090e;
@@ -1130,8 +1222,8 @@ hr {
 
 .login-box input {
     margin-bottom: 20px;
-	background: transparent;
-	border: 1px solid #ddd;
+    background: transparent;
+    border: 1px solid #ddd;
 }
 
 .login-signup {
@@ -1149,8 +1241,8 @@ hr {
 .login-box form .theme-btn {
     width: 100%;
     border-radius: 0;
-	color: #fff;
-	text-align: center;
+    color: #fff;
+    text-align: center;
     margin-top: 5px;
 }
 
@@ -1174,27 +1266,34 @@ hr {
     background: #3a559f;
     text-align: center;
 }
-.login-social a i.icofont-social-twitter {
+
+.login-social a i.ico-font-social-twitter {
     background: #50abf1;
 }
-.login-social a i.icofont-social-linkedin {
+
+.login-social a i.ico-font-social-linkedin {
     background: #dd4b39;
 }
-.login-social a i.icofont-social-google-plus {
+
+.login-social a i.ico-font-social-google-plus {
     background: #0084b1;
 }
-.login-social a i.icofont-camera {
+
+.login-social a i.ico-font-camera {
     background: #c536a4;
 }
+
 /*----------------------------------
 -------- blog PAGE CSS START -------
 ------------------------------------*/
 .blog-area {
-	padding-top: 30px;
+    padding-top: 30px;
 }
+
 .blog-area .single-news {
-	margin-top: 70px;
+    margin-top: 70px;
 }
+
 /*----------------------------------
 --------- blog PAGE CSS END --------
 -----------------------------------*/
@@ -1203,13 +1302,14 @@ hr {
 -------- blog details PAGE CSS START -------
 ------------------------------------*/
 .news-details a i {
-	margin-right: 5px;
+    margin-right: 5px;
 }
+
 .news-details > h2 {
     margin: 30px 0 5px;
 }
 
-.news-details > h2 + a,.news-details > h2 + a + a {
+.news-details > h2 + a, .news-details > h2 + a + a {
     margin-right: 10px;
     display: inline-block;
 }
@@ -1220,7 +1320,7 @@ hr {
 
 .news-details .details-thumb {
     border-top: 1px solid #ddd;
-	padding-bottom: 15px;
+    padding-bottom: 15px;
 }
 
 .news-details .details-comment {
@@ -1228,8 +1328,9 @@ hr {
 }
 
 .news-details .details-reply {
-	margin-top: 25px;
+    margin-top: 25px;
 }
+
 .news-details .details-reply h2 {
     margin-bottom: 25px;
 }
@@ -1247,6 +1348,7 @@ hr {
 .news-details {
     padding-top: 35px;
 }
+
 .detail-author {
     margin: 40px 0;
     border-top: 1px solid #fff;
@@ -1262,23 +1364,7 @@ hr {
 .details-author a {
     margin-left: 20px;
 }
+
 /*----------------------------------
 ---------  blog details PAGE CSS END --------
 -----------------------------------*/
-
-/*--------------------------------------
--------- Pre Loader Style START --------
----------------------------------------*/
-#preloader {
-  position: fixed;
-  z-index: 99999999999;
-  top: 0;
-  left: 0;
-  overflow: visible;
-  width: 100%;
-  height: 100%;
-  background: #fff url("../img/loader.gif") no-repeat center center;
-}
-/*--------------------------------------
---------- Pre Loader Style END ---------
----------------------------------------*/

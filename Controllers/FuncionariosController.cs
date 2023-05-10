@@ -1,280 +1,215 @@
-﻿using Microsoft.AspNetCore.Authorization;
+﻿using System;
+using System.IO;
+using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Hosting;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Threading.Tasks;
 using Webima.Data;
 using Webima.Filters;
 using Webima.Models;
+using Webima.ViewModels;
 
-namespace Webima.Controllers
+namespace Webima.Controllers;
+
+[Authorize(Roles = "Funcionario")]
+public class FuncionariosController : Controller
 {
-    [Authorize(Roles = "Funcionario")]
-    public class FuncionariosController : Controller
+    private readonly ApplicationDbContext _context;
+    private readonly IHostEnvironment _he;
+    private readonly IEmailSender _sender;
+
+    public FuncionariosController(ApplicationDbContext context, IHostEnvironment he, IEmailSender sender)
     {
-        private readonly ApplicationDbContext _context;
-        private readonly UserManager<IdentityUser> _userManager;
-        private readonly IHostEnvironment _he;
-        private readonly IEmailSender _emailSender;
+        _context = context;
+        _he = he;
+        _sender = sender;
+    }
 
-        public FuncionariosController(ApplicationDbContext context,
-            UserManager<IdentityUser> userManager,
-            IHostEnvironment he,
-            IEmailSender emailSender)
+    // GET: Funcionarios
+    public async Task<IActionResult> Index()
+    {
+        var userId = HttpContext.Session.GetString("UserId");
+        var funcionario = await _context.Funcionarios
+            .Where(x => x.Id == userId)
+            .Include(x => x.Utilizador)
+            .FirstOrDefaultAsync();
+        ViewData["Email"] = funcionario.Utilizador.Email;
+        return View(funcionario);
+    }
+
+    // GET: AdicionarFilme
+    public async Task<IActionResult> AdicionarFilme()
+    {
+        var userId = HttpContext.Session.GetString("UserId");
+        var sessoes = await _context.Sessoes
+            .Where(x => x.Estado == true)
+            .OrderBy(x => x.Horas)
+            .Select(x => new SessaoViewModel
+            {
+                Id = x.Id,
+                Horas = x.Horas,
+                Estado = x.Estado
+            })
+            .ToListAsync();
+
+        var filme = new FilmeViewModel
         {
-            _context = context;
-            _userManager = userManager;
-            _he = he;
-            _emailSender = emailSender;
-        }
+            FuncionarioId = userId,
+            Poster = "",
+            Sessoes = sessoes
+        };
 
-        // GET: Funcionarios
-        public async Task<IActionResult> Index()
+        ViewData["IdCat"] = new SelectList(_context.Categoria
+            .Where(x => x.Estado == true), "Id", "Nome");
+        ViewData["IdSala"] = new SelectList(_context.Salas
+            .Where(x => x.Estado == true), "Id", "Nome");
+
+        return View(filme);
+    }
+
+    // POST: AdicionarFilme
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public async Task<IActionResult> AdicionarFilme(FilmeViewModel input, IFormFile poster)
+    {
+        ModelState.Remove("Poster");
+        if (poster == null)
+            ModelState.AddModelError("Poster", "Poster obrigatório.");
+        else if (poster.ContentType is not ("image/png" or "image/jpeg" or "image/webp"))
+            ModelState.AddModelError("Poster", "Tipo de ficheiro não permitido.");
+
+        if (input.Ano <= 1900 || input.Ano > DateTime.Now.AddYears(1).Year)
+            ModelState.AddModelError("Ano", "Ano inválido.");
+
+        if (input.Estreia < DateTime.Now.Date)
+            ModelState.AddModelError("Estreia", "Estreia tem de ser uma data futura.");
+
+        if (input.DataFim < input.Estreia)
+            ModelState.AddModelError("DataFim", "A data final tem de ser depois da data de estreia.");
+
+        if (!ModelState.IsValid || poster == null)
         {
-            int? idFunc = HttpContext.Session.GetInt32("UserId");
-            if (idFunc == null)
-            {
-                idFunc = (await _context.Utilizadores
-                    .SingleOrDefaultAsync(x => x.Username == User.Identity.Name)).Id;
-                HttpContext.Session.SetInt32("UserId", (int)idFunc);
-            }
-
-            var user = await _userManager.GetUserAsync(User);
-
-            var funcionario = await _context.Funcionarios
-                .Where(x => x.Id == (int)idFunc)
-                .Include(x => x.IdNavigation)
-                .FirstOrDefaultAsync();
-
-            ViewData["Email"] = user.Email;
-
-            return View(funcionario);
-        }
-
-        // GET: AdicionarFilme
-        public async Task<IActionResult> AdicionarFilme()
-        {
-            int? idFunc = HttpContext.Session.GetInt32("UserId");
-            if (idFunc == null)
-            {
-                idFunc = (await _context.Utilizadores
-                    .SingleOrDefaultAsync(x => x.Username == User.Identity.Name)).Id;
-                HttpContext.Session.SetInt32("UserId", (int)idFunc);
-            }
-
-            FilmeViewModel filme = new()
-            {
-                IdFunc = (int)idFunc,
-                Poster = "",
-                Sessoes = new List<SessaoViewModel>(),
-            };
-
-            var sessoes = await _context.Sessoes
-                .Where(x => x.Estado == true)
-                .OrderBy(x => x.Horas)
-                .ToListAsync();
-
-            foreach (var sessao in sessoes)
-            {
-                filme.Sessoes.Add(new()
-                {
-                    Id = sessao.Id,
-                    Horas = sessao.Horas,
-                    Estado = sessao.Estado,
-                });
-            }
-
             ViewData["IdCat"] = new SelectList(_context.Categoria
                 .Where(x => x.Estado == true), "Id", "Nome");
             ViewData["IdSala"] = new SelectList(_context.Salas
                 .Where(x => x.Estado == true), "Id", "Nome");
-
-            return View(filme);
+            return View(input);
         }
 
-        // POST: AdicionarFilme
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> AdicionarFilme(FilmeViewModel input, IFormFile Poster)
+        var destination = Path.Combine(_he.ContentRootPath, "wwwroot/posters/", Path.GetFileName(poster.FileName));
+        await using var fs = new FileStream(destination, FileMode.Create);
+        await poster.CopyToAsync(fs);
+
+        input.Poster = Path.GetFileName(poster.FileName);
+
+        _context.Add((Filme)input);
+        await _context.SaveChangesAsync();
+
+        var filmeId = await _context.Filmes
+            .Where(x => x.Titulo == input.Titulo)
+            .Select(x => x.Id)
+            .FirstOrDefaultAsync();
+
+        foreach (var date in Enumerable.Range(0, (int)input.DataFim.Subtract(input.Estreia).TotalDays + 1)
+                     .Select(i => input.Estreia.AddDays(i)))
+        foreach (var sessao in input.Sessoes.Where(s => s.Selected))
+            _context.Add(new Bilhete
+            {
+                FilmeId = filmeId,
+                SalaId = input.IdSala,
+                Data = date,
+                SessaoId = sessao.Id,
+                Preco = input.Preco
+            });
+
+        await _context.SaveChangesAsync();
+        await NotificarClientes(filmeId);
+        return RedirectToAction("Index", "Home");
+    }
+
+    public async Task<IActionResult> EditarFilme(int id)
+    {
+        var filme = await _context.Filmes.FindAsync(id);
+        if (filme == null) return NotFound();
+        ViewData["IdCat"] = new SelectList(_context.Categoria
+            .Where(x => x.Estado == true), "Id", "Nome");
+        return View(filme);
+    }
+
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public async Task<IActionResult> EditarFilme(Filme filme, IFormFile poster)
+    {
+        ModelState.Remove("Poster");
+
+        if (poster is { ContentType: not ("image/png" or "image/jpeg" or "image/webp") })
+            ModelState.AddModelError("Poster", "Tipo de ficheiro não permitido.");
+        if (filme.Ano <= 1900 || filme.Ano > DateTime.Now.AddYears(1).Year)
+            ModelState.AddModelError("Ano", "Ano inválido.");
+
+        if (!ModelState.IsValid)
         {
-            ModelState.Remove("Poster");
-
-            if (Poster == null)
-                ModelState.AddModelError("Poster", "Poster obrigatório.");
-            else
-                if (Poster.ContentType is not ("image/png" or "image/jpeg" or "image/webp"))
-                ModelState.AddModelError("Poster", "Tipo de ficheiro não permitido.");
-
-            if (input.Ano <= 1900 || input.Ano > DateTime.Now.AddYears(1).Year)
-                ModelState.AddModelError("Ano", "Ano inválido.");
-
-            if (input.Estreia < DateTime.Now.Date)
-                ModelState.AddModelError("Estreia", "Estreia tem de ser uma data futura.");
-
-            if (input.DataFim < input.Estreia)
-                ModelState.AddModelError("DataFim", "A data final tem de ser depois da data de estreia.");
-
-            if (!ModelState.IsValid)
-            {
-                ViewData["IdCat"] = new SelectList(_context.Categoria
-                    .Where(x => x.Estado == true), "Id", "Nome");
-                ViewData["IdSala"] = new SelectList(_context.Salas
-                    .Where(x => x.Estado == true), "Id", "Nome");
-
-                return View(input);
-            }
-
-            string destination = Path.Combine(_he.ContentRootPath,
-                "wwwroot/posters/",
-                Path.GetFileName(Poster.FileName));
-            FileStream fs = new(destination, FileMode.Create);
-            Poster.CopyTo(fs);
-            fs.Close();
-
-            input.Poster = Path.GetFileName(Poster.FileName);
-
-            _context.Add((Filme)input);
-            await _context.SaveChangesAsync();
-
-            int idFilme = (await _context.Filmes
-                .SingleOrDefaultAsync(x => x.Titulo == input.Titulo)).Id;
-
-
-            for (var date = input.Estreia; date <= input.DataFim; date = date.AddDays(1))
-            {
-                foreach (var sessao in input.Sessoes)
-                {
-                    if (sessao.Selected)
-                    {
-                        Bilhete bilhete = new()
-                        {
-                            IdFilme = idFilme,
-                            IdSala = input.IdSala,
-                            Data = date,
-                            IdSessao = sessao.Id,
-                            Preco = input.Preco,
-                        };
-                        _context.Add(bilhete);
-                    }
-                }
-            }
-            await _context.SaveChangesAsync();
-            await NotificarClientes(idFilme);
-            return RedirectToAction("Index", "Home");
-        }
-
-        public async Task<IActionResult> EditarFilme(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var filme = await _context.Filmes.FindAsync(id);
-
-            if (filme == null)
-            {
-                return NotFound();
-            }
-
-            ViewData["IdCat"] = new SelectList(_context.Categoria
-                .Where(x => x.Estado == true), "Id", "Nome");
-
-            return View(filme);
-        }
-
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> EditarFilme(Filme filme, IFormFile poster)
-        {
-            ModelState.Remove("Poster");
-
-            if (poster != null && poster.ContentType is not ("image/png" or "image/jpeg" or "image/webp"))
-            {
-                ModelState.AddModelError("Poster", "Tipo de ficheiro não permitido.");
-            }
-            if (filme.Ano <= 1900 || filme.Ano > DateTime.Now.AddYears(1).Year)
-            {
-                ModelState.AddModelError("Ano", "Ano inválido.");
-            }
-
-            if (ModelState.IsValid)
-            {
-                if (poster != null)
-                {
-                    string source = Path.Combine(_he.ContentRootPath,
-                        "wwwroot/posters/", filme.Poster);
-                    System.IO.File.Delete(source);
-
-                    string destination = Path.Combine(_he.ContentRootPath,
-                        "wwwroot/posters/",
-                        Path.GetFileName(poster.FileName));
-                    FileStream fs = new(destination, FileMode.Create);
-                    poster.CopyTo(fs);
-                    fs.Close();
-
-                    filme.Poster = Path.GetFileName(poster.FileName);
-                }
-                _context.Update(filme);
-                await _context.SaveChangesAsync();
-                return RedirectToAction("Detalhes", "Filmes", new { id = filme.Id });
-            }
-
             ViewData["IdCat"] = new SelectList(_context.Categoria
                 .Where(x => x.Estado == true), "Id", "Nome");
             return View(filme);
         }
 
-        private async Task NotificarClientes(int id)
-        {
-            var filme = await _context.Filmes.FindAsync(id);
+        var source = Path.Combine(_he.ContentRootPath, "wwwroot/posters/", filme.Poster);
+        System.IO.File.Delete(source);
 
-            var utilizadores = _context.CliCats
-                .Where(x => x.IdCat == filme.IdCat)
-                .Include(x => x.IdClienteNavigation).ThenInclude(x => x.IdNavigation)
-                .Select(x => x.IdClienteNavigation.IdNavigation);
+        var destination = Path.Combine(_he.ContentRootPath, "wwwroot/posters/", Path.GetFileName(poster.FileName));
+        FileStream fs = new(destination, FileMode.Create);
+        await poster.CopyToAsync(fs);
+        fs.Close();
 
-            var users = _context.Users
-                .Where(x => utilizadores.Any(u => u.Username == x.UserName));
+        filme.Poster = Path.GetFileName(poster.FileName);
 
-            var filmeUrl = Url.Action(
-                action: "Detalhes",
-                controller: "Filmes",
-                values: new { id = id },
-                protocol: Request.Scheme);
+        _context.Update(filme);
+        await _context.SaveChangesAsync();
+        return RedirectToAction("Detalhes", "Filmes", new { id = filme.Id });
+    }
 
-            foreach (var user in users)
-            {
-                await _emailSender.SendEmailAsync(user.Email, "Próximas Estreias - Webima",
-                    $"Olá, {user.UserName}, temos um novo filme que achamos que podes gostar! <a href='{filmeUrl}'>Clique aqui</a>.");
-            }
-        }
+    private async Task NotificarClientes(int id)
+    {
+        var filme = await _context.Filmes.FindAsync(id);
+        if (filme == null) return;
+        var clientes = await _context.Clientes
+            .Include(x => x.CategoriasPreferidas)
+            .Include(x => x.Utilizador)
+            .Where(x => x.CategoriasPreferidas.Any(y => y.CategoriaId == filme.CategoriaId))
+            .ToListAsync();
+        var filmeUrl = Url.Action(
+            "Detalhes",
+            "Filmes",
+            new { id },
+            Request.Scheme);
+        await Task.WhenAll(clientes.Select(x => _sender.SendEmailAsync(x.Utilizador.Email!,
+                "Próximas Estreias - Webima",
+                $"Olá, {x.Utilizador.UserName}, temos um novo filme que achamos que podes gostar! <a href='{filmeUrl}'>Clique aqui</a>.")
+            )
+        );
+    }
 
-        // GET: AlterarTelefone
-        [AjaxFilter]
-        public async Task<IActionResult> AlterarTelefone(int Id)
-        {
-            var funcionario = await _context.Funcionarios.FindAsync(Id);
-            return PartialView(nameof(AlterarTelefone), funcionario);
-        }
+    // GET: AlterarTelefone
+    [AjaxFilter]
+    public async Task<IActionResult> AlterarTelefone(int id)
+    {
+        var funcionario = await _context.Funcionarios.FindAsync(id);
+        return PartialView(nameof(AlterarTelefone), funcionario);
+    }
 
-        // POST: AlterarTelefone
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<string> AlterarTelefone(Funcionario funcionario)
-        {
-            _context.Update(funcionario);
-            await _context.SaveChangesAsync();
-            return funcionario.Telefone;
-        }
-
+    // POST: AlterarTelefone
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public async Task<string> AlterarTelefone(Funcionario funcionario)
+    {
+        _context.Update(funcionario);
+        await _context.SaveChangesAsync();
+        return funcionario.Utilizador.PhoneNumber;
     }
 }

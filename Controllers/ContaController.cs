@@ -1,6 +1,6 @@
-﻿using Microsoft.AspNetCore.Authorization;
+﻿using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using System.Threading.Tasks;
 using Webima.Data;
 using Webima.Filters;
 using Webima.Models;
@@ -20,26 +20,17 @@ namespace Webima.Controllers
         // GET: Conta
         public IActionResult Index()
         {
-            if (User.IsInRole("Cliente"))
-            {
-                return RedirectToAction("Index", "Clientes");
-            }
-            if (User.IsInRole("Admin"))
-            {
-                return RedirectToAction("Index", "Admins");
-            }
-            if (User.IsInRole("Funcionario"))
-            {
-                return RedirectToAction("Index", "Funcionarios");
-            }
-            return RedirectToAction("Index", "Home");
+            if (User.IsInRole("Cliente")) return RedirectToAction("Index", "Clientes");
+            return User.IsInRole("Admin")
+                ? RedirectToAction("Index", "Admins")
+                : RedirectToAction("Index", User.IsInRole("Funcionario") ? "Funcionarios" : "Home");
         }
 
         // GET: Conta/AlterarNome
         [AjaxFilter]
-        public async Task<IActionResult> AlterarNome(int Id)
+        public async Task<IActionResult> AlterarNome(int id)
         {
-            var utilizador = await _context.Utilizadores.FindAsync(Id);
+            var utilizador = await _context.Utilizadores.FindAsync(id);
             return PartialView(nameof(AlterarNome), utilizador);
         }
 
